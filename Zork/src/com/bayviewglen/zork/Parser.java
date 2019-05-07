@@ -5,6 +5,8 @@ package com.bayviewglen.zork;
  * Version: 1.0
  * Date:    July 1999
  * 
+ * test more
+ * 
  * This class is part of Zork. Zork is a simple, text based adventure game.
  *
  * This parser reads user input and tries to interpret it as a "Zork"
