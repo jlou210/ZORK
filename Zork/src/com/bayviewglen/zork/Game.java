@@ -20,6 +20,7 @@ import java.util.Scanner;
  * This main class creates and initialises all the others: it creates all rooms,
  * creates the parser and starts the game. It also evaluates the commands that
  * the parser returns.
+ * another comment
  */
 class Game {
 	private Parser parser;
