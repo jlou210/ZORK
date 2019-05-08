@@ -19,7 +19,7 @@ package com.bayviewglen.zork;
  * The second word is not checked at the moment. It can be anything. If this
  * game is extended to deal with items, then the second part of the command
  * should probably be changed to be an item rather than a String.
- * test
+ * test2
  */
 class Command {
 	private String commandWord;
