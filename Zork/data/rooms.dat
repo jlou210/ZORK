@@ -3,16 +3,16 @@ Room Description: This is where you start.
 Exit Rooms: E-House Entrance
 Room Name: House Entrance
 Room Description: You enter the house to see a couple chairs, a rug with a rolled up piece of paper above, and Dora standing in the kitchen.
-Exit Rooms: W-Start Point, D-Dora's Kitchen
+Exit Rooms: W-Start Point, S-Dora's Kitchen
 Room Name: Dora's Kitchen
 Room Description: In the kitchen, there is a table with food, a knife, a cup, and a bottle resting on top. There is a fridge and a counter as well. 
-Exit Rooms: U-House Entrance, E-Living Room
+Exit Rooms: N-House Entrance, E-Living Room
 Room Name: Living Room
 Room Description: There is a pile of clothes in the corner, a broom, and a piece of paper that looks to be a pamphlet on the table. 
-Exit Rooms: E-Dora's Kitchen, UE-Dining Room, U-Arthur's Room, D- Backyardigan's Hallway
+Exit Rooms: W-Dora's Kitchen, N-Dining Room, U-Arthur's Room, D- Backyardigan's Hallway
 Room Name: Dining Room
 Room Description: In the dining room, there are chairs lining the dining table and plates set for seats.
-Exit Rooms: W-Living Room
+Exit Rooms: E-Living Room
 Room Name: Arthur's Room
 Room Description: You see DW standing in the corner, a bed, glasses on the pillow,  a table, and some papers.
 Exit Rooms: E-Living Room, D-Mr. Ratburn's Classroom
@@ -27,7 +27,7 @@ Room Description: You enter the library using the library card to find a room li
 Exit Rooms: W-Study Room, E-Secret Room
 Room Name: Secret Room
 Room Description: You push past a bookshelf to enter a secret passage, there is a rug and a backpack on the table. 
-Exit Rooms: null
+Exit Rooms: E-Secret Room
 Room Name: Ruby's Room
 Room Description: You enter Ruby's room to see her standing in a corner, waiting for you, she is smiling. You look around a see a bed and a nightstand, along with a dressing table with a drawer slightly ajar.
 Exit Rooms: E-Kitchen, W-Hallway Turn
@@ -45,16 +45,13 @@ Room Description: You enter Grandma’s house to find Max and Grandma waiting for 
 Exit Rooms: E-Room
 Room Name: Backyardigan's Hallway
 Room Description: You enter a hallway from Dora's House and see doors on either side of you.
-Exit Rooms: E-House, W-Backyard, D-Hallway Turn
+Exit Rooms: N-Living Room, E-House, W-Backyard, D-Hallway Turn
 Room Name: Hallway Turn
 Room Description: Looking to the east, you see what seems to be a faint light
 Exit Rooms: U-Backyardigan's Hallway, E-Ruby's Room
 Room Name: House
 Room Description: You've reached the main part of the Backyardigan's home. You see costumes lining the ground and what seems to be a shovel.
 Exit Rooms: E-Backyardigan's Hallway
-Room Name: House
-Room Description:
-Exit Rooms: W-Backyardigan's Hallway, DW-Mini Garden
 Room Name: Mini Garden
 Room Description: You enter the mini garden to see grass, some sticks littering the ground, and something white glittering in the sunlight. It is stuck in the ground.
 Exit Rooms: UE-House, D-Storage Room, E-Small Shed
