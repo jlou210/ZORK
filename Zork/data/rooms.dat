@@ -15,10 +15,10 @@ Room Description: In the dining room, there are chairs lining the dining table a
 Exit Rooms: E-Living Room
 Room Name: Arthur's Room
 Room Description: You see DW standing in the corner, a bed, glasses on the pillow,  a table, and some papers.
-Exit Rooms: E-Living Room, D-Mr. Ratburn's Classroom
+Exit Rooms: D-Living Room, S-Mr. Ratburn's Classroom
 Room Name: Mr. Ratburn's Classroom
 Room Description: You enter to see a blackboard with something written on it, chairs and tables line the room. Children are staring at you.
-Exit Rooms: U-Arthur's Room, UE-Study Room
+Exit Rooms: N-Arthur's Room, NE-Study Room
 Room Name: Study Room
 Room Description: You enter the study room to see Arthur standing there, some books on the table, and a chair.
 Exit Rooms: E-Library, D-Mr. Ratburn's Classroom
