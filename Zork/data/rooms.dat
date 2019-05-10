@@ -64,3 +64,38 @@ Exit Rooms: W-Mini Garden
 Room Name:  Storage Room
 Room Description: The Backyardigans seem to need a lot of storage space, you find a lot of things in here
 Exit Rooms: W-Back Storage Room, U-Mini Garden
+Room Name: Main Room
+Room Description: You enter the Treehouse, it smells like wood in here.
+Exit Rooms: UE-Trophy Room, UW-Room2, DE-Room3, DW-Room4
+Room Name: Trophy Room
+Room Description: There are shelves lining the walls, cartoonish arrows hover above each empty space.
+Exit Rooms: D-Main Room
+Room Name: Room2
+Room Description: There is a rug on the floor, but beyond that the room seems empty
+Exit Rooms: D-Main Room
+Room Name: Room 3
+Room Description: You take a look around this room to see a small backpack, a piece of what seems to be a mask, and a container.
+Exit Rooms: D-Main Room
+Room Name: Room 4
+Room Description: There is nothing but a towel on the floor here.
+Exit Rooms: D-Main Room, E-Mickey's Room
+Room Name: Mickey's Room
+Room Description: You enter Mickey's Room through the secret entrance in the treehouse. You find what seems to be a play room, Mickey awaits you at the door. 
+Exit Rooms: W-Room4, D-Donald's Room, W-Minnie's Room
+Room Name: Minnie's Room
+Room Description: In Minnie's Room everything is pink, she rushes towards you as you enter.
+Exit Rooms: W-Mickey's Room
+Room Name: Donald's Room
+Room Description: Donald seems to be attempting to dance when you walk in, you approach him as he realizes you are there.
+Exit Rooms: U-Mickey's Room, E-Outside
+Room Name: Outside
+Room Description: You are now outside, you see two buildings on either side of you.
+Exit Rooms: U-Goofy's Garden, D-Pluto's Dog House
+Room Name: Goofy's Garden
+Room Description: Goofy has a shovel, and wonders whether you have one too so you can help him garden.
+Exit Rooms: D-Outside
+Room Name: Pluto's Dog House
+Room Description: You hear some barking and walk in to see Pluto biting at what seems to be a piece of cloth. 
+Exit Rooms: U-Outside
+
+
