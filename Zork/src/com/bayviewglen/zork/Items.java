@@ -20,7 +20,7 @@ public class Items {
 		food.put("empanada", 5); // dora
 		food.put("pie", 10); // max
 		food.put("ice cream", 5); // arthur
-		food.put("cake", 20); // mickey
+		food.put("cake", 20); // mickey mouse
 		
 		HashMap<String, Integer> tools = new HashMap<String, Integer>();
 
