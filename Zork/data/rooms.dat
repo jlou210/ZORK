@@ -1,12 +1,98 @@
-Room Name: Room 1
-Room Description:  This is room<br>1
-Exit Rooms: E-Room 2
-Room Name: Room 2
-Room Description:  This is Room 2
-Exit Rooms: W-Room 1, U-Room 3
+Room Name: Start Point
+Room Description: This is where you start.
+Exit Rooms: E-House Entrance
+Room Name: House Entrance
+Room Description: You enter the house to see a couple chairs, a rug with a rolled up piece of paper above, and Dora standing in the kitchen.
+Exit Rooms: W-Start Point, S-Dora's Kitchen
+Room Name: Dora's Kitchen
+Room Description: In the kitchen, there is a table with food, a knife, a cup, and a bottle resting on top. There is a fridge and a counter as well. 
+Exit Rooms: N-House Entrance, E-Living Room
+Room Name: Living Room
+Room Description: There is a pile of clothes in the corner, a broom, and a piece of paper that looks to be a pamphlet on the table. 
+Exit Rooms: W-Dora's Kitchen, N-Dining Room, U-Arthur's Room, D- Backyardigan's Hallway
+Room Name: Dining Room
+Room Description: In the dining room, there are chairs lining the dining table and plates set for seats.
+Exit Rooms: E-Living Room
+Room Name: Arthur's Room
+Room Description: You see DW standing in the corner, a bed, glasses on the pillow,  a table, and some papers.
+Exit Rooms: D-Living Room, S-Mr. Ratburn's Classroom
+Room Name: Mr. Ratburn's Classroom
+Room Description: You enter to see a blackboard with something written on it, chairs and tables line the room. Children are staring at you.
+Exit Rooms: N-Arthur's Room, P-Study Room
+Room Name: Study Room
+Room Description: You enter the study room to see Arthur standing there, some books on the table, and a chair.
+Exit Rooms: E-Library, D-Mr. Ratburn's Classroom
+Room Name: Library
+Room Description: You enter the library using the library card to find a room lined with bookshelves and people studying and reading at tables. 
+Exit Rooms: W-Study Room, E-Secret Room
+Room Name: Secret Room
+Room Description: You push past a bookshelf to enter a secret passage, there is a rug and a backpack on the table. 
+Exit Rooms: E-Secret Room
+Room Name: Ruby's Room
+Room Description: You enter Ruby's room to see her standing in a corner, waiting for you, she is smiling. You look around a see a bed and a nightstand, along with a dressing table with a drawer slightly ajar.
+Exit Rooms: E-Kitchen, W-Hallway Turn
+Room Name: Ruby's Kitchen
+Room Description: You enter the kitchen to find it empty. There is something under a lid on the table, it seems to be cake. 
+Exit Rooms: E-Ruby's Room, U-Max's Room, D-Room
+Room Name: Max's Room
+Room Description: You enter Max's Room to find it extremely messy, you can make out the shape of a box under some clothes and a sandwich on his table.
+Exit Rooms: D-Ruby's Kitchen
+Room Name: Room
+Room Description: This room seems empty, but you see another door to the west
+Exit Rooms: U-Kitchen, W-Grandma's House
+Room Name: Grandma's House
+Room Description: You enter Grandma’s house to find Max and Grandma waiting for you, they look like they want to talk.
+Exit Rooms: E-Room
+Room Name: Backyardigan's Hallway
+Room Description: You enter a hallway from Dora's House and see doors on either side of you.
+Exit Rooms: N-Living Room, E-House, W-Backyard, D-Hallway Turn
+Room Name: Hallway Turn
+Room Description: Looking to the east, you see what seems to be a faint light
+Exit Rooms: U-Backyardigan's Hallway, E-Ruby's Room
+Room Name: House
+Room Description: You've reached the main part of the Backyardigan's home. You see costumes lining the ground and what seems to be a shovel.
+Exit Rooms: E-Backyardigan's Hallway
+Room Name: Mini Garden
+Room Description: You enter the mini garden to see grass, some sticks littering the ground, and something white glittering in the sunlight. It is stuck in the ground.
+Exit Rooms: P-House, D-Storage Room, E-Small Shed
+Room Name: Small Shed
+Room Description: This seems like a small shed. There are many bicycles stored in here.
+Exit Rooms: W-Mini Garden
+Room Name:  Storage Room
+Room Description: The Backyardigans seem to need a lot of storage space, you find a lot of things in here
+Exit Rooms: W-Back Storage Room, U-Mini Garden
+Room Name: Main Room
+Room Description: You enter the Treehouse, it smells like wood in here.
+Exit Rooms: P-Trophy Room, Q-Room2, R-Room3, T-Room4
+Room Name: Trophy Room
+Room Description: There are shelves lining the walls, cartoonish arrows hover above each empty space.
+Exit Rooms: D-Main Room
+Room Name: Room2
+Room Description: There is a rug on the floor, but beyond that the room seems empty
+Exit Rooms: D-Main Room
 Room Name: Room 3
-Room Description: You are in the hallway. There is a wooden door to the west.
-Exit Rooms: W-Room 2, D-Room
+Room Description: You take a look around this room to see a small backpack, a piece of what seems to be a mask, and a container.
+Exit Rooms: D-Main Room
 Room Name: Room 4
-Room Description: You are in a dungeon. It is a large circular room with old chains attached to the floor. <b>It looks like something was here before. <b>There are stairs leading up.
-Exit Rooms: U-Room 3
+Room Description: There is nothing but a towel on the floor here.
+Exit Rooms: D-Main Room, E-Mickey's Room
+Room Name: Mickey's Room
+Room Description: You enter Mickey's Room through the secret entrance in the treehouse. You find what seems to be a play room, Mickey awaits you at the door. 
+Exit Rooms: W-Room4, D-Donald's Room, W-Minnie's Room
+Room Name: Minnie's Room
+Room Description: In Minnie's Room everything is pink, she rushes towards you as you enter.
+Exit Rooms: W-Mickey's Room
+Room Name: Donald's Room
+Room Description: Donald Duck seems to be attempting to dance when you walk in, you approach him as he realizes you are there.
+Exit Rooms: U-Mickey's Room, E-Outside
+Room Name: Outside
+Room Description: You are now outside, you see two buildings on either side of you.
+Exit Rooms: U-Goofy's Garden, D-Pluto's Dog House
+Room Name: Goofy's Garden
+Room Description: Goofy has a shovel, and wonders whether you have one too so you can help him garden.
+Exit Rooms: D-Outside
+Room Name: Pluto's Dog House
+Room Description: You hear some barking and walk in to see Pluto biting at what seems to be a piece of cloth. 
+Exit Rooms: U-Outside
+
+
