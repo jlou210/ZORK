@@ -27,7 +27,7 @@ public class Items {
 		tools.put("shovel", 15); // backyard
 		tools.put("flashlight", 5); // max
 		tools.put("library card", 5); // arthur
-		tools.put("rope", 20); // mickey
+		tools.put("rope", 20); // mickey mouse
 
 	}
 
