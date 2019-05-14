@@ -20,14 +20,14 @@ public class Items {
 		food.put("empanada", 5); // dora
 		food.put("pie", 10); // max
 		food.put("ice cream", 5); // arthur
-		food.put("cake", 20); // mickey mouse
+		food.put("cake", 20); // mickey
 		
 		HashMap<String, Integer> tools = new HashMap<String, Integer>();
 
 		tools.put("shovel", 15); // backyard
 		tools.put("flashlight", 5); // max
 		tools.put("library card", 5); // arthur
-		tools.put("rope", 20); // mickey mouse
+		tools.put("rope", 20); // mickey 
 
 	}
 
