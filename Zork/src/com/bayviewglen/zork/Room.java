@@ -60,6 +60,18 @@ class Room {
 		case 'D':
 			dir = "down";
 			break;
+		case 'P':
+			dir = "north east";
+			break;
+		case 'Q':
+			dir = "north west";
+			break;
+		case 'R':
+			dir = "south east";
+			break;
+		case 'T':
+			dir = "south west";
+			break;
 		default:
 			throw new Exception("Invalid Direction");
 
@@ -72,7 +84,7 @@ class Room {
 	 * Define the exits of this room. Every direction either leads to another room
 	 * or is null (no exit there).
 	 */
-	public void setExits(Room north, Room east, Room south, Room west, Room up, Room down) {
+	public void setExits(Room north, Room east, Room south, Room west, Room up, Room down, Room northeast, Room northwest, Room southeast, Room southwest) {
 		if (north != null)
 			exits.put("north", north);
 		if (east != null)
@@ -85,6 +97,14 @@ class Room {
 			exits.put("up", up);
 		if (up != null)
 			exits.put("down", down);
+		if (northeast!= null)
+			exits.put("northeast", northeast);
+		if (northwest != null)
+			exits.put("northwest", northwest);
+		if (southeast != null)
+			exits.put("southeast", southeast);
+		if (southwest != null)
+			exits.put("southwest", southwest);
 
 	}
 
