@@ -18,7 +18,7 @@ Room Description: You see DW standing in the corner, a bed, glasses on the pillo
 Exit Rooms: D-Living Room, S-Mr. Ratburn's Classroom
 Room Name: Mr. Ratburn's Classroom
 Room Description: You enter to see a blackboard with something written on it, chairs and tables line the room. Children are staring at you.
-Exit Rooms: N-Arthur's Room, NE-Study Room
+Exit Rooms: N-Arthur's Room, P-Study Room
 Room Name: Study Room
 Room Description: You enter the study room to see Arthur standing there, some books on the table, and a chair.
 Exit Rooms: E-Library, D-Mr. Ratburn's Classroom
@@ -54,7 +54,7 @@ Room Description: You've reached the main part of the Backyardigan's home. You s
 Exit Rooms: E-Backyardigan's Hallway
 Room Name: Mini Garden
 Room Description: You enter the mini garden to see grass, some sticks littering the ground, and something white glittering in the sunlight. It is stuck in the ground.
-Exit Rooms: UE-House, D-Storage Room, E-Small Shed
+Exit Rooms: P-House, D-Storage Room, E-Small Shed
 Room Name: Small Shed
 Room Description: This seems like a small shed. There are many bicycles stored in here.
 Exit Rooms: W-Mini Garden
@@ -63,7 +63,7 @@ Room Description: The Backyardigans seem to need a lot of storage space, you fin
 Exit Rooms: W-Back Storage Room, U-Mini Garden
 Room Name: Main Room
 Room Description: You enter the Treehouse, it smells like wood in here.
-Exit Rooms: UE-Trophy Room, UW-Room2, DE-Room3, DW-Room4
+Exit Rooms: P-Trophy Room, Q-Room2, R-Room3, T-Room4
 Room Name: Trophy Room
 Room Description: There are shelves lining the walls, cartoonish arrows hover above each empty space.
 Exit Rooms: D-Main Room
