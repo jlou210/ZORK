@@ -1,6 +1,6 @@
 Room Name: Start Point
 Room Description: This is where you start.
-Exit Rooms: E-House Entrance
+Exit Rooms: E-House Entrance, W-Main Room
 Room Name: House Entrance
 Room Description: You enter the house to see a couple chairs, a rug with a rolled up piece of paper above, and Dora standing in the kitchen.
 Exit Rooms: W-Start Point, S-Dora's Kitchen
@@ -63,17 +63,17 @@ Room Description: The Backyardigans seem to need a lot of storage space, you fin
 Exit Rooms: W-Back Storage Room, U-Mini Garden
 Room Name: Main Room
 Room Description: You enter the Treehouse, it smells like wood in here.
-Exit Rooms: P-Trophy Room, Q-Room2, R-Room3, T-Room4
+Exit Rooms: P-Trophy Room, Q-Room2, R-Room3, T-Room4, E-Start Point
 Room Name: Trophy Room
 Room Description: There are shelves lining the walls, cartoonish arrows hover above each empty space.
 Exit Rooms: D-Main Room
 Room Name: Room2
 Room Description: There is a rug on the floor, but beyond that the room seems empty
 Exit Rooms: D-Main Room
-Room Name: Room 3
+Room Name: Room3
 Room Description: You take a look around this room to see a small backpack, a piece of what seems to be a mask, and a container.
 Exit Rooms: D-Main Room
-Room Name: Room 4
+Room Name: Room4
 Room Description: There is nothing but a towel on the floor here.
 Exit Rooms: D-Main Room, E-Mickey's Room
 Room Name: Mickey's Room
