@@ -51,16 +51,19 @@ Room Description: Looking to the east, you see what seems to be a faint light
 Exit Rooms: U-Backyardigan's Hallway, E-Ruby's Room
 Room Name: House
 Room Description: You've reached the main part of the Backyardigan's home. You see costumes lining the ground and what seems to be a shovel.
-Exit Rooms: E-Backyardigan's Hallway
+Exit Rooms: W-Backyardigan's Hallway
 Room Name: Mini Garden
 Room Description: You enter the mini garden to see grass, some sticks littering the ground, and something white glittering in the sunlight. It is stuck in the ground.
 Exit Rooms: P-House, D-Storage Room, E-Small Shed
 Room Name: Small Shed
 Room Description: This seems like a small shed. There are many bicycles stored in here.
-Exit Rooms: W-Mini Garden
+Exit Rooms: W-Mini Garden, E-Backyard
 Room Name:  Storage Room
 Room Description: The Backyardigans seem to need a lot of storage space, you find a lot of things in here
 Exit Rooms: W-Back Storage Room, U-Mini Garden
+Room Name: Backyard
+Room Description: You enter what seems to be a normal backyard. There seems to be an entrance in the distance.
+Exit Rooms: W-Small Shed, E-Backyardigan's Hallway, 
 Room Name: Main Room
 Room Description: You enter the Treehouse, it smells like wood in here.
 Exit Rooms: P-Trophy Room, Q-Room2, R-Room3, T-Room4, E-Start Point
@@ -94,5 +97,3 @@ Exit Rooms: D-Outside
 Room Name: Pluto's Dog House
 Room Description: You hear some barking and walk in to see Pluto biting at what seems to be a piece of cloth. 
 Exit Rooms: U-Outside
-
-
