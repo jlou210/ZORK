@@ -9,7 +9,7 @@ Room Description: In the kitchen, there is a table with food, a knife, a cup, an
 Exit Rooms: N-House Entrance, E-Living Room
 Room Name: Living Room
 Room Description: There is a pile of clothes in the corner, a broom, and a piece of paper that looks to be a pamphlet on the table. 
-Exit Rooms: W-Dora's Kitchen, N-Dining Room, U-Arthur's Room, D- Backyardigan's Hallway
+Exit Rooms: W-Dora's Kitchen, N-Dining Room, U-Arthur's Room, D-Backyardigan's Hallway
 Room Name: Dining Room
 Room Description: In the dining room, there are chairs lining the dining table and plates set for seats.
 Exit Rooms: E-Living Room
