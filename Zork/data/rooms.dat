@@ -1,6 +1,6 @@
 Room Name: Start Point
 Room Description: This is where you start.
-Exit Rooms: E-House Entrance, W-Main Room
+Exit Rooms: E-House Entrance, W-Main Room 
 Room Name: House Entrance
 Room Description: You enter the house to see a couple chairs, a rug with a rolled up piece of paper above, and Dora standing in the kitchen.
 Exit Rooms: W-Start Point, S-Dora's Kitchen
