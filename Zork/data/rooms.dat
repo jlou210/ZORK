@@ -30,16 +30,16 @@ Room Description: You push past a bookshelf to enter a secret passage, there is 
 Exit Rooms: E-Secret Room
 Room Name: Ruby's Room
 Room Description: You enter Ruby's room to see her standing in a corner, waiting for you, she is smiling. You look around a see a bed and a nightstand, along with a dressing table with a drawer slightly ajar.
-Exit Rooms: E-Kitchen, W-Hallway Turn
+Exit Rooms: E-Ruby's Kitchen, W-Hallway Turn
 Room Name: Ruby's Kitchen
 Room Description: You enter the kitchen to find it empty. There is something under a lid on the table, it seems to be cake. 
-Exit Rooms: E-Ruby's Room, U-Max's Room, D-Room
+Exit Rooms: W-Ruby's Room, N-Max's Room, S-Room
 Room Name: Max's Room
 Room Description: You enter Max's Room to find it extremely messy, you can make out the shape of a box under some clothes and a sandwich on his table.
-Exit Rooms: D-Ruby's Kitchen
+Exit Rooms: S-Ruby's Kitchen
 Room Name: Room
 Room Description: This room seems empty, but you see another door to the west
-Exit Rooms: U-Kitchen, W-Grandma's House
+Exit Rooms: N-Ruby's Kitchen, W-Grandma's House
 Room Name: Grandma's House
 Room Description: You enter Grandma’s house to find Max and Grandma waiting for you, they look like they want to talk.
 Exit Rooms: E-Room
