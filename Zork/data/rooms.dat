@@ -15,6 +15,7 @@ Room Description: In the dining room, there are chairs lining the dining table a
 Exit Rooms: E-Living Room
 Room Name: Arthur's Room
 <<<<<<< HEAD
+<<<<<<< HEAD
 Room Description: You see D.W. standing in the corner, a bed, glasses on the pillow,  a table, and some papers.
 Exit Rooms: D-Living Room, S-Mr. Ratburn's Classroom
 Room Name: Mr. Ratburn's Classroom
@@ -23,9 +24,21 @@ Room Description: You see DW standing in the corner, a bed, glasses on the pillo
 Exit Rooms: D-Living Room, S-Mr. Ratburn's Classroom Front
 Room Name: Mr. Ratburn's Classroom Front
 >>>>>>> refs/remotes/origin/master
+=======
+Room Description: You see DW standing in the corner, a bed, glasses on the pillow,  a table, and some papers.
+Exit Rooms: D-Living Room, S-Mr. Ratburn's Classroom Front
+Room Name: Mr. Ratburn's Classroom Front
+>>>>>>> refs/remotes/origin/master
 Room Description: You enter to see a blackboard with something written on it, chairs and tables line the room. Children are staring at you.
 <<<<<<< HEAD
+<<<<<<< HEAD
 Exit Rooms: N-Arthur's Room, P-Study Room
+=======
+Exit Rooms: N-Arthur's Room, E-Mr. Ratburn's Classroom Back
+Room Name: Mr. Ratburn's Classroom Back
+Room Description: You enter to see a blackboard with something written on it, chairs and tables line the room. Children are staring at you.
+Exit Rooms: N-Study Room, W-Mr. Ratburn's Classroom Front
+>>>>>>> refs/remotes/origin/master
 =======
 Exit Rooms: N-Arthur's Room, E-Mr. Ratburn's Classroom Back
 Room Name: Mr. Ratburn's Classroom Back
@@ -77,12 +90,17 @@ Exit Rooms: W-Backyardigan's Hallway
 Room Name: Mini Garden
 Room Description: You enter the mini garden to see grass, some sticks littering the ground, and something white glittering in the sunlight. It is stuck in the ground.
 <<<<<<< HEAD
+<<<<<<< HEAD
 Exit Rooms: P-House, D-Storage Room, E-Small Shed
+=======
+Exit Rooms: E-Small Opening
+>>>>>>> refs/remotes/origin/master
 =======
 Exit Rooms: E-Small Opening
 >>>>>>> refs/remotes/origin/master
 Room Name: Small Shed
 Room Description: This seems like a small shed. There are many bicycles stored in here.
+<<<<<<< HEAD
 <<<<<<< HEAD
 Exit Rooms: W-Mini Garden, E-Backyard
 Room Name:  Storage Room
@@ -90,12 +108,23 @@ Room Name:  Storage Room
 Exit Rooms: S-Small Opening
 Room Name: Storage Room
 >>>>>>> refs/remotes/origin/master
+=======
+Exit Rooms: S-Small Opening
+Room Name: Storage Room
+>>>>>>> refs/remotes/origin/master
 Room Description: The Backyardigans seem to need a lot of storage space, you find a lot of things in here
+<<<<<<< HEAD
 <<<<<<< HEAD
 Exit Rooms: W-Back Storage Room, U-Mini Garden
 Room Name: Backyard
 Room Description: You enter what seems to be a normal backyard. There seems to be an entrance in the distance.
 Exit Rooms: W-Small Shed, E-Backyardigan's Hallway, 
+=======
+Exit Rooms: W-Back Storage Room, N-Backyard
+Room Name: Back Storage Room
+Room Description: You go to the back of the storage room and there is another storage space.
+Exit Rooms: E-Storage Room
+>>>>>>> refs/remotes/origin/master
 =======
 Exit Rooms: W-Back Storage Room, N-Backyard
 Room Name: Back Storage Room
