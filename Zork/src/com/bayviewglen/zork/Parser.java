@@ -33,6 +33,8 @@ class Parser {
 		String inputLine = ""; // will hold the full input line
 		String word1;
 		String word2;
+		String word3;
+		String word4;
 		System.out.print("> "); // print prompt
 		BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 		try {
@@ -49,6 +51,14 @@ class Parser {
 			word2 = tokenizer.nextToken(); // get second word
 		else
 			word2 = null;
+		if (tokenizer.hasMoreTokens())
+			word3 = tokenizer.nextToken(); // get third word
+		else
+			word3 = null;
+		if (tokenizer.hasMoreTokens())
+			word4 = tokenizer.nextToken(); // get fourth word
+		else
+			word4 = null;
 // note: we just ignore the rest of the input line.
 // Now check whether this word is known. If so, create a command
 		// with it. If not, create a "nil" command (for unknown command).
