@@ -5,7 +5,7 @@ import java.util.List;
 
 public class PlayerInventory {
 
-	public List<String> inventory = new ArrayList<String>();
+	public List<Items> inventory = new ArrayList<Items>();
 	private double weightLimit;
 	private double currentWeight = 0;
 
@@ -21,14 +21,13 @@ public class PlayerInventory {
 
 	public double getWeight() {
 		return currentWeight;
-	}
-
-	
+	}	
 	
 	//ERICA: You need to add the items class and the roomInventory class.
 
-	
-	public void addPlayerInven(String item){
+		
+
+	public void addPlayerInven(Items item) {
 		if (getWeight() + item.getWeight() <= weightLimit) {	//getWeight has to be implemented in the items class
 			inventory.add(item);
 			//NEED TO ALSO REMOVE ITEM FROM THE ROOM INVENTORY. LUCK.
@@ -38,7 +37,7 @@ public class PlayerInventory {
 			System.out.print("If you picked this up now, your bag would be too heavy for you to walk.");
 			System.out.println("Either drop something in your inventory or find another bag to expand your inventory.");
 		}
-
+		
 	}
 
 	
