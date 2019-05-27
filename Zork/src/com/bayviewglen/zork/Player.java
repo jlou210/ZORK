@@ -10,8 +10,8 @@ public class Player {
 
 	// eat method
 
-	public String eat(food food) {
-		if(checkPlayerInventory(food) == true) {
+	public String eat(Food food) {
+		if(inventory.checkPlayerInventory(food) == true) {
 			removePlayerInventory(food);
 			System.out.println("You just ate " + food + " : " + food.getSound());
 		}else if(checkRoomInventory(food) == true) {
@@ -23,9 +23,9 @@ public class Player {
 		
 	}
 
-	public String take(tools tool) {
+	public String take(Tool tool) {
 		if(checkRoomInventory(tool) = true) {
-			addPlayerInventory(tool);
+			inventory.addPlayerInven(tool);
 			return tool + "added to your Inventory.";
 		} else {return tool + "is not in this room. It cannot be added to your inventory.";
 	}
@@ -42,7 +42,7 @@ public class Player {
 		return tool + "cannot be used here.";
 	}
 	
-	public String use(tools tool) {
+	public String use(Tool tool) {
 		if(checkPlayerInventory(tool) == true) {
 			removePlayerInventory(tool);
 			System.out.println("You just ate " + tool + " : " + food.getSound());
