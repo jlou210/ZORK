@@ -93,8 +93,8 @@ class Parser {
 		for example u can read a book but you can read a broom
 		*/
 		
-		for (int i = 0; i < validsCommands.length; i++) {
-			if(word1 == validCommands[i]) {
+		for (int i = 0; i < CommandWords.validCommands.length; i++) {
+			if(word1 == CommandWords.validCommands[i]) {
 				if(word2 == "book") {
 					
 				}
@@ -102,7 +102,7 @@ class Parser {
 					
 				}
 			}
-			else if(word1 == validCommands[1]) {
+			else if(word1 == CommandWords.validCommands[1]) {
 				if(word2 == "straight") {
 					
 				}
