@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 public class Items {
+	
 	public void initializeItems() {
 		HashMap<String, Integer> useless = new HashMap<String, Integer>();
 
@@ -34,11 +35,19 @@ public class Items {
 
 
 	public void addItem(Items i) {
-		useless.add(i);
+		useless.put(i, i.getWeight());
+	}
+	
+	public String itemName(Items i) {
+		
+	}
+	
+	public boolean isValidItem() {
+		
 	}
 
-	public String getUseless(Items i) {
-	    	 if(i<useless.size()&&>=0)
+	public String getUselessWeight(Items i) {
+	    	 if(i<useless.size() && useless.size() >=0)
 	    	        return useless.get(i).toString();
 	    	    else
 	    	        return "item does not exist";
@@ -51,14 +60,13 @@ public class Items {
 
 	public class useless {
 		//need method pickUp() that prints out 'you picked up...'
+		public String pickUp(Item item){
+				 System.out.print("You picked up );
+		}
 	}
 
-	public class food {
-		
-	}
-
-	public class empanada extends food {
-
+	public abstract class food {
+		public abstract String sound();
 	}
 
 	public class tools {
