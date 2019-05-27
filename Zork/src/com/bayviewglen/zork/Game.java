@@ -110,6 +110,7 @@ class Game {
 
 		boolean finished = false;
 		while (!finished) {
+			PlayerInventory playerInven = new PlayerInventory(30);
 			Command command = parser.getCommand();
 			finished = processCommand(command);
 		}

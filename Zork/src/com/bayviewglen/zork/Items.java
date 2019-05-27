@@ -58,16 +58,9 @@ public class Items {
 	}
 }
 
-	public class useless {
-		//need method pickUp() that prints out 'you picked up...'
-		public String pickUp(Item item){
-				 System.out.print("You picked up );
-		}
-	}
+	
 
-	public abstract class food {
-		public abstract String sound();
-	}
+	
 
 	public class tools {
 

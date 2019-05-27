@@ -1,6 +1,6 @@
 package com.bayviewglen.zork;
 
-public class Apple extends food {
+public class Apple extends Food {
 	public String sound() {
 		return "Crunch! Crunch!";
 	}
