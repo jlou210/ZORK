@@ -1,11 +1,11 @@
 package com.bayviewglen.zork;
 
 public class Player {
-	PlayerInventory inventory = new PlayerInventory(0);
+	Inventory playerInventory = new Inventory(0);
 	int inventoryWeight = 0;
 
 	public Player(int invenWeight) {
-		inventory = new PlayerInventory(invenWeight);
+		playerInventory = new Inventory(invenWeight);
 	}
 
 	// eat method
