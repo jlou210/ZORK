@@ -21,9 +21,7 @@ public class PlayerInventory {
 
 	public double getWeight() {
 		return currentWeight;
-	}
-
-	
+	}	
 	
 	//ERICA: You need to add the items class and the roomInventory class.
 
