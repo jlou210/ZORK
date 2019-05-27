@@ -3,7 +3,7 @@ package com.bayviewglen.zork;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-public class Items {
+public class Item {
 	
 	public void initializeItems() {
 		HashMap<String, Integer> useless = new HashMap<String, Integer>();
@@ -31,14 +31,18 @@ public class Items {
 		tools.put("rope", 20); // mickey
 		tools.put("map", 1); //dora 
 	}
+	
+	public void putItemInRoom() {
+		
+	}
 
 
 
-	public void addItem(Items i) {
+	public void addItem(Item i) {
 		useless.put(i, i.getWeight());
 	}
 	
-	public String itemName(Items i) {
+	public String itemName(Item i) {
 		
 	}
 	
@@ -46,7 +50,7 @@ public class Items {
 		
 	}
 
-	public String getUselessWeight(Items i) {
+	public String getUselessWeight(Item i) {
 	    	 if(i<useless.size() && useless.size() >=0)
 	    	        return useless.get(i).toString();
 	    	    else
@@ -57,11 +61,3 @@ public class Items {
 		
 	}
 }
-
-	
-
-	
-
-	public class tools {
-
-	}
