@@ -18,7 +18,7 @@ public class Player {
 			removeRoomInventory(food);
 			System.out.println("You just ate " + food + " : " + food.getSound());
 		}else {
-			return System.out.println("You cannot eat" + food + "because it cannot be found.")
+			return "You cannot eat" + food + "because it cannot be found.";
 		}
 		
 	}
@@ -26,21 +26,36 @@ public class Player {
 	public String take(tools tool) {
 		if(checkRoomInventory(tool) = true) {
 			addPlayerInventory(tool);
-			return System.out.println(tool + "added to your Inventory.");
-		} else {return System.out.println(tool + "is not in this room. It cannot be added to your inventory.");
+			return tool + "added to your Inventory.";
+		} else {return tool + "is not in this room. It cannot be added to your inventory.";
 	}
 
 	public String take(useless tool) {
 		if(checkRoomInventory(tool) = true) {
 				addPlayerInventory(tool);
-				return System.out.println(tool + "added to your Inventory.");
-			} else {return System.out.println(tool + "is not in this room. It cannot be added to your inventory.");
+				return tool + "added to your Inventory.";
+			} else {return tool + "is not in this room. It cannot be added to your inventory.";
+			}
 		}
 	
+	public String use(useless tool) {
+		return tool + "cannot be used here.";
+	}
 	
-	//use
+	public String use(tools tool) {
+		if(checkPlayerInventory(tool) == true) {
+			removePlayerInventory(tool);
+			System.out.println("You just ate " + tool + " : " + food.getSound());
+		}else if(checkRoomInventory(tool) == true) {
+			removeRoomInventory(tool);
+			System.out.println("You just ate " + tool + " : " + food.getSound());
+		}else {
+			return "You cannot eat" + tool + "because it cannot be found.";
+		}
+		
+	}
 	
-	//drink
+	
 	
 	
 	
