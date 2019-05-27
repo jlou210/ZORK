@@ -34,7 +34,7 @@ class Game {
 	// Room (assuming you have one).
 	private HashMap<String, Room> masterRoomMap;
 	
-	RoomInventory rooms = new RoomInventory(11, 10);	
+	Inventory rooms = new Inventory(11.0, 10);	
 	
 	
 	private void initRooms(String fileName) throws Exception {
@@ -113,7 +113,7 @@ class Game {
 
 		boolean finished = false;
 		while (!finished) {
-			PlayerInventory playerInven = new PlayerInventory(30);
+			Inventory playerInven = new Inventory(30);
 			Command command = parser.getCommand();
 			finished = processCommand(command);
 		}

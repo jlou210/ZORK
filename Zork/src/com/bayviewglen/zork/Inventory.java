@@ -55,6 +55,13 @@ public class Inventory {
 	private int numItems = 0;
 	private String[][] rooms = new String[numRooms][numItems];
 	
+	public Inventory(double numRooms, int numItems) {
+		this.numRooms = (int) numRooms;
+		this.numItems = numItems;
+		rooms = new String[(int) numRooms][numItems];
+
+	}	
+	
 	
 	public void initializeRooms() {
 		rooms[0] = new String [] {"HouseEntrance","Map"};
@@ -69,5 +76,7 @@ public class Inventory {
 		rooms[9] = new String [] {"BackStorageRoom", "Shed Key"};
 		rooms[10] = new String [] {"MaxRoom", "Antfarm"};
 	}
+	
+	
 
 }

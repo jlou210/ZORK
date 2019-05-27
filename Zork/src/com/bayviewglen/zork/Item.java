@@ -10,12 +10,15 @@ public class Item {
 	
 	public Item(String name, int weight, String description) {
 		this.name = name;
-		// ...
-		
+		this.weight = weight;
+		this.description = description;
 	}
+	HashMap<String, Integer> useless = new HashMap<String, Integer>();
+	HashMap<String, Integer> food = new HashMap<String, Integer>();
+	HashMap<String, Integer> tools = new HashMap<String, Integer>();
+
 	
 	public void initializeItems() {
-		HashMap<String, Integer> useless = new HashMap<String, Integer>();
 
 		useless.put("flower", 5); // dora
 		useless.put("branch", 10); // treehouse
@@ -23,7 +26,6 @@ public class Item {
 		useless.put("pillow", 10); // harry
 		useless.put("toy truck", 5); // max
 
-		HashMap<String, Integer> food = new HashMap<String, Integer>();
 
 		food.put("empanada", 5); // dora
 		food.put("pie", 10); // max
@@ -32,7 +34,6 @@ public class Item {
 		food.put("apple", 5); //treehouse
 		food.put("cake", 20); // mickey
 
-		HashMap<String, Integer> tools = new HashMap<String, Integer>();
 
 		tools.put("shovel", 15); // backyard
 		tools.put("flashlight", 5); // max
@@ -47,27 +48,31 @@ public class Item {
 
 
 
-	public void addItem(Item i) {
+	/*public void addItem(Item i) {
 		useless.put(i, i.getWeight());
+	}*/
+	
+	public String getItemName(Item i) {
+		return name;
 	}
 	
-	public String itemName(Item i) {
+	/*public boolean isValidItem() {
 		
-	}
-	
-	public boolean isValidItem() {
-		
-	}
+	}*/
 
-	public String getUselessWeight(Item i) {
-	    	 if(i<useless.size() && useless.size() >=0)
+	/*public String getUselessWeight(Item i) {
+	    	 if(i.length < useless.size() && useless.size() >=0)
 	    	        return useless.get(i).toString();
 	    	    else
 	    	        return "item does not exist";
-	}
+	}*/
 	
 	public int getWeight() {
-		
+		return weight;
+	}
+	
+	public String getItemDescription() {
+		return description;
 	}
 	
 	
