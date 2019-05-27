@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 public class Items {
-
 	public void initializeItems() {
 		HashMap<String, Integer> useless = new HashMap<String, Integer>();
 
