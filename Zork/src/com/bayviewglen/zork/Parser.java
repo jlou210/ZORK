@@ -87,6 +87,11 @@ class Parser {
 		
 		//have all the if statements that link it to the correct methods
 		
+		/*what this code does is it looks at the commands and checks to see if 
+		the following word is applicable
+		
+		for example u can read a book but you can read a broom
+		*/
 		
 		for (int i = 0; i < validscCommands.length; i++) {
 			if(word1 == validCommands[i]) {
