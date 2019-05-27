@@ -88,7 +88,7 @@ class Parser {
 		//have all the if statements that link it to the correct methods
 		
 		
-		for (int i = 0; i < validscommands.length; i++) {
+		for (int i = 0; i < validscCommands.length; i++) {
 			if(word1 == validCommands[i]) {
 				if(word2 == "book") {
 					
@@ -97,16 +97,14 @@ class Parser {
 					
 				}
 			}
-			else if(word1 == commands[1]) {
+			else if(word1 == validCommands[1]) {
 				if(word2 == "straight") {
 					
 				}
 			}
 		}
 		
-	}
-	
-	
+	}	
 
 	/**
 	 * Print out a list of valid command words.
