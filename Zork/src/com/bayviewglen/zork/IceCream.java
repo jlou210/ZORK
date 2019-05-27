@@ -6,3 +6,4 @@ public class IceCream extends food {
 	}
 	
 }
+
