@@ -93,7 +93,7 @@ class Parser {
 		for example u can read a book but you can read a broom
 		*/
 		
-		for (int i = 0; i < validscCommands.length; i++) {
+		for (int i = 0; i < validsCommands.length; i++) {
 			if(word1 == validCommands[i]) {
 				if(word2 == "book") {
 					
