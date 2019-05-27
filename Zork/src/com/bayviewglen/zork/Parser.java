@@ -66,7 +66,47 @@ class Parser {
 			return new Command(word1, word2);
 		else
 			return new Command(null, word2);
+		
+			
+		//Need something that checks for an adjective
+		
+		String adjective = "ly";
+		
+		if(word1.substring(word1.length()-1, word1.length())== adjective) {
+			
+		}
+		else if(word1.substring(word1.length()-1, word1.length())== adjective) {
+			
+		}
+		else if(word1.substring(word1.length()-1, word1.length())== adjective) {
+			
+		}
+		else if(word1.substring(word1.length()-1, word1.length())== adjective) {
+			
+		}
+		
+		//have all the if statements that link it to the correct methods
+		
+		
+		for (int i = 0; i < validscommands.length; i++) {
+			if(word1 == validCommands[i]) {
+				if(word2 == "book") {
+					
+				}
+				else if(word2=="poster") {
+					
+				}
+			}
+			else if(word1 == commands[1]) {
+				if(word2 == "straight") {
+					
+				}
+			}
+		}
+		
 	}
+	
+	
 
 	/**
 	 * Print out a list of valid command words.

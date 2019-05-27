@@ -14,9 +14,9 @@ public class RoomInventory {
 	public void initializeRooms() {
 		rooms[0] = new String [] {"HouseEntrance","Map"};
 		rooms[1] = new String [] {"Kitchen", "Table", "Raw Food", "Food", "Knife", "Cup", "Bottle","Counter", "Food"};
-		rooms[2] = new String [] {"LivingRoom", "Backpack", "Clothes", "Broom", "Leaflet Hint", "Staircase Up", "Staircase Down"};
+		rooms[2] = new String [] {"LivingRoom", "Backpack", "Clothes", "Broom", "Leaflet Hint"};
 		rooms[3] = new String [] {"ArthursRoom", "Glasses"};
-		rooms[4] = new String [] {"Mr.Ratburn'sClass", "Blackboard"};
+		rooms[4] = new String [] {"Mr.RatburnsClass", "Blackboard"};
 		rooms[5] = new String [] {"StudyRoom", "Library Card"};
 		rooms[6] = new String [] {"Library", "Bookshelf Key", "Bookshelf"};
 		rooms[7] = new String [] {"SecretRoom", "Flashlight"};
