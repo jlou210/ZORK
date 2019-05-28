@@ -125,16 +125,16 @@ public class Player {
 	}
 
 	public String drop(useless tool) {
-		if (checkPlayerInventory == true) {
-			removePlayerInventory(tool);
+		if (playerInventory.checkPlayerInventory(tool) == true) {
+			playerInventory.removePlayerInventory(tool);
 		} else {
 			System.out.println("You cannot drop something that's not in your inventory.");
 		}
 	}
 
 	public String drop(Food tool) {
-		if (checkPlayerInventory == true) {
-			removePlayerInventory(tool);
+		if (playerInventory.checkPlayerInventory(tool) == true) {
+			playerInventory.removePlayerInventory(tool);
 		} else {
 			System.out.println("You cannot drop something that's not in your inventory.");
 		}
