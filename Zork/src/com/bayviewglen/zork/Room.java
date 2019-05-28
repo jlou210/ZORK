@@ -147,7 +147,7 @@ class Room {
 		return (Room) exits.get(direction);
 	}
 
-	public String getRoomName() {
+	public static String getRoomName() {
 		return roomName;
 	}
 
