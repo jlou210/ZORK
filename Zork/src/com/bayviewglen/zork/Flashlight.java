@@ -6,3 +6,4 @@ public class Flashlight extends Tool {
 	}
 
 }
+
