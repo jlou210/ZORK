@@ -1,17 +1,22 @@
 package com.bayviewglen.zork;
 
 public class Player {
-	PlayerInventory inventory = new PlayerInventory(0);
+	Inventory playerInventory = new Inventory(0);
 	int inventoryWeight = 0;
 
 	public Player(int invenWeight) {
-		inventory = new PlayerInventory(invenWeight);
+		playerInventory = new Inventory(invenWeight);
 	}
 
 	// eat method
 
+<<<<<<< HEAD
 	public String eat(food food) {
 		if (checkPlayerInventory(food) == true) {
+=======
+	public String eat(Food food) {
+		if(inventory.checkPlayerInventory(food) == true) {
+>>>>>>> refs/remotes/origin/master
 			removePlayerInventory(food);
 			System.out.println("You just ate " + food + " : " + food.getSound());
 		} else if (checkRoomInventory(food) == true) {
@@ -23,9 +28,15 @@ public class Player {
 
 	}
 
+<<<<<<< HEAD
 	public String take(tools tool) {
 		if(checkRoomInventory(tool) == true) {
 			addPlayerInventory(tool);
+=======
+	public String take(Tool tool) {
+		if(checkRoomInventory(tool) = true) {
+			inventory.addPlayerInven(tool);
+>>>>>>> refs/remotes/origin/master
 			return tool + "added to your Inventory.";
 		} else {return tool + "is not in this room. It cannot be added to your inventory.";
 	}
@@ -43,6 +54,7 @@ public class Player {
 		return item1 + "cannot be used here.";
 	}
 	
+<<<<<<< HEAD
 	public String use(tools tool1) {
 		if(checkPlayerInventory(tool1) == true) {
 			System.out.println("You just used" + tool1);
@@ -50,6 +62,15 @@ public class Player {
 			removeRoomInventory(tool1);
 			System.out.println("You just used " + tool1);
 			addRoomInventory(tool1);
+=======
+	public String use(Tool tool) {
+		if(checkPlayerInventory(tool) == true) {
+			removePlayerInventory(tool);
+			System.out.println("You just ate " + tool + " : " + food.getSound());
+		}else if(checkRoomInventory(tool) == true) {
+			removeRoomInventory(tool);
+			System.out.println("You just ate " + tool + " : " + food.getSound());
+>>>>>>> refs/remotes/origin/master
 		}else {
 			return "You cannot use" + tool1 + "because it cannot be found.";
 		}

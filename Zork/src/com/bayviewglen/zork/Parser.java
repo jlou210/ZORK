@@ -33,6 +33,8 @@ class Parser {
 		String inputLine = ""; // will hold the full input line
 		String word1;
 		String word2;
+		String word3;
+		String word4;
 		System.out.print("> "); // print prompt
 		BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 		try {
@@ -49,6 +51,14 @@ class Parser {
 			word2 = tokenizer.nextToken(); // get second word
 		else
 			word2 = null;
+		if (tokenizer.hasMoreTokens())
+			word3 = tokenizer.nextToken(); // get third word
+		else
+			word3 = null;
+		if (tokenizer.hasMoreTokens())
+			word4 = tokenizer.nextToken(); // get fourth word
+		else
+			word4 = null;
 // note: we just ignore the rest of the input line.
 // Now check whether this word is known. If so, create a command
 		// with it. If not, create a "nil" command (for unknown command).
@@ -56,7 +66,50 @@ class Parser {
 			return new Command(word1, word2);
 		else
 			return new Command(null, word2);
-	}
+		
+			
+		//Need something that checks for an adjective
+		
+		String adjective = "ly";
+		
+		if(word1.substring(word1.length()-3)== adjective) {
+			
+		}
+		else if(word2.substring(word2.length()-3)== adjective) {
+			
+		}
+		else if(word3.substring(word3.length()-3)== adjective) {
+			
+		}
+		else if(word4.substring(word4.length()-3)== adjective) {
+			
+		}
+		
+		//have all the if statements that link it to the correct methods
+		
+		/*what this code does is it looks at the commands and checks to see if 
+		the following word is applicable
+		
+		for example u can read a book but you can read a broom
+		*/
+		
+		for (int i = 0; i < CommandWords.validCommands.length; i++) {
+			if(word1 == CommandWords.validCommands[i]) {
+				if(word2 == "book") {
+					
+				}
+				else if(word2=="poster") {
+					
+				}
+			}
+			else if(word1 == CommandWords.validCommands[1]) {
+				if(word2 == "straight") {
+					
+				}
+			}
+		}
+		
+	}	
 
 	/**
 	 * Print out a list of valid command words.
