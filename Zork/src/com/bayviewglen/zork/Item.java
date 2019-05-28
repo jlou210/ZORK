@@ -31,6 +31,9 @@ public class Item {
 	Cake cake = new Cake("cake", 20, "You picked up a 10 tier funfetti cake! It looks AMAZING!!! Eat this to win the game! Time to celebrate!");
 	
 	Map map = new Map("map", 1, "You picked up a map. This will help you navigate and teleporate back to the treehouse.");
+	Flashlight flashlight = new Flashlight("flashlight", 5, "You picked up a flashlight. This will help you see in the dark."); 
+	Glasses glasses = new Glasses("glasses", 5, "You picked up a pair of glasses. This will help with your blurry vision."); 
+	Book book = new Book("book", 5, "You picked up a book. You can read it."); 
 	
 	public void initializeItems() {
 
@@ -52,7 +55,9 @@ public class Item {
 		tools.put("shovel", 15); // backyard
 		tools.put("flashlight", 5); // max
 		tools.put("library card", 3); // arthur
+		tools.put("glasses", 5); // arthur
 		tools.put("rope", 20); // mickey
+		tools.put("book", 5); // mickey
 		tools.put("map", 1); //dora 
 	}
 	
