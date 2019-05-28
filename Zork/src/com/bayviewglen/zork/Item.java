@@ -13,14 +13,15 @@ public class Item {
 		this.weight = weight;
 		this.description = description;
 	}
-	HashMap<String, Integer> useless = new HashMap<String, Integer>();
-	HashMap<String, Integer> food = new HashMap<String, Integer>();
-	HashMap<String, Integer> tools = new HashMap<String, Integer>();
-
+	HashMap<Item, Integer> useless = new HashMap<Item, Integer>();
+	HashMap<Item, Integer> food = new HashMap<Item, Integer>();
+	HashMap<Item, Integer> tools = new HashMap<Item, Integer>();
+	
+	Item flower = new Item("flower", 5, "You picked up a blue flower. It smells pretty good, but I'm not sure if it's useful...");
 	
 	public void initializeItems() {
 
-		useless.put("flower", 5); // dora
+		useless.put(flower, 5); // dora
 		useless.put("branch", 10); // treehouse
 		useless.put("sand", 5); // backyard
 		useless.put("pillow", 10); // harry
