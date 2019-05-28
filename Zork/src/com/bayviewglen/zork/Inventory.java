@@ -92,6 +92,8 @@ public class Inventory {
 		//mickeymouse
 		rooms[15] = new String [] {"WinRoom", "Cake"}; 
 		
+		
+		
 	}
 	
 	
