@@ -5,7 +5,7 @@ import java.util.List;
 
 public class Inventory {
 	
-	private ArrayList<Item> items;
+	private static ArrayList<Item> items;
 	private int maxWeight;
 	private int currentPlayerWeight = 0;
 	
@@ -29,7 +29,7 @@ public class Inventory {
 
 		
 
-	public void addPlayerInven(Item item) {
+	public void addPlayerInventory(Item item) {
 		if (getPlayerWeight() + item.getWeight() <= maxWeight) {	//getWeight has to be implemented in the items class
 			items.add(item);
 			//NEED TO ALSO REMOVE ITEM FROM THE ROOM INVENTORY. LUCK.
@@ -43,10 +43,15 @@ public class Inventory {
 	}
 	
 	public boolean checkPlayerInventory(Item item) {
-		
+		for(Item i : items) {
+			if(i == item) {
+				return true;
+			}			
+		}
+		return false;
 	}
 	
-	public void removePlyaerInven() {
+	public void removePlayerInventory(Item item) {
 		
 	}
 	
