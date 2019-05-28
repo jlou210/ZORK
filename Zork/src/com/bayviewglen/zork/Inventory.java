@@ -67,7 +67,6 @@ public class Inventory {
 
 	}	
 	
-	
 	public void initializeRooms() {
 		//dora
 		rooms[0] = new String [] {"HouseEntrance","Map"};
@@ -91,7 +90,6 @@ public class Inventory {
 		rooms[14] = new String [] {"Good'sRoom", "Cookies", "Apple"};
 		//mickeymouse
 		rooms[15] = new String [] {"WinRoom", "Cake"};		
-		
 	}
 	
 }

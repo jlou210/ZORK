@@ -66,8 +66,7 @@ class Parser {
 			return new Command(word1, word2);
 		else
 			return new Command(null, word2);
-		
-			
+	
 		//Need something that checks for an adjective
 		
 		String adjective = "ly";
@@ -92,22 +91,24 @@ class Parser {
 		
 		for example u can read a book but you can read a broom
 		*/
-		
-		for (int i = 0; i < CommandWords.validCommands.length; i++) {
-			if(word1 == CommandWords.validCommands[i]) {
-				if(word2 == "book") {
-					
+		public void doAction(String[] word) {
+			for (int i = 0; i < CommandWords.validCommands.length; i++) {
+				if(word == CommandWords.validCommands[i]) {
+					if(word2 == "book") {
+						
+					}
+					else if(word2=="poster") {
+						
+					}
 				}
-				else if(word2=="poster") {
-					
-				}
-			}
-			else if(word1 == CommandWords.validCommands[i]) {
-				if(word2 == "straight") {
-					
+				else if(word1 == CommandWords.validCommands[i]) {
+					if(word2 == "straight") {
+						
+					}
 				}
 			}
 		}
+		
 		
 	}	
 
