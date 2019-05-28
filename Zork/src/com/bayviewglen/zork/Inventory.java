@@ -90,12 +90,8 @@ public class Inventory {
 		//treehouse
 		rooms[14] = new String [] {"Good'sRoom", "Cookies", "Apple"};
 		//mickeymouse
-		rooms[15] = new String [] {"WinRoom", "Cake"}; 
-		
-		
+		rooms[15] = new String [] {"WinRoom", "Cake"};		
 		
 	}
 	
-	
-
 }
