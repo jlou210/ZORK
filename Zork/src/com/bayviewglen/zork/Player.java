@@ -43,11 +43,11 @@ public class Player {
 			return item + "is not in this room. It cannot be added to your inventory.";
 		}
 	}
+
 //use method
 	public String use(useless item1) {
 		return item1 + "cannot be used here.";
 	}
-
 
 	public String use(Tool tool) {
 		if (checkPlayerInventory(tool) == true) {
@@ -61,6 +61,7 @@ public class Player {
 		}
 
 	}
+
 //get method
 	public String get(Tool tool2) {
 		if (checkRoomInventory == true) {
@@ -77,43 +78,69 @@ public class Player {
 			System.out.println("You cannot get" + item2 + "because it is not in this room.");
 		}
 	}
+
 //look method
 	public String look() {
 		System.out.println(roomDescription);
 	}
+
 //lookAt method
 	public String lookAt(Tool tool) {
-		if(checkRoomInventory(tool) == true) {
+		if (checkRoomInventory(tool) == true) {
 			return getItemDescription(tool);
-		}
-	}
-	
-	public String lookAt(useless tool) {
-		if(checkRoomInventory(tool) == true) {
-			return getItemDescription(tool);
-		}
-	}
-	
-//burn methods
-	public String burn(Tool tool) {
-		if(checkRoomInventory(tool) == true) {
-			removeRoomInventory(tool);
-			System.out.println(tool + "is burning!");
-			}
-		}
-	
-	public String burn(useless tool) {
-		if(checkRoomInventory(tool) == true) {
-			removeRoomInventory(tool);
-			System.out.println(tool + "is burning!");
-			}
-		}
-	
-	public String burn(Food tool) {
-		if(checkRoomInventory(tool) == true) {
-			removeRoomInventory(tool);
-			System.out.println(tool + "is burning!");
-			}
 		}
 	}
 
+	public String lookAt(useless tool) {
+		if (checkRoomInventory(tool) == true) {
+			return getItemDescription(tool);
+		}
+	}
+
+//burn methods
+	public String burn(Tool tool) {
+		if (checkRoomInventory(tool) == true) {
+			removeRoomInventory(tool);
+			System.out.println(tool + "is burning!");
+		}
+	}
+
+	public String burn(useless tool) {
+		if (checkRoomInventory(tool) == true) {
+			removeRoomInventory(tool);
+			System.out.println(tool + "is burning!");
+		}
+	}
+
+	public String burn(Food tool) {
+		if (checkRoomInventory(tool) == true) {
+			removeRoomInventory(tool);
+			System.out.println(tool + "is burning!");
+		}
+	}
+
+//drop methods
+	public String drop(Tool tool) {
+		if (checkPlayerInventory == true) {
+			removePlayerInventory(tool);
+		} else {
+			System.out.println("You cannot drop something that's not in your inventory.");
+		}
+	}
+
+	public String drop(useless tool) {
+		if (checkPlayerInventory == true) {
+			removePlayerInventory(tool);
+		} else {
+			System.out.println("You cannot drop something that's not in your inventory.");
+		}
+	}
+
+	public String drop(Food tool) {
+		if (checkPlayerInventory == true) {
+			removePlayerInventory(tool);
+		} else {
+			System.out.println("You cannot drop something that's not in your inventory.");
+		}
+	}
+}
