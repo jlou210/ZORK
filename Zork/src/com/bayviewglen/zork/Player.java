@@ -57,20 +57,23 @@ public class Player {
 	}
 	
 	public String get(tools tool2) {
-		if(checkRoomInventory = true) {
+		if(checkRoomInventory == true) {
 			addPlayerInventory(tool2);
 		}else { 
 			System.out.println("You cannot get" + tool2 + "because it is not in this room.");
 		}
 		}
 	
-	public String get(useless item2)){
-		if(checkRoomInventory = true) {
+	public String get(usless item2) {
+		if(checkRoomInventory == true) {
 			addPlayerInventory(item2);
-		}else { 
+		}else {
 			System.out.println("You cannot get" + item2 + "because it is not in this room.");
 		}
-		}
+	}
+	
+	public String look() {
+		System.out.println(description);
 	}
 
 }
