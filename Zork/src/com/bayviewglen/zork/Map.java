@@ -6,3 +6,4 @@ public class Map extends Tool {
 	}
 
 }
+
