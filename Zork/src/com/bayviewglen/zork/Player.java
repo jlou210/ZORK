@@ -24,14 +24,14 @@ public class Player {
 	}
 
 	public String take(tools tool) {
-		if(checkRoomInventory(tool) = true) {
+		if(checkRoomInventory(tool) == true) {
 			addPlayerInventory(tool);
 			return tool + "added to your Inventory.";
 		} else {return tool + "is not in this room. It cannot be added to your inventory.";
 	}
 
 	public String take(useless item){
-		if(checkRoomInventory(item) = true) {
+		if(checkRoomInventory(item) == true) {
 				addPlayerInventory(item);
 				removeRoomInventory(item);
 				return item + "added to your Inventory.";
