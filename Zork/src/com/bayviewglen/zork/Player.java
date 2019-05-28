@@ -27,15 +27,9 @@ public class Player {
 
 	}
 
-	public String take(tools tool) {
-		if(checkRoomInventory(tool) == true) {
-			addPlayerInventory(tool);
-		}
-
 	public String take(Tool tool) {
 		if(checkRoomInventory(tool) == true) {
 			inventory.addPlayerInventory(tool);
-
 			return tool + "added to your Inventory.";
 		} else {return tool + "is not in this room. It cannot be added to your inventory.";
 	}
@@ -49,19 +43,11 @@ public class Player {
 			return item + "is not in this room. It cannot be added to your inventory.";
 		}
 	}
-
+//use method
 	public String use(useless item1) {
 		return item1 + "cannot be used here.";
 	}
 
-	public String use(tools tool1) {
-		if(checkPlayerInventory(tool1) == true) {
-			System.out.println("You just used" + tool1);
-		}else if(checkRoomInventory(tool1) == true) {
-			removeRoomInventory(tool1);
-			System.out.println("You just used " + tool1);
-			addRoomInventory(tool1);
-		}
 
 	public String use(Tool tool) {
 		if (checkPlayerInventory(tool) == true) {
@@ -75,8 +61,8 @@ public class Player {
 		}
 
 	}
-
-	public String get(tools tool2) {
+//get method
+	public String get(Tool tool2) {
 		if (checkRoomInventory == true) {
 			addPlayerInventory(tool2);
 		} else {
@@ -84,16 +70,50 @@ public class Player {
 		}
 	}
 
-	public String get(usless item2) {
+	public String get(useless item2) {
 		if (checkRoomInventory == true) {
 			addPlayerInventory(item2);
 		} else {
 			System.out.println("You cannot get" + item2 + "because it is not in this room.");
 		}
 	}
-
+//look method
 	public String look() {
-		System.out.println(description);
+		System.out.println(roomDescription);
+	}
+//lookAt method
+	public String lookAt(Tool tool) {
+		if(checkRoomInventory(tool) == true) {
+			return getItemDescription(tool);
+		}
+	}
+	
+	public String lookAt(useless tool) {
+		if(checkRoomInventory(tool) == true) {
+			return getItemDescription(tool);
+		}
+	}
+	
+//burn methods
+	public String burn(Tool tool) {
+		if(checkRoomInventory(tool) == true) {
+			removeRoomInventory(tool);
+			System.out.println(tool + "is burning!");
+			}
+		}
+	
+	public String burn(useless tool) {
+		if(checkRoomInventory(tool) == true) {
+			removeRoomInventory(tool);
+			System.out.println(tool + "is burning!");
+			}
+		}
+	
+	public String burn(Food tool) {
+		if(checkRoomInventory(tool) == true) {
+			removeRoomInventory(tool);
+			System.out.println(tool + "is burning!");
+			}
+		}
 	}
 
-}
