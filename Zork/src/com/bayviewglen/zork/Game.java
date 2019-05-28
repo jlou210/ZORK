@@ -24,7 +24,7 @@ import java.util.Scanner;
  */
 class Game {
 	private Parser parser;
-	private Room currentRoom;
+	public static Room currentRoom;
 	// This is a MASTER object that contains all of the rooms and is easily
 	// accessible.
 	// The key will be the name of the room -> no spaces (Use all caps and
@@ -144,6 +144,11 @@ class Game {
 		String commandWord = command.getCommandWord();
 		if (commandWord.equals("help"))
 			printHelp();
+		else if (commandWord.equals("teleport")) {
+			if (command.hasSecondWord())
+				teleport(command.getSecondWord());
+			else
+				System.out.println("Teleport where?");
 		else if (commandWord.equals("go"))
 			goRoom(command);
 		else if (commandWord.equals("quit")) {
@@ -155,6 +160,16 @@ class Game {
 			System.out.println("Do you really think you should be eating at a time like this?");
 		}
 		return false;
+	}
+
+private void teleport(String secondWord) {
+		if(checkInventory(map) == true) {
+			currentRoom = masterRoomMap.get(secondWord.toUpperCase().replaceAll(" ", "_"));
+			System.out.println(currentRoom.longDescription());
+		}else {
+		// no
+			System.out.println("You do not have the map");
+		}
 	}
 
 // implementations of user commands:

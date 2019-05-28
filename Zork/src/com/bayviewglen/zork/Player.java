@@ -81,7 +81,7 @@ public class Player {
 	}
 
 //lookAt method
-	public String lookAt(Tool tool) {
+	public String lookAt(Item tool) {
 		if (checkRoomInventory(tool) == true) {
 			return tool.getItemDescription(tool);
 		}
@@ -94,29 +94,16 @@ public class Player {
 	}
 
 //burn methods
-	public String burn(Tool tool) {
+	public String burn(Item tool) {
 		if (checkRoomInventory(tool) == true) {
 			removeRoomInventory(tool);
 			System.out.println(tool + "is burning!");
 		}
 	}
 
-	public String burn(useless tool) {
-		if (checkRoomInventory(tool) == true) {
-			removeRoomInventory(tool);
-			System.out.println(tool + "is burning!");
-		}
-	}
-
-	public String burn(Food tool) {
-		if (checkRoomInventory(tool) == true) {
-			removeRoomInventory(tool);
-			System.out.println(tool + "is burning!");
-		}
-	}
 
 //drop methods
-	public String drop(Tool tool) {
+	public String drop(Item tool) {
 		if (checkPlayerInventory == true) {
 			removePlayerInventory(tool);
 		} else {
@@ -124,20 +111,13 @@ public class Player {
 		}
 	}
 
-	public String drop(useless tool) {
-		if (playerInventory.checkPlayerInventory(tool) == true) {
-			playerInventory.removePlayerInventory(tool);
-		} else {
-			System.out.println("You cannot drop something that's not in your inventory.");
-		}
-	}
+	
+//teleport methods
+	public String teleport() {
+		Room treehouse = "Main Room";
+		Game.currentRoom = treehouse;
 
-	public String drop(Food tool) {
-		if (playerInventory.checkPlayerInventory(tool) == true) {
-			playerInventory.removePlayerInventory(tool);
-		} else {
-			System.out.println("You cannot drop something that's not in your inventory.");
-		}
+	
 	}
 
 //read methods
