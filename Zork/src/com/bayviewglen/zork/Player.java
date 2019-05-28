@@ -10,12 +10,8 @@ public class Player {
 
 	// eat method
 
-	public String eat(food food) {
-		if (checkPlayerInventory(food) == true) {
-
 	public String eat(Food food) {
-		if (inventory.checkPlayerInventory(food) == true) {
-
+		if (checkPlayerInventory(food) == true) {
 			removePlayerInventory(food);
 			System.out.println("You just ate " + food + " : " + food.getSound());
 		} else if (checkRoomInventory(food) == true) {
@@ -142,5 +138,51 @@ public class Player {
 		} else {
 			System.out.println("You cannot drop something that's not in your inventory.");
 		}
+	}
+
+//read methods
+	public String read() {
+		return null;
+	}
+
+//go methods
+	public String go() {
+		return null;
+
+	}
+
+//drink method
+	public String drink() {
+		return null;
+	}
+
+//give method
+	public String give() {
+		return null;
+	}
+
+//move method
+	public String move() {
+		return null;
+	}
+
+//climb method
+	public String climb() {
+		return null;
+	}
+
+//throw method
+	public String throwObject() {
+		return null;
+	}
+
+//save method
+	public String save() {
+		return null;
+	}
+
+//help method
+	public String help() {
+		return null;
 	}
 }
