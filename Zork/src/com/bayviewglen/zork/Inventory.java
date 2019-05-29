@@ -109,8 +109,26 @@ public class Inventory {
 	}
 	//To Complete
 	public boolean checkRoomInventory(Item item) {
+		for(Item i : roomInventory) {
+			if(i == item) {
+				return true;
+			}			
+		}
 		return false;
 	}
+	
+	public void removeRoomInventory(Item item) {
+		boolean isValid = false;
+		
+		for (int i = 0; i < roomInventory.size(); i++) {
+			if (roomInventory.get(i) == item) {
+				roomInventory.remove(i);
+				isValid = true;
+				break;
+			}
+		}
+		public void addRoomInventory(Item item) {
+				roomInventory.add(item);
 	
 }
 	
