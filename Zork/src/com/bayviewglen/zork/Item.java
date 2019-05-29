@@ -14,6 +14,7 @@ public class Item {
 		this.description = description;
 		
 	}
+
 	static HashMap<Item, Integer> useless = new HashMap<Item, Integer>();
 	static HashMap<Item, Integer> food = new HashMap<Item, Integer>();
 	static HashMap<Item, Integer> tools = new HashMap<Item, Integer>();
