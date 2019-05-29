@@ -121,8 +121,9 @@ public class Player {
 	}
 
 //move method
-	public String move() {
-		return null;
+	public String move(Command command) {
+		return go(command);
+		
 	}
 
 //climb method
