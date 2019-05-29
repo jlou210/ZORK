@@ -6,7 +6,7 @@ public class LeafletHint extends Tool {
 	}
 	
 	public String message() {
-		return "Search for a hidden gem where you life is created.";
+		return "Search for a hidden treasure where green life is created.";
 	}
 
 }
