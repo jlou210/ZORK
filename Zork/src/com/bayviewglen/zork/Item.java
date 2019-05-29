@@ -14,9 +14,9 @@ public class Item {
 		this.description = description;
 		
 	}
-	HashMap<Item, Integer> useless = new HashMap<Item, Integer>();
-	HashMap<Item, Integer> food = new HashMap<Item, Integer>();
-	HashMap<Item, Integer> tools = new HashMap<Item, Integer>();
+	HashMap<String, Item> useless = new HashMap<String, Item>();
+	HashMap<String, Item> food = new HashMap<String, Item>();
+	HashMap<String, Item> tools = new HashMap<String, Item>();
 	
 	Item flower = new Item("flower", 5, "You picked up a sunflower. The pollen is making your nose itchy. I'm not sure it's useful...");
 	Item treeBranch = new Item("tree branch", 10, "You picked up a tree branch. It's long and pointy, but I don't think it's very useful.");
@@ -40,9 +40,9 @@ public class Item {
 	
 	public void initializeItems() {
 
-		useless.put(flower, 5); // dora
-		useless.put(treeBranch, 10); // treehouse
-		useless.put(sand, 5); // backyard
+		useless.put("flower", flower); // dora
+		useless.put("tree branch", treeBranch); // treehouse
+		useless.put("sand", sand); // backyard
 		useless.put(pillow, 10); // harry
 		useless.put(toyTruck, 5); // max
 
