@@ -152,7 +152,7 @@ public class Player {
 	
 //check player inventory (boolean)
 	public boolean checkPlayerInventory(Item tool) {
-		if()
+		if();
 	}
 
 //help method
