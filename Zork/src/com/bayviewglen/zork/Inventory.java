@@ -84,7 +84,7 @@ public class Inventory {
 	
 	public void initializeRooms() {
 		//dora
-		rooms[0] = new String [] {"House Entrance","map"};
+		rooms[0] = new String [] {"House Entrance","map", "Dora"};
 		rooms[1] = new String [] {"Dining Room", "pie", "ice cream"};
 		rooms[2] = new String [] {"Kitchen"};
 		rooms[3] = new String [] {"LivingRoom", "backpack", "clothes", "leaflet hint"};
