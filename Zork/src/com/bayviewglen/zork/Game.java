@@ -34,7 +34,7 @@ class Game {
 	private HashMap<String, Room> masterRoomMap;
 	private Map map = new Map("The Map", 1, "Hello! I am Map!");
 	Inventory rooms = new Inventory(11.0, 10);
-	Inventory playerInven = new Inventory(30);
+	Inventory playerInven = new Inventory(40);
 	
 	private void initRooms(String fileName) throws Exception {
 		masterRoomMap = new HashMap<String, Room>();
