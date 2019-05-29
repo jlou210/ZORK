@@ -110,8 +110,8 @@ public class Inventory {
 
 	//how do i convert from item to string
 	public boolean checkRoomInventory(Item item) {
-		for(Item i : rooms) {
-			if(i == item) {
+		for(String[] i : rooms) {
+			if(i == item.getItemName(i)) {
 				return true;
 			}			
 		}
@@ -121,8 +121,8 @@ public class Inventory {
 	public void removeRoomInventory(Item item) {
 		boolean isValid = false;
 		
-		for (int i = 0; i < rooms.size(); i++) {
-			if (rooms.get(i) == item) {
+		for (int i = 0; i < rooms.length; i++) {
+			if (rooms[i].equals(item)) {
 				rooms.remove(i);
 				isValid = true;
 				break;
