@@ -32,13 +32,14 @@ class Game {
 	// masterRoomMap.get("GREAT_ROOM") will return the Room Object that is the Great
 	// Room (assuming you have one).
 	private HashMap<String, Room> masterRoomMap;
-	private Map map = new Map("The Map", 25, "I am a map");
+	private Map map = new Map("The Map", 1, "Hello! I am Map!");
 	Inventory rooms = new Inventory(11.0, 10);
-	Inventory playerInven = new Inventory(30);
+	Inventory playerInven = new Inventory(40);
 	
 	private void initRooms(String fileName) throws Exception {
 		masterRoomMap = new HashMap<String, Room>();
 		Scanner roomScanner;
+		
 		try {
 			HashMap<String, HashMap<String, String>> exits = new HashMap<String, HashMap<String, String>>();
 			roomScanner = new Scanner(new File(fileName));
@@ -147,10 +148,8 @@ class Game {
 		if (commandWord.equals("help")) {
 			printHelp();
 		} else if (commandWord.equals("teleport")) {
-			if (command.hasSecondWord())
+			if (command.hasSecondWord()) //Can't teleport to a place of the player's choosing.
 				teleport(command.getSecondWord(), playerInven);
-			else 
-			System.out.println("Teleport where?");
 		}else if (commandWord.equals("go"))
 			goRoom(command);
 		 else if (commandWord.equals("quit")) {
