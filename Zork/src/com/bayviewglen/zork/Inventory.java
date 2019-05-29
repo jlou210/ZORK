@@ -95,7 +95,7 @@ public class Inventory {
 		rooms[7] = new String [] {"Library", "bookshelf key"};
 		rooms[8] = new String [] {"Secret Room", "flashlight", "trophy"};
 		//backyardigans
-		rooms[9] = new String [] {"Mini Garden", "dirt", "library card", "branch", "flower"};
+		rooms[9] = new String [] {"Mini Garden", "dirt", "library card", "tree branch", "flower"};
 		rooms[10] = new String [] {"Backyard", "sand"};
 		rooms[11] = new String [] {"Back Storage Room", "shed key"};
 		//max and ruby
