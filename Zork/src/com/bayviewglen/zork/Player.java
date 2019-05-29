@@ -30,15 +30,6 @@ public class Player {
 		} else {return tool + "is not in this room. It cannot be added to your inventory.";
 	}
 
-	public String take(useless item) {
-		if (checkRoomInventory(item) == true) {
-			playerInventory.addPlayerInventory(item);
-			removeRoomInventory(item);
-			return item + "added to your Inventory.";
-		} else {
-			return item + "is not in this room. It cannot be added to your inventory.";
-		}
-	}
 
 //use method
 	public String use(useless item1) {
@@ -59,7 +50,7 @@ public class Player {
 	}
 
 //get method
-	public String get(Tool tool2) {
+	public String get(Item tool2) {
 		if (checkRoomInventory == true) {
 			playerInventory.addPlayerInventory(tool2);
 		} else {
@@ -67,13 +58,7 @@ public class Player {
 		}
 	}
 
-	public String get(useless item2) {
-		if (checkRoomInventory == true) {
-			playerInventory.addPlayerInventory(item2);
-		} else {
-			System.out.println("You cannot get" + item2 + "because it is not in this room.");
-		}
-	}
+
 
 //look method
 	public String look() {
