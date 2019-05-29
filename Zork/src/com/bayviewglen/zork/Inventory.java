@@ -108,6 +108,11 @@ public class Inventory {
 		
 	}
 	
+	public boolean checkRoomInventory(Item item) {
+		if(getRoomName())
+		return false;
+	}
+	
 }
 	
  
