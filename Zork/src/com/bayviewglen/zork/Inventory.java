@@ -134,13 +134,12 @@ public class Inventory {
 
 
 	public boolean checkRoomInventory(Item item) {
-<<<<<<< HEAD
 		for (Item i : rooms) {
 			if (i == item) {
-=======
+
 		for(String[] i : rooms) {
 			if(i == item.getItemName(i)) {
->>>>>>> branch 'master' of https://github.com/jlou210/ZORK.git
+
 				return true;
 			}
 		}
