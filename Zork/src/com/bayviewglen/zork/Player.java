@@ -99,8 +99,8 @@ public class Player {
 	
 	
 //read methods
-	public String read() {
-		return null;
+	public String read(Item tool) {
+		return Item.description;
 	}
 
 //go methods
@@ -116,7 +116,7 @@ public class Player {
 
 //give method
 	public String give() {
-		return null;
+		;
 	}
 
 //move method
