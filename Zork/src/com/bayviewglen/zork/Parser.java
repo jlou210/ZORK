@@ -72,16 +72,16 @@ class Parser {
 		
 		String adjective = "ly";
 		
-		if(word1.substring(word1.length()-3)== adjective) {
+		if(word1.substring(word1.length()-1, word1.length())== adjective) {
 			
 		}
-		else if(word2.substring(word2.length()-3)== adjective) {
+		else if(word1.substring(word1.length()-1, word1.length())== adjective) {
 			
 		}
-		else if(word3.substring(word3.length()-3)== adjective) {
+		else if(word1.substring(word1.length()-1, word1.length())== adjective) {
 			
 		}
-		else if(word4.substring(word4.length()-3)== adjective) {
+		else if(word1.substring(word1.length()-1, word1.length())== adjective) {
 			
 		}
 		
@@ -102,7 +102,7 @@ class Parser {
 					
 				}
 			}
-			else if(word1 == CommandWords.validCommands[1]) {
+			else if(word1 == CommandWords.validCommands[i]) {
 				if(word2 == "straight") {
 					
 				}

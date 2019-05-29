@@ -13,7 +13,7 @@ package com.bayviewglen.zork;
 class CommandWords {
 	// a constant array that holds all valid command words
 	public static final String[] validCommands = { "read","go","quit","help", "eat", "get"
-			, "use", "drink", "look", "give", "move", "burn", "climb"};
+			, "use", "drink", "look", "give", "move", "burn", "climb", "teleport"};
 
 	/**
 	 * Constructor - initialise the command words.

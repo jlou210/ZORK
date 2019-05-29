@@ -19,12 +19,11 @@ import java.util.Scanner;
  * 
  * This main class creates and initialises all the others: it creates all rooms,
  * creates the parser and starts the game. It also evaluates the commands that
- * the parser returns.
- * another comment
+ * the parser returns. another comment
  */
 class Game {
-	private Parser parser;
-	private Room currentRoom;
+	private static Parser parser;
+	public static Room currentRoom;
 	// This is a MASTER object that contains all of the rooms and is easily
 	// accessible.
 	// The key will be the name of the room -> no spaces (Use all caps and
@@ -33,10 +32,18 @@ class Game {
 	// masterRoomMap.get("GREAT_ROOM") will return the Room Object that is the Great
 	// Room (assuming you have one).
 	private HashMap<String, Room> masterRoomMap;
+<<<<<<< HEAD
+
+	Inventory rooms = new Inventory(11.0, 10);
+
+=======
 	
-	Inventory rooms = new Inventory(11.0, 10);	
+	Inventory rooms = new Inventory(11.0, 10);
+	Inventory playerInven = new Inventory(30);
+
 	
 	
+>>>>>>> branch 'master' of https://github.com/jlou210/ZORK.git
 	private void initRooms(String fileName) throws Exception {
 		masterRoomMap = new HashMap<String, Room>();
 		Scanner roomScanner;
@@ -96,6 +103,9 @@ class Game {
 		try {
 			initRooms("data/Rooms.dat");
 			currentRoom = masterRoomMap.get("START_POINT");
+			playerInven = new Inventory(30);
+			Item.initializeItems();
+			play();
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -113,9 +123,8 @@ class Game {
 
 		boolean finished = false;
 		while (!finished) {
-			Inventory playerInven = new Inventory(30);
 			Command command = parser.getCommand();
-			finished = processCommand(command);
+			finished = processCommand(command, playerInven);
 		}
 		System.out.println("Thank you for playing.  Good bye.");
 	}
@@ -136,25 +145,60 @@ class Game {
 	 * Given a command, process (that is: execute) the command. If this command ends
 	 * the game, true is returned, otherwise false is returned.
 	 */
+<<<<<<< HEAD
 	private boolean processCommand(Command command) {
+		String commandWord = command.getCommandWord();
+=======
+	private boolean processCommand(Command command, Inventory playerInven) {
+>>>>>>> branch 'master' of https://github.com/jlou210/ZORK.git
 		if (command.isUnknown()) {
 			System.out.println("I don't know what you mean...");
 			return false;
 		}
-		String commandWord = command.getCommandWord();
-		if (commandWord.equals("help"))
+		if (commandWord.equals("help")) {
 			printHelp();
+		} else if (commandWord.equals("teleport")) {
+			if (command.hasSecondWord())
+<<<<<<< HEAD
+				teleport(command.getSecondWord());
+		} else {
+			System.out.println("Teleport where?");
+		}
+
+		if (commandWord.equals("go")) {
+=======
+				teleport(command.getSecondWord(), playerInven);
+			else
+				System.out.println("Teleport where?");
+			}
 		else if (commandWord.equals("go"))
+>>>>>>> branch 'master' of https://github.com/jlou210/ZORK.git
 			goRoom(command);
-		else if (commandWord.equals("quit")) {
+		} else if (commandWord.equals("quit")) {
 			if (command.hasSecondWord())
 				System.out.println("Quit what?");
-			else
-				return true; // signal that we want to quit
-		} else if (commandWord.equals("eat")) {
+		} else {
+			return true; // signal that we want to quit
+		}
+		if (commandWord.equals("eat")) {
 			System.out.println("Do you really think you should be eating at a time like this?");
 		}
 		return false;
+	}
+
+<<<<<<< HEAD
+	private void teleport(String secondWord) {
+		if (checkInventory(map) == true) {
+=======
+private void teleport(String secondWord, Inventory playerInven) {
+		if(playerInven.checkInventory(map) == true) {
+>>>>>>> branch 'master' of https://github.com/jlou210/ZORK.git
+			currentRoom = masterRoomMap.get(secondWord.toUpperCase().replaceAll(" ", "_"));
+			System.out.println(currentRoom.longDescription());
+		} else {
+			// no
+			System.out.println("You do not have the map");
+		}
 	}
 
 // implementations of user commands:
@@ -162,7 +206,7 @@ class Game {
 	 * Print out some help information. Here we print some stupid, cryptic message
 	 * and a list of the command words.
 	 */
-	private void printHelp() {
+	public static void printHelp() {
 		System.out.println("You are lost. You are alone. You wander");
 		System.out.println("around at Monash Uni, Peninsula Campus.");
 		System.out.println();
@@ -174,12 +218,11 @@ class Game {
 	 * Try to go to one direction. If there is an exit, enter the new room,
 	 * otherwise print an error message.
 	 */
-	private void goRoom(Command command) {
+	public static String goRoom(Command command) {
 		if (!command.hasSecondWord()) {
 			// if there is no second word, we don't know where to go...
 			System.out.println("Go where?");
-			return;
-		}
+		}else {
 		String direction = command.getSecondWord();
 // Try to leave current room.
 		Room nextRoom = currentRoom.nextRoom(direction);
@@ -190,5 +233,7 @@ class Game {
 			System.out.println(currentRoom.longDescription());
 		}
 	}
+		return null;
 
+}
 }

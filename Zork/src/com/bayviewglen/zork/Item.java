@@ -4,9 +4,9 @@ import java.util.HashMap;
 
 public class Item {
 	
-	private String name;
-	private int weight;
-	private String description;
+	public String name;
+	public int weight;
+	public static String description;
 	
 	public Item(String name, int weight, String description) {
 		this.name = name;
@@ -34,35 +34,31 @@ public class Item {
 	Flashlight flashlight = new Flashlight("flashlight", 5, "You picked up a flashlight. This will help you see in the dark."); 
 	Glasses glasses = new Glasses("glasses", 5, "You picked up a pair of glasses. This will help with your blurry vision."); 
 	Book book = new Book("book", 5, "You picked up a book. You can read it."); 
-	LibraryCard libraryCard = new LibraryCard("library card", 1, "You picked up a library card. Having fun isn't hard."); 
-	LeafletHint leafletHint = new LeafletHint("leaflet hint", 1, "You picked up a leaflet hint. Read for a clue."); 
-	BookshelfKey bookshelfKey = new BookshelfKey("bookshelf key", 3, "You picked up a bookshelf key. Hmm..."); 
-	
-	
 	
 	public void initializeItems() {
 
 		useless.put(flower, 5); // dora
-		useless.put(treeBranch, 10); // treehouse
-		useless.put(sand, 5); // backyard
-		useless.put(pillow, 10); // harry
-		useless.put(toyTruck, 5); // max
+		useless.put("tree branch", 10); // treehouse
+		useless.put("sand", 5); // backyard
+		useless.put("pillow", 10); // harry
+		useless.put("toy truck", 5); // max
 
 
-		food.put(empanada, 5); // dora
-		food.put(pie, 10); // max
-		food.put(iceCream, 5); // arthur
-		food.put(cookies, 5); //backyard
-		food.put(apple, 5); //treehouse
-		food.put(cake, 20); // mickey
+		food.put("empanada", 5); // dora
+		food.put("pie", 10); // max
+		food.put("ice cream", 5); // arthur
+		food.put("cookies", 5); //backyard
+		food.put("apple", 5); //treehouse
+		food.put("cake", 20); // mickey
 
-		tools.put(flashlight, 5); // max
-		tools.put(libraryCard, 1); // arthur
-		tools.put(glasses, 5); // arthur
-		tools.put(book, 5); // mickey
-		tools.put(map, 1); //dora 
-		tools.put(leafletHint, 1); //dora 
-		tools.put(bookshelfKey, 3); 
+
+		tools.put("shovel", 15); // backyard
+		tools.put("flashlight", 5); // max
+		tools.put("library card", 3); // arthur
+		tools.put("glasses", 5); // arthur
+		tools.put("rope", 20); // mickey
+		tools.put("book", 5); // mickey
+		tools.put("map", 1); //dora 
 	}
 	
 	public void putItemInRoom() {

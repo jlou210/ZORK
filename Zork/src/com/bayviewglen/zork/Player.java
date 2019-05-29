@@ -11,12 +11,12 @@ public class Player {
 	// eat method
 
 	public String eat(Food food) {
-		if (checkPlayerInventory(food) == true) {
+		if (playerInventory.checkPlayerInventory(food) == true) {
 			playerInventory.removePlayerInventory(food);
-			System.out.println("You just ate " + food + " : " + food.getSound());
+			System.out.println("You just ate " + food + " : " + food.sound());
 		} else if (checkRoomInventory(food) == true) {
 			removeRoomInventory(food);
-			System.out.println("You just ate " + food + " : " + food.getSound());
+			System.out.println("You just ate " + food + " : " + food.sound());
 		} else {
 			return "You cannot eat" + food + "because it cannot be found.";
 		}
@@ -30,36 +30,24 @@ public class Player {
 		} else {return tool + "is not in this room. It cannot be added to your inventory.";
 	}
 
-	public String take(useless item) {
-		if (checkRoomInventory(item) == true) {
-			playerInventory.addPlayerInventory(item);
-			removeRoomInventory(item);
-			return item + "added to your Inventory.";
-		} else {
-			return item + "is not in this room. It cannot be added to your inventory.";
-		}
-	}
 
 //use method
-	public String use(useless item1) {
-		return item1 + "cannot be used here.";
-	}
-
-	public String use(Tool tool) {
+	
+	public String use(Item tool) {
 		if (playerInventory.checkPlayerInventory(tool) == true) {
 			playerInventory.removePlayerInventory(tool);
 			System.out.println("You just used " + tool + ".");
 		} else if (checkRoomInventory(tool) == true) {
 			removeRoomInventory(tool);
-			System.out.println("You just ate " + tool + " : " + food.getSound());
+			System.out.println("You just ate " + tool + " : " + food.sound()); //Why are you eating the tool?!
 		} else {
-			return "You cannot use" + tool1 + "because it cannot be found.";
+			return "You cannot use" + tool + "because it cannot be found.";
 		}
 
 	}
 
 //get method
-	public String get(Tool tool2) {
+	public String get(Item tool2) {
 		if (checkRoomInventory == true) {
 			playerInventory.addPlayerInventory(tool2);
 		} else {
@@ -67,13 +55,7 @@ public class Player {
 		}
 	}
 
-	public String get(useless item2) {
-		if (checkRoomInventory == true) {
-			playerInventory.addPlayerInventory(item2);
-		} else {
-			System.out.println("You cannot get" + item2 + "because it is not in this room.");
-		}
-	}
+
 
 //look method
 	public String look() {
@@ -81,7 +63,7 @@ public class Player {
 	}
 
 //lookAt method
-	public String lookAt(Tool tool) {
+	public String lookAt(Item tool) {
 		if (checkRoomInventory(tool) == true) {
 			return tool.getItemDescription(tool);
 		}
@@ -94,37 +76,16 @@ public class Player {
 	}
 
 //burn methods
-	public String burn(Tool tool) {
+	public String burn(Item tool) {
 		if (checkRoomInventory(tool) == true) {
 			removeRoomInventory(tool);
 			System.out.println(tool + "is burning!");
 		}
 	}
 
-	public String burn(useless tool) {
-		if (checkRoomInventory(tool) == true) {
-			removeRoomInventory(tool);
-			System.out.println(tool + "is burning!");
-		}
-	}
-
-	public String burn(Food tool) {
-		if (checkRoomInventory(tool) == true) {
-			removeRoomInventory(tool);
-			System.out.println(tool + "is burning!");
-		}
-	}
 
 //drop methods
-	public String drop(Tool tool) {
-		if (checkPlayerInventory == true) {
-			removePlayerInventory(tool);
-		} else {
-			System.out.println("You cannot drop something that's not in your inventory.");
-		}
-	}
-
-	public String drop(useless tool) {
+	public String drop(Item tool) {
 		if (playerInventory.checkPlayerInventory(tool) == true) {
 			playerInventory.removePlayerInventory(tool);
 		} else {
@@ -132,22 +93,16 @@ public class Player {
 		}
 	}
 
-	public String drop(Food tool) {
-		if (playerInventory.checkPlayerInventory(tool) == true) {
-			playerInventory.removePlayerInventory(tool);
-		} else {
-			System.out.println("You cannot drop something that's not in your inventory.");
-		}
-	}
-
+	
+	
 //read methods
-	public String read() {
-		return null;
+	public String read(Item tool) {
+		return Item.description;
 	}
 
 //go methods
-	public String go() {
-		return null;
+	public String go(Command command) {
+		return Game.goRoom(command);
 
 	}
 
@@ -157,8 +112,12 @@ public class Player {
 	}
 
 //give method
-	public String give() {
-		return null;
+	public String give(Item tool) {
+		if(checkPlayerInventory(tool) == true) {
+			System.out.println("You gave away" + tool+ ".");
+		}else {
+			System.out.println("You cannot give something that's not in your inventory.");
+		}
 	}
 
 //move method
@@ -172,8 +131,12 @@ public class Player {
 	}
 
 //throw method
-	public String throwObject() {
-		return null;
+	public String throwObject(Item tool) {
+		if(checkPlayerInventory(tool) == true) {
+			System.out.println("You have thrown" + tool);
+		}else {
+			System.out.println("You cannot throw" + tool + "because it is not in your inventory.");
+		}
 	}
 
 //save method
@@ -182,7 +145,7 @@ public class Player {
 	}
 
 //help method
-	public String help() {
-		return null;
+	public void help() {
+		Game.printHelp();
 	}
 }

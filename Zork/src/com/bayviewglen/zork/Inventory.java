@@ -52,6 +52,20 @@ public class Inventory {
 	}
 	
 	public void removePlayerInventory(Item item) {
+		boolean isValid = false;
+		
+		for (int i = 0; i < items.size(); i++) {
+			if (items.get(i) == item) {
+				items.remove(i);
+				isValid = true;
+				break;
+			}
+		}
+		
+		if (!isValid) {
+			System.out.println("You do not have this item in your inventory.");
+		}
+		
 		
 	}
 	
@@ -68,20 +82,30 @@ public class Inventory {
 	}	
 	
 	
-	static public void initializeRooms() {
-		rooms[0] = new String [] {"HouseEntrance","map"};
-		rooms[1] = new String [] {"Kitchen", "table", "raw food", "food", "knife", "cup", "bottle","counter", "food"};
-		rooms[2] = new String [] {"Living Room", "backpack", "clothes", "broom", "leaflet hint"};
-		rooms[3] = new String [] {"Arthur's Room", "glasses"};
-		rooms[4] = new String [] {"Mr.Ratburn's Class", "blackboard"};
-		rooms[5] = new String [] {"Study Room"};
-		rooms[6] = new String [] {"Library", "bookshelf key", "bookshelf"};
-		rooms[7] = new String [] {"Secret Room", "flashlight"};
-		rooms[8] = new String [] {"Mini Garden", "dirt", "library card", "branch"};
-		rooms[9] = new String [] {"Back Storage Room", "shed key"};
-		rooms[10] = new String [] {"Max's Room", "toy truck"};
+	public void initializeRooms() {
+		//dora
+		rooms[0] = new String [] {"HouseEntrance","Map"};
+		rooms[1] = new String [] {"DiningRoom", "Pie", "Ice Cream"};
+		rooms[2] = new String [] {"Kitchen", "Raw Food", "Food", "Cup","Food"};
+		rooms[3] = new String [] {"LivingRoom", "Backpack", "Clothes", "Broom", "Leaflet Hint"};
+		//arthur
+		rooms[4] = new String [] {"Arthur'sRoom", "Glasses"};
+		rooms[5] = new String [] {"Mr.Ratburn'sClass"};
+		rooms[6] = new String [] {"StudyRoom", "Library Card"};
+		rooms[7] = new String [] {"Library", "Bookshelf Key"};
+		rooms[8] = new String [] {"SecretRoom", "Flashlight", "Trophy"};
+		//backyardigans
+		rooms[9] = new String [] {"Minigarden", "Dirt", "Library Card", "Sticks", "Flower"};
+		rooms[10] = new String [] {"Backyard", "Tree Branch", "Sand"};
+		rooms[11] = new String [] {"BackStorageRoom", "Shed Key"};
+		//max and ruby
+		rooms[12] = new String [] {"MaxRoom", "Antfarm", "Empanada", "Toy Truck"};
+		rooms[13] = new String [] {"Ruby'sRoom", "Pillow"};
+		//treehouse
+		rooms[14] = new String [] {"Good'sRoom", "Cookies", "Apple"};
+		//mickeymouse
+		rooms[15] = new String [] {"WinRoom", "Cake"};		
+		
 	}
 	
-	
-
 }
