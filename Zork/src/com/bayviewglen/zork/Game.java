@@ -89,7 +89,7 @@ class Game {
 	}
 
 	/**
-	 * Create the game and initialise its internal map.
+	 * Create the game and initialize its internal map.
 	 */
 	public Game() {
 		try {
@@ -168,7 +168,7 @@ class Game {
 
 
 private void teleport(String secondWord, Inventory playerInven) {
-		if(playerInven.checkInventory(map)) {
+		if(playerInven.checkPlayerInventory(map)) {
 			currentRoom = masterRoomMap.get(secondWord.toUpperCase().replaceAll(" ", "_"));
 			System.out.println(currentRoom.longDescription());
 		} else {

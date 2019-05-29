@@ -107,9 +107,8 @@ public class Inventory {
 		rooms[15] = new String [] {"Win Room", "cake"};		
 		
 	}
-	
+	//To Complete
 	public boolean checkRoomInventory(Item item) {
-		if(getRoomName())
 		return false;
 	}
 	
