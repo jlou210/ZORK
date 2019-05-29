@@ -43,6 +43,7 @@ public class Item {
 	static Backpack backpack = new Backpack("backpack", 1, "You picked up a backpack. You can use it hold all your items!"); 
 	
 	
+	
 	public static void initializeItems() {
 
 		useless.put("flower", flower); // dora
