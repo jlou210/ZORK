@@ -6,7 +6,7 @@ public class Item {
 	
 	public String name;
 	public int weight;
-	public String description;
+	public static String description;
 	
 	public Item(String name, int weight, String description) {
 		this.name = name;

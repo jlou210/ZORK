@@ -107,10 +107,29 @@ public class Inventory {
 		rooms[15] = new String [] {"Win Room", "cake"};		
 		
 	}
-	//To Complete
+
+	//how do i convert from item to string
 	public boolean checkRoomInventory(Item item) {
+		for(Item i : rooms) {
+			if(i == item) {
+				return true;
+			}			
+		}
 		return false;
 	}
+	
+	public void removeRoomInventory(Item item) {
+		boolean isValid = false;
+		
+		for (int i = 0; i < rooms.size(); i++) {
+			if (rooms.get(i) == item) {
+				rooms.remove(i);
+				isValid = true;
+				break;
+			}
+		}
+		public void addRoomInventory(Item item) {
+				rooms.add(item);
 	
 }
 	
