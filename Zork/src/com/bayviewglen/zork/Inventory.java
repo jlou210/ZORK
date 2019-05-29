@@ -102,7 +102,7 @@ public class Inventory {
 		rooms[12] = new String [] {"Max's Room", "ant farm", "empanada", "toy truck"};
 		rooms[13] = new String [] {"Ruby's Room", "pillow"};
 		//treehouse
-		rooms[14] = new String [] {"Pantry", "cookies"};
+		rooms[14] = new String [] {"Pantry", "cookies", "donuts"};
 		//mickeymouse
 		rooms[15] = new String [] {"Win Room", "cake"};		
 		
