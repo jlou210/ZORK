@@ -34,7 +34,9 @@ class Game {
 	// Room (assuming you have one).
 	private HashMap<String, Room> masterRoomMap;
 	
-	Inventory rooms = new Inventory(11.0, 10);	
+	Inventory rooms = new Inventory(11.0, 10);
+	Inventory playerInven = new Inventory(30);
+
 	
 	
 	private void initRooms(String fileName) throws Exception {
@@ -96,6 +98,9 @@ class Game {
 		try {
 			initRooms("data/Rooms.dat");
 			currentRoom = masterRoomMap.get("START_POINT");
+			playerInven = new Inventory(30);
+			Item.initializeItems();
+			play();
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -113,9 +118,8 @@ class Game {
 
 		boolean finished = false;
 		while (!finished) {
-			Inventory playerInven = new Inventory(30);
 			Command command = parser.getCommand();
-			finished = processCommand(command);
+			finished = processCommand(command, playerInven);
 		}
 		System.out.println("Thank you for playing.  Good bye.");
 	}
@@ -136,7 +140,7 @@ class Game {
 	 * Given a command, process (that is: execute) the command. If this command ends
 	 * the game, true is returned, otherwise false is returned.
 	 */
-	private boolean processCommand(Command command) {
+	private boolean processCommand(Command command, Inventory playerInven) {
 		if (command.isUnknown()) {
 			System.out.println("I don't know what you mean...");
 			return false;
@@ -146,9 +150,10 @@ class Game {
 			printHelp();
 		else if (commandWord.equals("teleport")) {
 			if (command.hasSecondWord())
-				teleport(command.getSecondWord());
+				teleport(command.getSecondWord(), playerInven);
 			else
 				System.out.println("Teleport where?");
+			}
 		else if (commandWord.equals("go"))
 			goRoom(command);
 		else if (commandWord.equals("quit")) {
@@ -162,8 +167,8 @@ class Game {
 		return false;
 	}
 
-private void teleport(String secondWord) {
-		if(checkInventory(map) == true) {
+private void teleport(String secondWord, Inventory playerInven) {
+		if(playerInven.checkInventory(map) == true) {
 			currentRoom = masterRoomMap.get(secondWord.toUpperCase().replaceAll(" ", "_"));
 			System.out.println(currentRoom.longDescription());
 		}else {
