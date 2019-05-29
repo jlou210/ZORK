@@ -39,6 +39,7 @@ class Game {
 	private void initRooms(String fileName) throws Exception {
 		masterRoomMap = new HashMap<String, Room>();
 		Scanner roomScanner;
+		
 		try {
 			HashMap<String, HashMap<String, String>> exits = new HashMap<String, HashMap<String, String>>();
 			roomScanner = new Scanner(new File(fileName));
