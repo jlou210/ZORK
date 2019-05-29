@@ -69,7 +69,7 @@ class Parser {
 		//After this is dead code. whY>!>>!>..1./??!?!?!??!?!?!??!?!wa;jh weuil fleubg puifhudhoidgrhugvf'ngfofh'hjfuh
 			
 		//Need something that checks for an adjective
-		
+		/*
 		String adjective = "ly";
 		
 		if(word1.substring(word1.length()-1, word1.length())== adjective) {
@@ -87,11 +87,11 @@ class Parser {
 		
 		//have all the if statements that link it to the correct methods
 		
-		/*what this code does is it looks at the commands and checks to see if 
-		the following word is applicable
+		//what this code does is it looks at the commands and checks to see if 
+		//the following word is applicable
 		
-		for example u can read a book but you can read a broom
-		*/
+		//for example u can read a book but you can read a broom
+		
 		
 		for (int i = 0; i < CommandWords.validCommands.length; i++) {
 			if(word1 == CommandWords.validCommands[i]) {
@@ -108,7 +108,7 @@ class Parser {
 				}
 			}
 		}
-		
+		*/
 	}	
 
 	/**

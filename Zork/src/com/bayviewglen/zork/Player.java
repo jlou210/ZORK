@@ -10,12 +10,12 @@ public class Player {
 
 	// eat method
 
-	public String eat(Food food) {
+	public String eat(Food food, Inventory playerInven) {
 		if (playerInventory.checkPlayerInventory(food) == true) {
 			playerInventory.removePlayerInventory(food);
 			System.out.println("You just ate " + food + " : " + food.sound());
-		} else if (checkRoomInventory(food) == true) {
-			removeRoomInventory(food);
+		} else if (Inventory.checkRoomInventory(food) == true) {
+			Inventory.removeRoomInventory(food);
 			System.out.println("You just ate " + food + " : " + food.sound());
 		} else {
 			return "You cannot eat" + food + "because it cannot be found.";
@@ -23,7 +23,7 @@ public class Player {
 
 	}
 
-	public String take(Item tool) {
+	public String take(Item tool, Inventory playerInven) {
 		if(Inventory.checkRoomInventory(tool) == true) {
 			playerInventory.addPlayerInventory(tool);
 			return tool + "added to your Inventory.";
@@ -32,7 +32,7 @@ public class Player {
 
 //use method
 
-	public String use(Item tool) {
+	public String use(Item tool, Inventory playerInven) {
 		if (playerInventory.checkPlayerInventory(tool) == true) {
 			playerInventory.removePlayerInventory(tool);
 			System.out.println("You just used " + tool + ".");
@@ -46,7 +46,7 @@ public class Player {
 	}
 
 //get method
-	public String get(Item tool2) {
+	public String get(Item tool2, Inventory playerInven) {
 		if (checkRoomInventory == true) {
 			playerInventory.addPlayerInventory(tool2);
 		} else {
@@ -102,14 +102,14 @@ public class Player {
 	}
 
 //drink method
-	public String drink(Drink water) {
+	/*public String drink(Drink water) {
 		if(playerInventory.checkPlayerInventory(water) == true) {
 			playerInventory.removePlayerInventory(water);
 			System.out.println("You drank" + water + ".");
 		}else {
 			System.out.println("You cannot drinks something that is not in your inventory.");
 		}
-	}
+	}*/
 
 //give method
 	public void give(Item tool) {
