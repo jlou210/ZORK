@@ -104,8 +104,8 @@ public class Player {
 	}
 
 //go methods
-	public String go() {
-		return null;
+	public String go(Command command) {
+		Game.goRoom(command);
 
 	}
 
@@ -134,7 +134,7 @@ public class Player {
 		if(checkPlayerInventory(tool) == true) {
 			System.out.println("You have thrown" + tool);
 		}else {
-			System.out.println("You cannot throw" + tools + "because it is not in your inventory.");
+			System.out.println("You cannot throw" + tool + "because it is not in your inventory.");
 		}
 	}
 
