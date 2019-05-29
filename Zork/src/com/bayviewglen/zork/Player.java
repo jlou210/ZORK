@@ -11,12 +11,12 @@ public class Player {
 	// eat method
 
 	public String eat(Food food) {
-		if (checkPlayerInventory(food) == true) {
+		if (playerInventory.checkPlayerInventory(food) == true) {
 			playerInventory.removePlayerInventory(food);
-			System.out.println("You just ate " + food + " : " + food.getSound());
+			System.out.println("You just ate " + food + " : " + food.sound());
 		} else if (checkRoomInventory(food) == true) {
 			removeRoomInventory(food);
-			System.out.println("You just ate " + food + " : " + food.getSound());
+			System.out.println("You just ate " + food + " : " + food.sound());
 		} else {
 			return "You cannot eat" + food + "because it cannot be found.";
 		}
@@ -30,15 +30,6 @@ public class Player {
 		} else {return tool + "is not in this room. It cannot be added to your inventory.";
 	}
 
-	public String take(useless item) {
-		if (checkRoomInventory(item) == true) {
-			playerInventory.addPlayerInventory(item);
-			removeRoomInventory(item);
-			return item + "added to your Inventory.";
-		} else {
-			return item + "is not in this room. It cannot be added to your inventory.";
-		}
-	}
 
 //use method
 	public String use(useless item1) {
@@ -51,15 +42,15 @@ public class Player {
 			System.out.println("You just used " + tool + ".");
 		} else if (checkRoomInventory(tool) == true) {
 			removeRoomInventory(tool);
-			System.out.println("You just ate " + tool + " : " + food.getSound());
+			System.out.println("You just ate " + tool + " : " + food.sound()); //Why are you eating the tool?!
 		} else {
-			return "You cannot use" + tool1 + "because it cannot be found.";
+			return "You cannot use" + tool + "because it cannot be found.";
 		}
 
 	}
 
 //get method
-	public String get(Tool tool2) {
+	public String get(Item tool2) {
 		if (checkRoomInventory == true) {
 			playerInventory.addPlayerInventory(tool2);
 		} else {
@@ -67,13 +58,7 @@ public class Player {
 		}
 	}
 
-	public String get(useless item2) {
-		if (checkRoomInventory == true) {
-			playerInventory.addPlayerInventory(item2);
-		} else {
-			System.out.println("You cannot get" + item2 + "because it is not in this room.");
-		}
-	}
+
 
 //look method
 	public String look() {
@@ -104,30 +89,23 @@ public class Player {
 
 //drop methods
 	public String drop(Item tool) {
-		if (checkPlayerInventory == true) {
-			removePlayerInventory(tool);
+		if (playerInventory.checkPlayerInventory(tool) == true) {
+			playerInventory.removePlayerInventory(tool);
 		} else {
 			System.out.println("You cannot drop something that's not in your inventory.");
 		}
 	}
 
 	
-//teleport methods
-	public String teleport() {
-		Room treehouse = "Main Room";
-		Game.currentRoom = treehouse;
-
 	
-	}
-
 //read methods
 	public String read() {
 		return null;
 	}
 
 //go methods
-	public String go() {
-		return null;
+	public String go(Command command) {
+		Game.goRoom(command);
 
 	}
 
@@ -152,8 +130,12 @@ public class Player {
 	}
 
 //throw method
-	public String throwObject() {
-		return null;
+	public String throwObject(Item tool) {
+		if(checkPlayerInventory(tool) == true) {
+			System.out.println("You have thrown" + tool);
+		}else {
+			System.out.println("You cannot throw" + tool + "because it is not in your inventory.");
+		}
 	}
 
 //save method
