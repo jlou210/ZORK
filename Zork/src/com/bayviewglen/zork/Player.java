@@ -32,11 +32,8 @@ public class Player {
 
 
 //use method
-	public String use(useless item1) {
-		return item1 + "cannot be used here.";
-	}
-
-	public String use(Tool tool) {
+	
+	public String use(Item tool) {
 		if (playerInventory.checkPlayerInventory(tool) == true) {
 			playerInventory.removePlayerInventory(tool);
 			System.out.println("You just used " + tool + ".");
@@ -115,8 +112,12 @@ public class Player {
 	}
 
 //give method
-	public String give() {
-		;
+	public String give(Item tool) {
+		if(checkPlayerInventory(tool) == true) {
+			System.out.println("You gave away" + tool+ ".");
+		}else {
+			System.out.println("You cannot give something that's not in your inventory.");
+		}
 	}
 
 //move method
