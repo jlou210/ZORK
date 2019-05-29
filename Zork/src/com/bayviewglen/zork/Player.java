@@ -145,8 +145,12 @@ public class Player {
 	}
 
 //throw method
-	public String throwObject() {
-		return null;
+	public String throwObject(Item tool) {
+		if(checkPlayerInventory(tool) == true) {
+			System.out.println("You have thrown" + tool);
+		}else {
+			System.out.println("You cannot throw" + tools + "because it is not in your inventory.");
+		}
 	}
 
 //save method
