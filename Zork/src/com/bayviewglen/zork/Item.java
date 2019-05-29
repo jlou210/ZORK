@@ -38,6 +38,7 @@ public class Item {
 	static Book book = new Book("book", 5, "You picked up a book. You can read it."); 
 	static LeafletHint leafletHint = new LeafletHint("leaflet hint", 1, "You picked up a leaflet hint. Hmm..."); 
 	static LibraryCard libraryCard = new LibraryCard("library card", 1, "You picked up a library card. Having fun isn't hard."); 
+	static Clothes clothes = new Clothes("clothes", 10, "You picked up some clothes, but the outfit you are wearing is fine."); 
 	
 	public static void initializeItems() {
 
@@ -46,6 +47,7 @@ public class Item {
 		useless.put("sand", sand); // backyard
 		useless.put("pillow", pillow); // harry
 		useless.put("toy truck", toyTruck); // max
+		useless.put("clothes", clothes); 
 
 
 		food.put("empanada", empanada); // dora
