@@ -84,27 +84,27 @@ public class Inventory {
 	
 	public void initializeRooms() {
 		//dora
-		rooms[0] = new String [] {"HouseEntrance","Map"};
-		rooms[1] = new String [] {"DiningRoom", "Pie", "Ice Cream"};
-		rooms[2] = new String [] {"Kitchen", "Raw Food", "Food", "Cup","Food"};
-		rooms[3] = new String [] {"LivingRoom", "Backpack", "Clothes", "Broom", "Leaflet Hint"};
+		rooms[0] = new String [] {"House Entrance","map"};
+		rooms[1] = new String [] {"Dining Room", "pie", "ice cream"};
+		rooms[2] = new String [] {"Kitchen"};
+		rooms[3] = new String [] {"LivingRoom", "backpack", "clothes", "leaflet hint"};
 		//arthur
-		rooms[4] = new String [] {"Arthur'sRoom", "Glasses"};
-		rooms[5] = new String [] {"Mr.Ratburn'sClass"};
-		rooms[6] = new String [] {"StudyRoom", "Library Card"};
-		rooms[7] = new String [] {"Library", "Bookshelf Key"};
-		rooms[8] = new String [] {"SecretRoom", "Flashlight", "Trophy"};
+		rooms[4] = new String [] {"Arthur's Room", "glasses"};
+		rooms[5] = new String [] {"Mr.Ratburn's Class"};
+		rooms[6] = new String [] {"Study Room"};
+		rooms[7] = new String [] {"Library", "bookshelf key"};
+		rooms[8] = new String [] {"Secret Room", "flashlight", "trophy"};
 		//backyardigans
-		rooms[9] = new String [] {"Minigarden", "Dirt", "Library Card", "Sticks", "Flower"};
-		rooms[10] = new String [] {"Backyard", "Tree Branch", "Sand"};
-		rooms[11] = new String [] {"BackStorageRoom", "Shed Key"};
+		rooms[9] = new String [] {"Mini Garden", "dirt", "library card", "branch", "flower"};
+		rooms[10] = new String [] {"Backyard", sSand"};
+		rooms[11] = new String [] {"Back Storage Room", "shed key"};
 		//max and ruby
-		rooms[12] = new String [] {"MaxRoom", "Antfarm", "Empanada", "Toy Truck"};
-		rooms[13] = new String [] {"Ruby'sRoom", "Pillow"};
+		rooms[12] = new String [] {"Max's Room", "ant farm", "empanada", "toy truck"};
+		rooms[13] = new String [] {"Ruby's Room", "pillow"};
 		//treehouse
-		rooms[14] = new String [] {"Good'sRoom", "Cookies", "Apple"};
+		rooms[14] = new String [] {"Pantry", "cookies", "apple"};
 		//mickeymouse
-		rooms[15] = new String [] {"WinRoom", "Cake"};		
+		rooms[15] = new String [] {"Win Room", "cake"};		
 		
 	}
 	
