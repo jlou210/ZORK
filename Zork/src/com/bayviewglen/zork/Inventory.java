@@ -96,7 +96,7 @@ public class Inventory {
 		rooms[8] = new String [] {"Secret Room", "flashlight", "trophy"};
 		//backyardigans
 		rooms[9] = new String [] {"Mini Garden", "dirt", "library card", "branch", "flower"};
-		rooms[10] = new String [] {"Backyard", sSand"};
+		rooms[10] = new String [] {"Backyard", "sand"};
 		rooms[11] = new String [] {"Back Storage Room", "shed key"};
 		//max and ruby
 		rooms[12] = new String [] {"Max's Room", "ant farm", "empanada", "toy truck"};
@@ -109,3 +109,5 @@ public class Inventory {
 	}
 	
 }
+	
+ 
