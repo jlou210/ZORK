@@ -32,18 +32,10 @@ class Game {
 	// masterRoomMap.get("GREAT_ROOM") will return the Room Object that is the Great
 	// Room (assuming you have one).
 	private HashMap<String, Room> masterRoomMap;
-<<<<<<< HEAD
-
-	Inventory rooms = new Inventory(11.0, 10);
-
-=======
-	
+	private Map map = new Map("The Map", 25, "I am a map");
 	Inventory rooms = new Inventory(11.0, 10);
 	Inventory playerInven = new Inventory(30);
-
 	
-	
->>>>>>> branch 'master' of https://github.com/jlou210/ZORK.git
 	private void initRooms(String fileName) throws Exception {
 		masterRoomMap = new HashMap<String, Room>();
 		Scanner roomScanner;
@@ -97,7 +89,7 @@ class Game {
 	}
 
 	/**
-	 * Create the game and initialise its internal map.
+	 * Create the game and initialize its internal map.
 	 */
 	public Game() {
 		try {
@@ -145,36 +137,23 @@ class Game {
 	 * Given a command, process (that is: execute) the command. If this command ends
 	 * the game, true is returned, otherwise false is returned.
 	 */
-<<<<<<< HEAD
-	private boolean processCommand(Command command) {
-		String commandWord = command.getCommandWord();
-=======
+
 	private boolean processCommand(Command command, Inventory playerInven) {
->>>>>>> branch 'master' of https://github.com/jlou210/ZORK.git
 		if (command.isUnknown()) {
 			System.out.println("I don't know what you mean...");
 			return false;
 		}
+		String commandWord = command.getCommandWord();
 		if (commandWord.equals("help")) {
 			printHelp();
 		} else if (commandWord.equals("teleport")) {
 			if (command.hasSecondWord())
-<<<<<<< HEAD
-				teleport(command.getSecondWord());
-		} else {
-			System.out.println("Teleport where?");
-		}
-
-		if (commandWord.equals("go")) {
-=======
 				teleport(command.getSecondWord(), playerInven);
-			else
-				System.out.println("Teleport where?");
-			}
-		else if (commandWord.equals("go"))
->>>>>>> branch 'master' of https://github.com/jlou210/ZORK.git
+			else 
+			System.out.println("Teleport where?");
+		}else if (commandWord.equals("go"))
 			goRoom(command);
-		} else if (commandWord.equals("quit")) {
+		 else if (commandWord.equals("quit")) {
 			if (command.hasSecondWord())
 				System.out.println("Quit what?");
 		} else {
@@ -186,13 +165,10 @@ class Game {
 		return false;
 	}
 
-<<<<<<< HEAD
-	private void teleport(String secondWord) {
-		if (checkInventory(map) == true) {
-=======
+
+
 private void teleport(String secondWord, Inventory playerInven) {
-		if(playerInven.checkInventory(map) == true) {
->>>>>>> branch 'master' of https://github.com/jlou210/ZORK.git
+		if(playerInven.checkPlayerInventory(map)) {
 			currentRoom = masterRoomMap.get(secondWord.toUpperCase().replaceAll(" ", "_"));
 			System.out.println(currentRoom.longDescription());
 		} else {

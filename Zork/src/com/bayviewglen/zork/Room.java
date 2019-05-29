@@ -19,7 +19,7 @@ import java.util.HashMap;
 import java.util.Iterator;
 
 class Room {
-	private static String roomName;
+	private String roomName;
 	private String description;
 	private HashMap<String, Room> exits; // stores exits of this room.
 
@@ -147,8 +147,8 @@ class Room {
 		return (Room) exits.get(direction);
 	}
 
-	public static String getRoomName() {
-		return roomName;
+	public static String getRoomName(Room room) {
+		return room.roomName;
 	}
 
 	public void setRoomName(String roomName) {
