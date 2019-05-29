@@ -107,9 +107,9 @@ public class Inventory {
 		rooms[15] = new String [] {"Win Room", "cake"};		
 		
 	}
-	//To Complete
+
 	public boolean checkRoomInventory(Item item) {
-		for(Item i : roomInventory) {
+		for(Item i : rooms) {
 			if(i == item) {
 				return true;
 			}			
@@ -120,15 +120,15 @@ public class Inventory {
 	public void removeRoomInventory(Item item) {
 		boolean isValid = false;
 		
-		for (int i = 0; i < roomInventory.size(); i++) {
-			if (roomInventory.get(i) == item) {
-				roomInventory.remove(i);
+		for (int i = 0; i < rooms.size(); i++) {
+			if (rooms.get(i) == item) {
+				rooms.remove(i);
 				isValid = true;
 				break;
 			}
 		}
 		public void addRoomInventory(Item item) {
-				roomInventory.add(item);
+				rooms.add(item);
 	
 }
 	
