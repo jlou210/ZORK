@@ -12,6 +12,7 @@ public class Item {
 		this.name = name;
 		this.weight = weight;
 		this.description = description;
+		
 	}
 	HashMap<Item, Integer> useless = new HashMap<Item, Integer>();
 	HashMap<Item, Integer> food = new HashMap<Item, Integer>();
