@@ -11,12 +11,12 @@ public class Player {
 	// eat method
 
 	public String eat(Food food) {
-		if (checkPlayerInventory(food) == true) {
+		if (playerInventory.checkPlayerInventory(food) == true) {
 			playerInventory.removePlayerInventory(food);
-			System.out.println("You just ate " + food + " : " + food.getSound());
+			System.out.println("You just ate " + food + " : " + food.sound());
 		} else if (checkRoomInventory(food) == true) {
 			removeRoomInventory(food);
-			System.out.println("You just ate " + food + " : " + food.getSound());
+			System.out.println("You just ate " + food + " : " + food.sound());
 		} else {
 			return "You cannot eat" + food + "because it cannot be found.";
 		}
@@ -51,9 +51,9 @@ public class Player {
 			System.out.println("You just used " + tool + ".");
 		} else if (checkRoomInventory(tool) == true) {
 			removeRoomInventory(tool);
-			System.out.println("You just ate " + tool + " : " + food.getSound());
+			System.out.println("You just ate " + tool + " : " + food.sound()); //Why are you eating the tool?!
 		} else {
-			return "You cannot use" + tool1 + "because it cannot be found.";
+			return "You cannot use" + tool + "because it cannot be found.";
 		}
 
 	}
@@ -104,22 +104,15 @@ public class Player {
 
 //drop methods
 	public String drop(Item tool) {
-		if (checkPlayerInventory == true) {
-			removePlayerInventory(tool);
+		if (playerInventory.checkPlayerInventory(tool) == true) {
+			playerInventory.removePlayerInventory(tool);
 		} else {
 			System.out.println("You cannot drop something that's not in your inventory.");
 		}
 	}
 
 	
-//teleport methods
-	public String teleport() {
-		Room treehouse = "Main Room";
-		Game.currentRoom = treehouse;
-
 	
-	}
-
 //read methods
 	public String read() {
 		return null;

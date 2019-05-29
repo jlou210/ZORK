@@ -52,6 +52,20 @@ public class Inventory {
 	}
 	
 	public void removePlayerInventory(Item item) {
+		boolean isValid = false;
+		
+		for (int i = 0; i < items.size(); i++) {
+			if (items.get(i) == item) {
+				items.remove(i);
+				isValid = true;
+				break;
+			}
+		}
+		
+		if (!isValid) {
+			System.out.println("You do not have this item in your inventory.");
+		}
+		
 		
 	}
 	
