@@ -23,7 +23,7 @@ import java.util.Scanner;
  * another comment
  */
 class Game {
-	private Parser parser;
+	private static Parser parser;
 	public static Room currentRoom;
 	// This is a MASTER object that contains all of the rooms and is easily
 	// accessible.
@@ -177,7 +177,7 @@ private void teleport(String secondWord) {
 	 * Print out some help information. Here we print some stupid, cryptic message
 	 * and a list of the command words.
 	 */
-	private void printHelp() {
+	public static void printHelp() {
 		System.out.println("You are lost. You are alone. You wander");
 		System.out.println("around at Monash Uni, Peninsula Campus.");
 		System.out.println();
@@ -189,7 +189,7 @@ private void teleport(String secondWord) {
 	 * Try to go to one direction. If there is an exit, enter the new room,
 	 * otherwise print an error message.
 	 */
-	public static void goRoom(Command command) {
+	public static String goRoom(Command command) {
 		if (!command.hasSecondWord()) {
 			// if there is no second word, we don't know where to go...
 			System.out.println("Go where?");

@@ -105,7 +105,7 @@ public class Player {
 
 //go methods
 	public String go(Command command) {
-		Game.goRoom(command);
+		return Game.goRoom(command);
 
 	}
 
@@ -144,7 +144,7 @@ public class Player {
 	}
 
 //help method
-	public String help() {
-		return null;
+	public void help() {
+		Game.printHelp();
 	}
 }
