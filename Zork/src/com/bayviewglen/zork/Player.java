@@ -32,11 +32,8 @@ public class Player {
 
 
 //use method
-	public String use(useless item1) {
-		return item1 + "cannot be used here.";
-	}
-
-	public String use(Tool tool) {
+	
+	public String use(Item tool) {
 		if (playerInventory.checkPlayerInventory(tool) == true) {
 			playerInventory.removePlayerInventory(tool);
 			System.out.println("You just used " + tool + ".");
