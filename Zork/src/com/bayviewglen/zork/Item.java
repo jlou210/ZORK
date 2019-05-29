@@ -38,27 +38,26 @@ public class Item {
 	public void initializeItems() {
 
 		useless.put(flower, 5); // dora
-		useless.put("tree branch", 10); // treehouse
-		useless.put("sand", 5); // backyard
-		useless.put("pillow", 10); // harry
-		useless.put("toy truck", 5); // max
+		useless.put(tree branch, 10); // treehouse
+		useless.put(sand, 5); // backyard
+		useless.put(pillow, 10); // harry
+		useless.put(toy truck, 5); // max
 
 
-		food.put("empanada", 5); // dora
-		food.put("pie", 10); // max
-		food.put("ice cream", 5); // arthur
-		food.put("cookies", 5); //backyard
-		food.put("apple", 5); //treehouse
-		food.put("cake", 20); // mickey
+		food.put(empanada, 5); // dora
+		food.put(pie, 10); // max
+		food.put(ice cream, 5); // arthur
+		food.put(cookies, 5); //backyard
+		food.put(apple, 5); //treehouse
+		food.put(cake, 20); // mickey
 
 
-		tools.put("shovel", 15); // backyard
-		tools.put("flashlight", 5); // max
-		tools.put("library card", 3); // arthur
-		tools.put("glasses", 5); // arthur
-		tools.put("rope", 20); // mickey
-		tools.put("book", 5); // mickey
-		tools.put("map", 1); //dora 
+		tools.put(flashlight, 5); // max
+		tools.put(library card, 3); // arthur
+		tools.put(glasses, 5); // arthur
+		tools.put(rope, 20); // mickey
+		tools.put(book, 5); // mickey
+		tools.put(map, 1); //dora 
 	}
 	
 	public void putItemInRoom() {
