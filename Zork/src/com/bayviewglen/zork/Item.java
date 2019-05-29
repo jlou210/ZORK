@@ -34,7 +34,12 @@ public class Item {
 	Flashlight flashlight = new Flashlight("flashlight", 5, "You picked up a flashlight. This will help you see in the dark."); 
 	Glasses glasses = new Glasses("glasses", 5, "You picked up a pair of glasses. This will help with your blurry vision."); 
 	Book book = new Book("book", 5, "You picked up a book. You can read it."); 
-	LibraryCard libraryCard = new LibraryCard("library card", 5, "You picked up a library card. Having fun isn't hard."); 
+	LibraryCard libraryCard = new LibraryCard("library card", 1, "You picked up a library card. Having fun isn't hard."); 
+	LeafletHint leafletHint = new LeafletHint("leaflet hint", 1, "You picked up a leaflet hint. Read for a clue."); 
+	
+	
+	
+	
 	public void initializeItems() {
 
 		useless.put(flower, 5); // dora
@@ -52,10 +57,11 @@ public class Item {
 		food.put(cake, 20); // mickey
 
 		tools.put(flashlight, 5); // max
-		tools.put(libraryCard, 3); // arthur
+		tools.put(libraryCard, 1); // arthur
 		tools.put(glasses, 5); // arthur
 		tools.put(book, 5); // mickey
 		tools.put(map, 1); //dora 
+		tools.put(leafletHint, 1); //dora 
 	}
 	
 	public void putItemInRoom() {
