@@ -172,7 +172,7 @@ public class Player {
 	public void place(Item tool) {
 		if (playerInventory.checkPlayerInventory(tool) == true) {
 			playerInventory.removePlayerInventory(tool);
-			System.out.println("You place" + tool + ".");
+			System.out.println("You placed" + tool + ".");
 		} else {
 			System.out.println("You cannot place something that's not in your inventory.");
 		}
