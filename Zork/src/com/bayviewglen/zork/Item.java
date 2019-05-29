@@ -31,6 +31,7 @@ public class Item {
 	static IceCream iceCream = new IceCream("ice cream", 5, "You picked up ice cream. Quick! Eat it before it melts!");
 	static Cookies cookies = new Cookies("cookies", 5, "You picked up some cookies. Smells super good! I think they're homemade.");
 	static Apple apple = new Apple("apple", 5, "You picked up an apple. Hopefully it's not poisonous.");
+	static Donuts donuts = new Donuts("donuts", 5, "You picked up some donuts. Or if you're Canadian, weirdly shaped timbits.");
 	static Cake cake = new Cake("cake", 20, "You picked up a 10 tier funfetti cake! It looks AMAZING!!! Eat this to win the game! Time to celebrate!");
 	
 	static Map map = new Map("map", 1, "You picked up a map. This will help you navigate and teleporate back to the treehouse.");
@@ -58,6 +59,7 @@ public class Item {
 		food.put("cookies", cookies); //backyard
 		food.put("apple", apple); //treehouse
 		food.put("cake", cake); // mickey
+		food.put("donuts", donuts); // mickey
 
 
 		tools.put("flashlight", flashlight); // max
