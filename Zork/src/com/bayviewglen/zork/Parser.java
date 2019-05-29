@@ -66,7 +66,7 @@ class Parser {
 			return new Command(word1, word2);
 		else
 			return new Command(null, word2);
-		
+		//After this is dead code. whY>!>>!>..1./??!?!?!??!?!?!??!?!wa;jh weuil fleubg puifhudhoidgrhugvf'ngfofh'hjfuh
 			
 		//Need something that checks for an adjective
 		

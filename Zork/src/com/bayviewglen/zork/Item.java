@@ -15,9 +15,9 @@ public class Item {
 		
 	}
 
-	static HashMap<Item, Integer> useless = new HashMap<Item, Integer>();
-	static HashMap<Item, Integer> food = new HashMap<Item, Integer>();
-	static HashMap<Item, Integer> tools = new HashMap<Item, Integer>();
+	static HashMap<String, Item> useless = new HashMap<String, Item>();
+	static HashMap<String, Item> food = new HashMap<String, Item>();
+	static HashMap<String, Item> tools = new HashMap<String, Item>();
 	
 	static Item flower = new Item("flower", 5, "You picked up a sunflower. The pollen is making your nose itchy. I'm not sure it's useful...");
 	static Item treeBranch = new Item("tree branch", 10, "You picked up a tree branch. It's long and pointy, but I don't think it's very useful.");
@@ -41,29 +41,30 @@ public class Item {
 	
 	public static void initializeItems() {
 
-		useless.put(flower, 5); // dora
-		useless.put(treeBranch, 10); // treehouse
-		useless.put(sand, 5); // backyard
-		useless.put(pillow, 10); // harry
-		useless.put(toyTruck, 5); // max
+		useless.put("flower", flower); // dora
+		useless.put("tree branch", treeBranch); // treehouse
+		useless.put("sand", sand); // backyard
+		useless.put("pillow", pillow); // harry
+		useless.put("toy truck", toyTruck); // max
 
 
-		food.put(empanada, 5); // dora
-		food.put(pie, 10); // max
-		food.put(iceCream, 5); // arthur
-		food.put(cookies, 5); //backyard
-		food.put(apple, 5); //treehouse
-		food.put(cake, 20); // mickey
+		food.put("empanada", empanada); // dora
+		food.put("pie", pie); // max
+		food.put("ice cream", iceCream); // arthur
+		food.put("cookies", cookies); //backyard
+		food.put("apple", apple); //treehouse
+		food.put("cake", cake); // mickey
 
 
-		tools.put(flashlight, 5); // max
-		tools.put(libraryCard, 3); // arthur
-		tools.put(glasses, 5); // arthur
-		tools.put(book, 5); // arthur
-		tools.put(map, 1); //dora 
-		tools.put(leafletHint, 1);
+		tools.put("flashlight", flashlight); // max
+		tools.put("library card", libraryCard); // arthur
+		tools.put("glasses", glasses); // arthur
+		tools.put("book", book); // arthur
+		tools.put("map", map); //dora 
+		tools.put("leaflet hint", leafletHint);
 		
 	}
+	
 	
 	public void putItemInRoom() {
 		
