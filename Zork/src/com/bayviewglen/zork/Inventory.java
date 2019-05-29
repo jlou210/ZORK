@@ -74,11 +74,8 @@ public class Inventory {
 		this.numItems = numItems;
 		rooms = new String[(int) numRooms][numItems];
 
-<<<<<<< HEAD
-=======
-	}	
-	
-	
+	}
+
 	public void initializeRooms() {
 		//dora
 		rooms[0] = new String [] {"House Entrance","map", "Dora"};
@@ -102,8 +99,7 @@ public class Inventory {
 		rooms[14] = new String [] {"Pantry", "cookies", "donuts"};
 		//mickeymouse
 		rooms[15] = new String [] {"Win Room", "cake"};		
-	
->>>>>>> branch 'master' of https://github.com/jlou210/ZORK.git
+
 	}
 
 	public void initializeRooms() {
@@ -132,23 +128,24 @@ public class Inventory {
 
 	}
 
-
 	public boolean checkRoomInventory(Item item) {
 		for (Item i : rooms) {
 			if (i == item) {
 
-		for(String[] i : rooms) {
-			if(i == item.getItemName(i)) {
+				for (String[] i : rooms) {
+					if (i == item.getItemName(i)) {
 
-				return true;
+						return true;
+					}
+				}
+				return false;
 			}
 		}
-		return false;
 	}
 
 	public void removeRoomInventory(Item item) {
 		boolean isValid = false;
-		
+
 		for (int i = 0; i < rooms.length; i++) {
 			if (rooms[i].equals(item)) {
 				rooms.remove(i);
@@ -157,7 +154,9 @@ public class Inventory {
 			}
 		}
 
+	}
+
 	public void addRoomInventory(Item item) {
-				rooms.add(item);
-	
+		rooms.add(item);
+	}
 }
