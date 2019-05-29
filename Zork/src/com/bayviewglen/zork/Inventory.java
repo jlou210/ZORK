@@ -108,6 +108,7 @@ public class Inventory {
 		
 	}
 
+	//how do i convert from item to string
 	public boolean checkRoomInventory(Item item) {
 		for(Item i : rooms) {
 			if(i == item) {
