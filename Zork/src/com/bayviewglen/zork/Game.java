@@ -194,8 +194,7 @@ class Game {
 		if (!command.hasSecondWord()) {
 			// if there is no second word, we don't know where to go...
 			System.out.println("Go where?");
-			return;
-		}
+		}else {
 		String direction = command.getSecondWord();
 // Try to leave current room.
 		Room nextRoom = currentRoom.nextRoom(direction);
@@ -206,5 +205,7 @@ class Game {
 			System.out.println(currentRoom.longDescription());
 		}
 	}
+		return null;
 
+}
 }
