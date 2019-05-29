@@ -36,7 +36,7 @@ public class Item {
 	Book book = new Book("book", 5, "You picked up a book. You can read it."); 
 	LibraryCard libraryCard = new LibraryCard("library card", 1, "You picked up a library card. Having fun isn't hard."); 
 	LeafletHint leafletHint = new LeafletHint("leaflet hint", 1, "You picked up a leaflet hint. Read for a clue."); 
-	
+	BookshelfKey bookshelfKey = new BookshelfKey("bookshelf key", 3, "You picked up a bookshelf key. Hmm..."); 
 	
 	
 	
@@ -62,6 +62,7 @@ public class Item {
 		tools.put(book, 5); // mickey
 		tools.put(map, 1); //dora 
 		tools.put(leafletHint, 1); //dora 
+		tools.put(bookshelfKey, 3); 
 	}
 	
 	public void putItemInRoom() {

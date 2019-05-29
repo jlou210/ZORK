@@ -68,18 +68,18 @@ public class Inventory {
 	}	
 	
 	
-	public void initializeRooms() {
-		rooms[0] = new String [] {"HouseEntrance","Map"};
-		rooms[1] = new String [] {"Kitchen", "Table", "Raw Food", "Food", "Knife", "Cup", "Bottle","Counter", "Food"};
-		rooms[2] = new String [] {"LivingRoom", "Backpack", "Clothes", "Broom", "LeafletHint"};
-		rooms[3] = new String [] {"Arthur'sRoom", "Glasses"};
-		rooms[4] = new String [] {"Mr.Ratburn'sClass", "Blackboard"};
-		rooms[5] = new String [] {"StudyRoom"};
-		rooms[6] = new String [] {"Library", "BookshelfKey", "Bookshelf"};
-		rooms[7] = new String [] {"SecretRoom", "Flashlight"};
-		rooms[8] = new String [] {"MiniGarden", "Dirt", "LibraryCard", "Sticks"};
-		rooms[9] = new String [] {"BackStorageRoom", "ShedKey"};
-		rooms[10] = new String [] {"MaxRoom", "AntFarm"};
+	static public void initializeRooms() {
+		rooms[0] = new String [] {"HouseEntrance","map"};
+		rooms[1] = new String [] {"Kitchen", "table", "raw food", "food", "knife", "cup", "bottle","counter", "food"};
+		rooms[2] = new String [] {"Living Room", "backpack", "clothes", "broom", "leaflet hint"};
+		rooms[3] = new String [] {"Arthur's Room", "glasses"};
+		rooms[4] = new String [] {"Mr.Ratburn's Class", "blackboard"};
+		rooms[5] = new String [] {"Study Room"};
+		rooms[6] = new String [] {"Library", "bookshelf key", "bookshelf"};
+		rooms[7] = new String [] {"Secret Room", "flashlight"};
+		rooms[8] = new String [] {"Mini Garden", "dirt", "library card", "branch"};
+		rooms[9] = new String [] {"Back Storage Room", "shed key"};
+		rooms[10] = new String [] {"Max's Room", "toy truck"};
 	}
 	
 	
