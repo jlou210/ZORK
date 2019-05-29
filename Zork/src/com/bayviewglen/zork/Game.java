@@ -19,8 +19,7 @@ import java.util.Scanner;
  * 
  * This main class creates and initialises all the others: it creates all rooms,
  * creates the parser and starts the game. It also evaluates the commands that
- * the parser returns.
- * another comment
+ * the parser returns. another comment
  */
 class Game {
 	private static Parser parser;
@@ -33,10 +32,9 @@ class Game {
 	// masterRoomMap.get("GREAT_ROOM") will return the Room Object that is the Great
 	// Room (assuming you have one).
 	private HashMap<String, Room> masterRoomMap;
-	
-	Inventory rooms = new Inventory(11.0, 10);	
-	
-	
+
+	Inventory rooms = new Inventory(11.0, 10);
+
 	private void initRooms(String fileName) throws Exception {
 		masterRoomMap = new HashMap<String, Room>();
 		Scanner roomScanner;
@@ -137,37 +135,40 @@ class Game {
 	 * the game, true is returned, otherwise false is returned.
 	 */
 	private boolean processCommand(Command command) {
+		String commandWord = command.getCommandWord();
 		if (command.isUnknown()) {
 			System.out.println("I don't know what you mean...");
 			return false;
 		}
-		String commandWord = command.getCommandWord();
-		if (commandWord.equals("help"))
+		if (commandWord.equals("help")) {
 			printHelp();
-		else if (commandWord.equals("teleport")) {
+		} else if (commandWord.equals("teleport")) {
 			if (command.hasSecondWord())
 				teleport(command.getSecondWord());
-			else
-				System.out.println("Teleport where?");
-		else if (commandWord.equals("go"))
+		} else {
+			System.out.println("Teleport where?");
+		}
+
+		if (commandWord.equals("go")) {
 			goRoom(command);
-		else if (commandWord.equals("quit")) {
+		} else if (commandWord.equals("quit")) {
 			if (command.hasSecondWord())
 				System.out.println("Quit what?");
-			else
-				return true; // signal that we want to quit
-		} else if (commandWord.equals("eat")) {
+		} else {
+			return true; // signal that we want to quit
+		}
+		if (commandWord.equals("eat")) {
 			System.out.println("Do you really think you should be eating at a time like this?");
 		}
 		return false;
 	}
 
-private void teleport(String secondWord) {
-		if(checkInventory(map) == true) {
+	private void teleport(String secondWord) {
+		if (checkInventory(map) == true) {
 			currentRoom = masterRoomMap.get(secondWord.toUpperCase().replaceAll(" ", "_"));
 			System.out.println(currentRoom.longDescription());
-		}else {
-		// no
+		} else {
+			// no
 			System.out.println("You do not have the map");
 		}
 	}
