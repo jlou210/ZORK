@@ -105,7 +105,7 @@ public class Inventory {
 		rooms[14] = new String [] {"Pantry", "cookies", "donuts"};
 		//mickeymouse
 		rooms[15] = new String [] {"Win Room", "cake"};		
-		
+	
 	}
 
 	//how do i convert from item to string
