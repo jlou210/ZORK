@@ -144,9 +144,24 @@ public class Player {
 	public String save() {
 		return null;
 	}
+	
+//check inventory method
+	public Inventory check() {
+		return playerInventory;
+	}
+	
+//check player inventory (boolean)
+	public boolean checkPlayerInventory(Item tool) {
+		if();
+	}
 
 //help method
 	public void help() {
 		Game.printHelp();
+	}
+	
+//quit method
+	public String quit() {
+		return null;
 	}
 }
