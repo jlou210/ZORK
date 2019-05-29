@@ -90,7 +90,7 @@ public class Inventory {
 		rooms[3] = new String [] {"LivingRoom", "backpack", "clothes", "leaflet hint"};
 		//arthur
 		rooms[4] = new String [] {"Arthur's Room", "glasses"};
-		rooms[5] = new String [] {"Mr.Ratburn's Class"};
+		rooms[5] = new String [] {"Mr.Ratburn's Class", "ice cream"};
 		rooms[6] = new String [] {"Study Room"};
 		rooms[7] = new String [] {"Library", "bookshelf key"};
 		rooms[8] = new String [] {"Secret Room", "flashlight", "trophy"};
