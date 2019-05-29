@@ -120,7 +120,7 @@ public class Player {
 		}
 	}
 
-//move method
+//move methods
 	public String move(Command command) {
 		return go(command);
 
