@@ -118,8 +118,7 @@ class Parser {
 			}
 			else if(word == CommandWords.validCommands[4]) {
 				if(wordTwo == "pie") {
-					Pie pie = new Pie();
-					Player.eat(pie);
+					Player.eat(//access the Hashmap and get 'Pie' item by putting in keyword "pie");
 				}
 				else if(wordTwo=="ice cream") {
 					
