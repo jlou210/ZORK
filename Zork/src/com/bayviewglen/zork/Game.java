@@ -19,11 +19,10 @@ import java.util.Scanner;
  * 
  * This main class creates and initialises all the others: it creates all rooms,
  * creates the parser and starts the game. It also evaluates the commands that
- * the parser returns.
- * another comment
+ * the parser returns. another comment
  */
 class Game {
-	private Parser parser;
+	private static Parser parser;
 	public static Room currentRoom;
 	// This is a MASTER object that contains all of the rooms and is easily
 	// accessible.
@@ -33,15 +32,14 @@ class Game {
 	// masterRoomMap.get("GREAT_ROOM") will return the Room Object that is the Great
 	// Room (assuming you have one).
 	private HashMap<String, Room> masterRoomMap;
-	
+	private Map map = new Map("The Map", 1, "Hello! I am Map!");
 	Inventory rooms = new Inventory(11.0, 10);
-	Inventory playerInven = new Inventory(30);
-
-	
+	Inventory playerInven = new Inventory(40);
 	
 	private void initRooms(String fileName) throws Exception {
 		masterRoomMap = new HashMap<String, Room>();
 		Scanner roomScanner;
+		
 		try {
 			HashMap<String, HashMap<String, String>> exits = new HashMap<String, HashMap<String, String>>();
 			roomScanner = new Scanner(new File(fileName));
@@ -92,7 +90,7 @@ class Game {
 	}
 
 	/**
-	 * Create the game and initialise its internal map.
+	 * Create the game and initialize its internal map.
 	 */
 	public Game() {
 		try {
@@ -140,39 +138,40 @@ class Game {
 	 * Given a command, process (that is: execute) the command. If this command ends
 	 * the game, true is returned, otherwise false is returned.
 	 */
+
 	private boolean processCommand(Command command, Inventory playerInven) {
 		if (command.isUnknown()) {
 			System.out.println("I don't know what you mean...");
 			return false;
 		}
 		String commandWord = command.getCommandWord();
-		if (commandWord.equals("help"))
+		if (commandWord.equals("help")) {
 			printHelp();
-		else if (commandWord.equals("teleport")) {
-			if (command.hasSecondWord())
+		} else if (commandWord.equals("teleport")) {
+			if (command.hasSecondWord()) //Can't teleport to a place of the player's choosing.
 				teleport(command.getSecondWord(), playerInven);
-			else
-				System.out.println("Teleport where?");
-			}
-		else if (commandWord.equals("go"))
+		}else if (commandWord.equals("go"))
 			goRoom(command);
-		else if (commandWord.equals("quit")) {
+		 else if (commandWord.equals("quit")) {
 			if (command.hasSecondWord())
 				System.out.println("Quit what?");
-			else
-				return true; // signal that we want to quit
-		} else if (commandWord.equals("eat")) {
+		} else {
+			return true; // signal that we want to quit
+		}
+		if (commandWord.equals("eat")) {
 			System.out.println("Do you really think you should be eating at a time like this?");
 		}
 		return false;
 	}
 
+
+
 private void teleport(String secondWord, Inventory playerInven) {
-		if(playerInven.checkInventory(map) == true) {
+		if(playerInven.checkPlayerInventory(map)) {
 			currentRoom = masterRoomMap.get(secondWord.toUpperCase().replaceAll(" ", "_"));
 			System.out.println(currentRoom.longDescription());
-		}else {
-		// no
+		} else {
+			// no
 			System.out.println("You do not have the map");
 		}
 	}
@@ -182,7 +181,7 @@ private void teleport(String secondWord, Inventory playerInven) {
 	 * Print out some help information. Here we print some stupid, cryptic message
 	 * and a list of the command words.
 	 */
-	private void printHelp() {
+	public static void printHelp() {
 		System.out.println("You are lost. You are alone. You wander");
 		System.out.println("around at Monash Uni, Peninsula Campus.");
 		System.out.println();
@@ -194,12 +193,11 @@ private void teleport(String secondWord, Inventory playerInven) {
 	 * Try to go to one direction. If there is an exit, enter the new room,
 	 * otherwise print an error message.
 	 */
-	public static void goRoom(Command command) {
+	public static String goRoom(Command command) {
 		if (!command.hasSecondWord()) {
 			// if there is no second word, we don't know where to go...
 			System.out.println("Go where?");
-			return;
-		}
+		}else {
 		String direction = command.getSecondWord();
 // Try to leave current room.
 		Room nextRoom = currentRoom.nextRoom(direction);
@@ -210,5 +208,7 @@ private void teleport(String secondWord, Inventory playerInven) {
 			System.out.println(currentRoom.longDescription());
 		}
 	}
+		return null;
 
+}
 }
