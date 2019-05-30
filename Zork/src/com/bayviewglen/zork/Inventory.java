@@ -79,6 +79,7 @@ public class Inventory {
 
 
 	public static void initializeRooms(Game game) {
+		
 		//dora 
 		Inventory inv = new Inventory(Integer.MAX_VALUE);
 		inv.addRoomInventory(Item.map);
@@ -162,44 +163,12 @@ public class Inventory {
 		game.getMasterMap().get("Win Room").setInventory(inv);
 		
 		
-		
-		// dora
-		rooms[0] = new String[] { "House Entrance", "map" };
-		rooms[1] = new String[] { "Dining Room", "pie", "ice cream" };
-		rooms[2] = new String[] { "Kitchen" };
-		rooms[3] = new String[] { "LivingRoom", "backpack", "clothes", "leaflet hint" };
-		// arthur
-		rooms[4] = new String[] { "Arthur's Room", "glasses" };
-		rooms[5] = new String[] { "Mr.Ratburn's Class", "ice cream" };
-		rooms[6] = new String[] { "Study Room" };
-		rooms[7] = new String[] { "Library", "bookshelf key" };
-		rooms[8] = new String[] { "Secret Room", "flashlight", "trophy" };
-		// backyardigans
-		rooms[9] = new String[] { "Mini Garden", "dirt", "library card", "branch", "flower" };
-		rooms[10] = new String[] { "Backyard", "sand" };
-		rooms[11] = new String[] { "Back Storage Room", "shed key" };
-		// max and ruby
-		rooms[12] = new String[] { "Max's Room", "ant farm", "empanada", "toy truck" };
-		rooms[13] = new String[] { "Ruby's Room", "pillow" };
-		// treehouse
-		rooms[14] = new String[] { "Pantry", "cookies", "apple" };
-		// mickeymouse
-		rooms[15] = new String[] { "Win Room", "cake" };
 
 	}
 
 	public boolean checkRoomInventory(Item item) {
-		for (Item i : rooms) {
-			if (i == item) {
-
-				for (String[] i : rooms) {
-					if (i == item.getItemName(i)) {
-
-						return true;
-					}
-				}
-				return false;
-			}
+		if(game.get(Game.currentRoom) == item) {
+			
 		}
 	}
 
