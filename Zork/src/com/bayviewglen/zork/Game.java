@@ -98,6 +98,7 @@ class Game {
 			currentRoom = masterRoomMap.get("START_POINT");
 			playerInven = new Inventory(30);
 			Item.initializeItems();
+			Inventory.initializeRooms();s
 			play();
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
@@ -120,6 +121,10 @@ class Game {
 			finished = processCommand(command, playerInven);
 		}
 		System.out.println("Thank you for playing.  Good bye.");
+	}
+	
+	public HashMap<String, Room> getMasterMap() {
+		return masterRoomMap;
 	}
 
 	/**

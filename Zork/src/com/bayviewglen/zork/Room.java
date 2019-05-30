@@ -22,6 +22,7 @@ class Room {
 	private String roomName;
 	private String description;
 	private HashMap<String, Room> exits; // stores exits of this room.
+	private Inventory roomItems;
 
 	/**
 	 * Create a room described "description". Initially, it has no exits.
@@ -37,6 +38,14 @@ class Room {
 		roomName = "DEFAULT ROOM";
 		description = "DEFAULT DESCRIPTION";
 		exits = new HashMap<String, Room>();
+	}
+	
+	public Inventory getInventory() {
+		return roomItems;
+	}
+	
+	public void setInventory(Inventory inventory) {
+		roomItems = inventory;
 	}
 
 	public void setExit(char direction, Room r) throws Exception {

@@ -78,7 +78,16 @@ public class Inventory {
 
 
 
-	public void initializeRooms() {
+	public static void initializeRooms(Game game) {
+		Inventory inv = new Inventory(Integer.MAX_VALUE);
+		inv.addRoomInventory(Item.map);
+		game.getMasterMap().get("House Entrance").setInventory(inv);
+		
+		inv = new Inventory(Integer.MAX_VALUE);
+		inv.addRoomInventory(Item.pie);
+		inv.addRoomInventory(Item.iceCream);
+		game.getMasterMap().get("Dining Room").setInventory(inv);
+		
 		// dora
 		rooms[0] = new String[] { "House Entrance", "map" };
 		rooms[1] = new String[] { "Dining Room", "pie", "ice cream" };
