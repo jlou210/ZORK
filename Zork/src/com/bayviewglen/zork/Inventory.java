@@ -88,10 +88,14 @@ public class Inventory {
 		inv.addRoomInventory(Item.iceCream);
 		game.getMasterMap().get("Dining Room").setInventory(inv);
 		
+		inv = new Inventory(Integer.MAX_VALUE);
+		inv.addRoomInventory(Item.iceCream);
+		game.getMasterMap().get("Kitchen").setInventory(inv);
+		
 		// dora
 		rooms[0] = new String[] { "House Entrance", "map" };
 		rooms[1] = new String[] { "Dining Room", "pie", "ice cream" };
-		rooms[2] = new String[] { "Kitchen" };
+		rooms[2] = new String[] { "Kitchen", "donut" };
 		rooms[3] = new String[] { "LivingRoom", "backpack", "clothes", "leaflet hint" };
 		// arthur
 		rooms[4] = new String[] { "Arthur's Room", "glasses" };
