@@ -40,8 +40,13 @@ public class Item {
 	public static final Book book = new Book("book", 5, "You picked up a book. You can read it."); 
 	public static final LeafletHint leafletHint = new LeafletHint("leaflet hint", 1, "You picked up a leaflet hint. Hmm..."); 
 	public static final LibraryCard libraryCard = new LibraryCard("library card", 1, "You picked up a library card. Having fun isn't hard."); 
+
 	public static final Backpack backpack = new Backpack("backpack", 1, "You picked up a backpack. You can use it hold all your items!"); 
-	
+	public static final dirt dirt = new dirt("dirt", 1, "You picked up some dirt. I don't know what you can do with this."); 
+	public static final shedKey shedKey = new shedKey("shed-key", 1, "You picked up a key. I wonder where it can be used."); 
+	public static final antFarm antFarm = new antFarm("backpack", 5, "You picked up an ant-farm. Looks like something Max would play with."); 
+	public static final trophy trophy = new trophy("trophy", 5, "You picked up a trophy. I'm not sure what this is for!"); 
+	public static final BookshelfKey BookshelfKey = new BookshelfKey("book-shelf key", 1, "You picked up a key. I wonder where it can be used."); 
 	
 	
 	public static void initializeItems() {
