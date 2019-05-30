@@ -10,9 +10,9 @@ public class Player {
 
 	// eat method
 
-	public static String eat(Item food, Inventory playerInven) {
-		if (playerInventory.checkPlayerInventory(food) == true) {
-			playerInventory.removePlayerInventory(food);
+	public static String eat(Food food, Inventory playerInven) {
+		if (playerInven.checkPlayerInventory(food) == true) {
+			playerInven.removePlayerInventory(food);
 			System.out.println("You just ate " + food + " : " + food.sound());
 		} else if (Inventory.checkRoomInventory(food) == true) {
 			Inventory.removeRoomInventory(food);
@@ -33,8 +33,8 @@ public class Player {
 //use method
 
 	public String use(Item tool, Inventory playerInven) {
-		if (playerInventory.checkPlayerInventory(tool) == true) {
-			playerInventory.removePlayerInventory(tool);
+		if (playerInven.checkPlayerInventory(tool) == true) {
+			playerInven.removePlayerInventory(tool);
 			System.out.println("You just used " + tool + ".");
 		} else if (checkRoomInventory(tool) == true) {
 			removeRoomInventory(tool);
