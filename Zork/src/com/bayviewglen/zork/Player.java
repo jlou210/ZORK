@@ -96,13 +96,13 @@ public class Player {
 	
 	
 //read methods
-	public String read() {
-		return null;
+	public String read(Item tool) {
+		return Item.description;
 	}
 
 //go methods
 	public String go(Command command) {
-		Game.goRoom(command);
+		return Game.goRoom(command);
 
 	}
 
@@ -112,8 +112,12 @@ public class Player {
 	}
 
 //give method
-	public String give() {
-		return null;
+	public String give(Item tool) {
+		if(checkPlayerInventory(tool) == true) {
+			System.out.println("You gave away" + tool+ ".");
+		}else {
+			System.out.println("You cannot give something that's not in your inventory.");
+		}
 	}
 
 //move method
@@ -141,7 +145,7 @@ public class Player {
 	}
 
 //help method
-	public String help() {
-		return null;
+	public void help() {
+		Game.printHelp();
 	}
 }
