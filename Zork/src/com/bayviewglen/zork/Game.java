@@ -98,7 +98,7 @@ class Game {
 			currentRoom = masterRoomMap.get("START_POINT");
 			playerInven = new Inventory(30);
 			Item.initializeItems();
-			Inventory.initializeRooms();s
+			Inventory.initializeRooms();
 			play();
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
