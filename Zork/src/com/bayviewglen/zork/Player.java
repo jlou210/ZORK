@@ -10,7 +10,7 @@ public class Player {
 
 	// eat method
 
-	public String eat(Food food, Inventory playerInven) {
+	public static String eat(Item food, Inventory playerInven) {
 		if (playerInventory.checkPlayerInventory(food) == true) {
 			playerInventory.removePlayerInventory(food);
 			System.out.println("You just ate " + food + " : " + food.sound());

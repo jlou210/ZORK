@@ -44,73 +44,121 @@ class Parser {
 		}
 		StringTokenizer tokenizer = new StringTokenizer(inputLine);
 		if (tokenizer.hasMoreTokens())
-			word1 = tokenizer.nextToken(); // get first word
+			word1 = tokenizer.nextToken().toLowerCase(); // get first word
 		else
 			word1 = null;
 		if (tokenizer.hasMoreTokens())
-			word2 = tokenizer.nextToken(); // get second word
+			word2 = tokenizer.nextToken().toLowerCase(); // get second word
 		else
 			word2 = null;
 		if (tokenizer.hasMoreTokens())
-			word3 = tokenizer.nextToken(); // get third word
+			word3 = tokenizer.nextToken().toLowerCase(); // get third word
 		else
 			word3 = null;
 		if (tokenizer.hasMoreTokens())
-			word4 = tokenizer.nextToken(); // get fourth word
+			word4 = tokenizer.nextToken().toLowerCase(); // get fourth word
 		else
 			word4 = null;
 // note: we just ignore the rest of the input line.
+		//Need something that checks for an adjective
+		String adjective = "ly";
+				
+		if(word1.substring(word1.length()-1, word1.length())== adjective) {
+					
+		}
+		else if(word1.substring(word1.length()-1, word1.length())== adjective) {
+					
+		}
+		else if(word1.substring(word1.length()-1, word1.length())== adjective) {
+					
+		}
+		else if(word1.substring(word1.length()-1, word1.length())== adjective) {
+				
+		}
 // Now check whether this word is known. If so, create a command
 		// with it. If not, create a "nil" command (for unknown command).
-		if (commands.isCommand(word1))
+		if (commands.isCommand(word1)) {
+			doAction(word1, word2);
 			return new Command(word1, word2);
-		else
+		}
+		else {
+			doAction(word2, word3);
 			return new Command(null, word2);
-		//After this is dead code. whY>!>>!>..1./??!?!?!??!?!?!??!?!wa;jh weuil fleubg puifhudhoidgrhugvf'ngfofh'hjfuh
-			
-		//Need something that checks for an adjective
-		/*
-		String adjective = "ly";
-		
-		if(word1.substring(word1.length()-1, word1.length())== adjective) {
-			
 		}
-		else if(word1.substring(word1.length()-1, word1.length())== adjective) {
-			
-		}
-		else if(word1.substring(word1.length()-1, word1.length())== adjective) {
-			
-		}
-		else if(word1.substring(word1.length()-1, word1.length())== adjective) {
-			
-		}
-		
+	}
 		//have all the if statements that link it to the correct methods
 		
-		//what this code does is it looks at the commands and checks to see if 
-		//the following word is applicable
+		/*what this code does is it looks at the commands and checks to see if 
+		the following word is applicable
 		
-		//for example u can read a book but you can read a broom
-		
-		
-		for (int i = 0; i < CommandWords.validCommands.length; i++) {
-			if(word1 == CommandWords.validCommands[i]) {
-				if(word2 == "book") {
+		for example u can read a book but you can read a broom
+		*/
+		public void doAction(String word, String wordTwo) {
+			if(word == CommandWords.validCommands[0]) {
+				if(wordTwo == "book") {
 					
 				}
-				else if(word2=="poster") {
+				else if(wordTwo=="map") {
+					
+				}
+				else if(wordTwo == "leaflet hint") {
 					
 				}
 			}
-			else if(word1 == CommandWords.validCommands[i]) {
-				if(word2 == "straight") {
+			else if(word == CommandWords.validCommands[1]) {
+				if(wordTwo == "straight") {
 					
 				}
+			}
+			else if(word == CommandWords.validCommands[2]) {
+				
+			}
+			else if(word == CommandWords.validCommands[3]) {
+				
+			}
+			else if(word == CommandWords.validCommands[4]) {
+				if(wordTwo == "pie") {
+					Player.eat(Item.food.get("pie"), Game.playerInven);
+				}
+				else if(wordTwo=="ice cream") {
+					Player.eat(Item.food.get("ice cream"), Game.playerInven);
+				}
+				else if(wordTwo == "empanada") {
+					
+				}
+				else if(wordTwo == "apple") {
+					
+				}
+			}
+			else if(word == CommandWords.validCommands[5]) {
+				
+			}
+			else if(word == CommandWords.validCommands[6]) {
+				
+			}
+			else if(word == CommandWords.validCommands[7]) {
+				
+			}
+			else if(word == CommandWords.validCommands[8]) {
+				
+			}
+			else if(word == CommandWords.validCommands[9]) {
+				
+			}
+			else if(word == CommandWords.validCommands[10]) {
+				
+			}
+			else if(word == CommandWords.validCommands[11]) {
+				
+			}
+			else if(word == CommandWords.validCommands[12]) {
+				
+			}
+			else if(word == CommandWords.validCommands[13]) {
+				
 			}
 		}
-		*/
-	}	
-
+		
 	/**
 	 * Print out a list of valid command words.
 	 */
