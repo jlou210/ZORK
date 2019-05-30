@@ -24,6 +24,7 @@ import java.util.Scanner;
 class Game {
 	private static Parser parser;
 	public static Room currentRoom;
+;
 	// This is a MASTER object that contains all of the rooms and is easily
 	// accessible.
 	// The key will be the name of the room -> no spaces (Use all caps and
@@ -31,7 +32,7 @@ class Game {
 	// In a hashmap keys are case sensitive.
 	// masterRoomMap.get("GREAT_ROOM") will return the Room Object that is the Great
 	// Room (assuming you have one).
-	private HashMap<String, Room> masterRoomMap;
+	private static HashMap<String, Room> masterRoomMap;
 	private Map map = new Map("The Map", 1, "Hello! I am Map!");
 	Inventory rooms = new Inventory(11.0, 10);
 	static Inventory playerInven = new Inventory(40);
@@ -57,6 +58,7 @@ class Game {
 				String[] rooms = roomExits.split(":")[1].split(",");
 				HashMap<String, String> temp = new HashMap<String, String>();
 				for (String s : rooms) {
+					System.out.println(s);
 					temp.put(s.split("-")[0].trim(), s.split("-")[1]);
 				}
 
@@ -98,7 +100,7 @@ class Game {
 			currentRoom = masterRoomMap.get("START_POINT");
 			playerInven = new Inventory(30);
 			Item.initializeItems();
-			Inventory.initializeRooms();s
+			Inventory.initializeRooms(this);
 			play();
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
@@ -133,7 +135,7 @@ class Game {
 	private void printWelcome() {
 		System.out.println();
 		System.out.println("Welcome to Zork!");
-		System.out.println("Zork is a new, incredibly boring adventure game.");
+		System.out.println("Zork is a new, incredibly boring adventure game. Just like your love life.");
 		System.out.println("Type 'help' if you need help.");
 		System.out.println();
 		System.out.println(currentRoom.longDescription());
