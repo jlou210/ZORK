@@ -12,7 +12,8 @@ public class Arthur implements Character{
 	
 	public boolean isGlasses(Inventory playerInven ) {
 		if(playerInven.checkPlayerInventory(Item.tools.get("glasses"))){
-			
+			return true;
 		}
+		return false;
 	}
 }
