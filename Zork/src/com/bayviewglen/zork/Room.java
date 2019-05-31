@@ -180,4 +180,9 @@ class Room {
 		// TODO Auto-generated method stub
 		
 	}
+
+	public void remove(Item item) {
+		// TODO Auto-generated method stub
+		
+	}
 }

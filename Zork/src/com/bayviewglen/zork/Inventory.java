@@ -221,16 +221,21 @@ public class Inventory {
 
 	}
 
-	public boolean checkRoomInventory(Item item, Game game) {
+	public static boolean checkRoomInventory(Item item, Game game) {
 		if(game.getMasterMap().get(Game.currentRoom).getInventory().equals(item)) {
 			return true;
 		}
 		return false;
 	}
 
-	public void removeRoomInventory(Item item, String room, Game game) {
-		game.getMasterMap().remove(game.getMasterMap().get(room).getItem(item));	
+	public static void removeRoomInventory(Item item, String room, Game game) {
+		game.getMasterMap().get(Game.currentRoom).getInventory().remove(Game.currentRoom.getItem(item));	
 
+	}
+
+	private void remove(Item item) {
+		// TODO Auto-generated method stub
+		
 	}
 
 	public void addRoomInventory(Item item, String room, Game game) {

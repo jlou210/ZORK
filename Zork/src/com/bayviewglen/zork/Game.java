@@ -100,8 +100,6 @@ class Game {
 			playerInven = new Inventory(30);
 			Item.initializeItems();
 
-			Inventory.initializeRooms();
-
 			Inventory.initializeRooms(this);
 			play();
 		} catch (Exception e) {
