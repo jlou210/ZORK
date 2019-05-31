@@ -528,85 +528,84 @@ class Parser {
 					Game.player.drop(Item.tools.get("ant farm"));
 				}
 				else if(wordTwo == "trophy" && wordThree == "1") {
-					Game.player.drop(Item.tools.get("trophy 1"), Game.playerInven, Game.currentRoom.getRoomName(Game.currentRoom), game);
+					Game.player.drop(Item.tools.get("trophy 1"));
 				}
 				else if(wordTwo == "trophy" && wordThree == "2") {
-					Game.player.get(Item.tools.get("trophy 2"), Game.playerInven, Game.currentRoom.getRoomName(Game.currentRoom), game);
+					Game.player.drop(Item.tools.get("trophy 2"));
 				}
 				else if(wordTwo == "trophy" && wordThree == "3") {
-					Game.player.get(Item.tools.get("trophy 3"), Game.playerInven, Game.currentRoom.getRoomName(Game.currentRoom), game);
+					Game.player.drop(Item.tools.get("trophy 3"));
 				}
 				else if(wordTwo == "trophy" && wordThree == "4") {
-					Game.player.get(Item.tools.get("trophy 4"), Game.playerInven, Game.currentRoom.getRoomName(Game.currentRoom), game);
+					Game.player.drop(Item.tools.get("trophy 4"));
 				}
 				else if(wordTwo == "bookshelf" && wordThree == "key") {
-					Game.player.get(Item.tools.get("bookshelf key"), Game.playerInven, Game.currentRoom.getRoomName(Game.currentRoom), game);
+					Game.player.drop(Item.tools.get("bookshelf key"));
 				}
 				else if(wordTwo == "flower") {
-					Game.player.get(Item.useless.get("flower"), Game.playerInven, Game.currentRoom.getRoomName(Game.currentRoom), game);
+					Game.player.drop(Item.useless.get("flower"));
 				}
 				else if(wordTwo == "tree" && wordThree == "branch") {
-					Game.player.get(Item.useless.get("tree branch"), Game.playerInven, Game.currentRoom.getRoomName(Game.currentRoom), game);
+					Game.player.drop(Item.useless.get("tree branch"));
 				}
 				else if(wordTwo == "sand") {
-					Game.player.get(Item.useless.get("sand"), Game.playerInven, Game.currentRoom.getRoomName(Game.currentRoom), game);
+					Game.player.drop(Item.useless.get("sand"));
 				}
 				else if(wordTwo == "pillow") {
-					Game.player.get(Item.useless.get("pillow"), Game.playerInven, Game.currentRoom.getRoomName(Game.currentRoom), game);
+					Game.player.drop(Item.useless.get("pillow"));
 				}
 				else if(wordTwo == "toy" && wordThree == "truck") {
-					Game.player.get(Item.useless.get("toy truck"), Game.playerInven, Game.currentRoom.getRoomName(Game.currentRoom), game);
+					Game.player.drop(Item.useless.get("toy truck"));
 				}
 				else if(wordTwo == "clothes") {
-					Game.player.get(Item.useless.get("clothes"), Game.playerInven, Game.currentRoom.getRoomName(Game.currentRoom), game);
+					Game.player.drop(Item.useless.get("clothes"));
 				}
 				else if(wordTwo == "dirt") {
-					Game.player.get(Item.useless.get("dirt"), Game.playerInven, Game.currentRoom.getRoomName(Game.currentRoom), game);
+					Game.player.drop(Item.useless.get("dirt"));
 				}
 				else if(wordTwo=="map") {
-					Game.player.get(Item.tools.get("map"), Game.playerInven, Game.currentRoom.getRoomName(Game.currentRoom), game);
+					Game.player.drop(Item.tools.get("map"));
 				}
 				else if(wordTwo == "leaflet" && wordThree == "hint") {
-					Game.player.get(Item.tools.get("leaflet hint"), Game.playerInven, Game.currentRoom.getRoomName(Game.currentRoom), game);
+					Game.player.drop(Item.tools.get("leaflet hint"));
 				}
 				else if(wordTwo == "book") {
-					Game.player.get(Item.tools.get("book"), Game.playerInven, Game.currentRoom.getRoomName(Game.currentRoom), game);
+					Game.player.drop(Item.tools.get("book"));
 				}
 				else if(wordTwo == "pie") {
-					Game.player.get(Item.food.get("pie"), Game.playerInven, Game.currentRoom.getRoomName(Game.currentRoom), game);
+					Game.player.drop(Item.food.get("pie"));
 				}
 				else if(wordTwo=="ice" && wordThree == "cream") {
-					Game.player.get(Item.food.get("ice cream"), Game.playerInven, Game.currentRoom.getRoomName(Game.currentRoom), game);
+					Game.player.drop(Item.food.get("ice cream"));
 				}
 				else if(wordTwo == "empanada") {
-					Game.player.get(Item.food.get("empanada"), Game.playerInven, Game.currentRoom.getRoomName(Game.currentRoom), game);
+					Game.player.drop(Item.food.get("empanada"));
 				}
 				else if(wordTwo == "apple") {
-					Game.player.get(Item.food.get("apple"), Game.playerInven, Game.currentRoom.getRoomName(Game.currentRoom), game);
+					Game.player.drop(Item.food.get("apple"));
 				}
 				else if(wordTwo == "donuts") {
-					Game.player.get(Item.food.get("donuts"), Game.playerInven, Game.currentRoom.getRoomName(Game.currentRoom), game);
+					Game.player.drop(Item.food.get("donuts"));
 				}
 				else if(wordTwo == "cookies") {
-					Game.player.get(Item.food.get("cookies"), Game.playerInven, Game.currentRoom.getRoomName(Game.currentRoom), game);
+					Game.player.drop(Item.food.get("cookies"));
 				}
 				else if(wordTwo == "cake") {
-					Game.player.get(Item.food.get("cookies"), Game.playerInven, Game.currentRoom.getRoomName(Game.currentRoom), game);
+					Game.player.drop(Item.food.get("cookies"));
 				}
 				else if(wordTwo == "water") {
-					Game.player.get(Item.drink.get("water"), Game.playerInven, Game.currentRoom.getRoomName(Game.currentRoom), game);
+					Game.player.drop(Item.drink.get("water"));
 				}
 				else if(wordTwo == "milk") {
-					Game.player.get(Item.drink.get("milk"), Game.playerInven, Game.currentRoom.getRoomName(Game.currentRoom), game);
+					Game.player.drop(Item.drink.get("milk"));
 				}
 				else if(wordTwo == "glass" && wordThree == "of" && wordFour == "water") {
-					Game.player.get(Item.drink.get("glass of water"), Game.playerInven, Game.currentRoom.getRoomName(Game.currentRoom), game);
+					Game.player.drop(Item.drink.get("glass of water"));
 				}
 				else if(wordTwo == "glass" && wordThree == "of" && wordFour == "milk") {
-					Game.player.get(Item.drink.get("glass of milk"), Game.playerInven, Game.currentRoom.getRoomName(Game.currentRoom), game);
+					Game.player.drop(Item.drink.get("glass of milk"));
 				}
-			}
-			
+			}			
 		}
 		
 	/**
