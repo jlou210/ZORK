@@ -605,7 +605,10 @@ class Parser {
 				else if(wordTwo == "glass" && wordThree == "of" && wordFour == "milk") {
 					Game.player.drop(Item.drink.get("glass of milk"));
 				}
-			}			
+			}		
+			else if(word == CommandWords.validCommands[19]) {
+				
+			}
 		}
 		
 	/**
