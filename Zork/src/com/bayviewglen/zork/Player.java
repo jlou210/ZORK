@@ -87,14 +87,6 @@ public class Player {
 		}
 	}
 
-//burn methods
-	public void burn(Item tool, Game game) {
-		if (Inventory.checkRoomInventory(tool, game) == true) {
-			Inventory.removeRoomInventory(tool, Game.currentRoom.getRoomName(Game.currentRoom), game);
-		Game.currentRoom.getInventory();
-			System.out.println(tool + " is burning!");
-		}
-	}
 
 //drop methods
 	public void drop(Item tool) {
@@ -118,7 +110,7 @@ public class Player {
 	}
 
 //drink method
-	public String drink(Drink water) {
+	public void drink(Drink water) {
 		if(playerInventory.checkPlayerInventory(water) == true) {
 			playerInventory.removePlayerInventory(water);
 			System.out.println("You drank" + water + ".");
@@ -168,7 +160,7 @@ public class Player {
 
 //quitting method
 	public void quit(Game game) {
-		Game.play(game, true);
+		game.play(game, true);
 	}
 // put method
 	public void put(Item tool) {
