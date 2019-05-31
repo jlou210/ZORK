@@ -114,7 +114,7 @@ public class Inventory {
 		
 		inv = new Inventory(Integer.MAX_VALUE);
 		inv.addRoomInventory(Item.flashlight, "Secret Room", game);
-		inv.addRoomInventory(Item.trophy, "Secret Room", game);
+		inv.addRoomInventory(Item.trophy1, "Secret Room", game);
 		game.getMasterMap().get("Secret Room").setInventory(inv);
 		
 		//backyardigans
@@ -135,6 +135,7 @@ public class Inventory {
 		game.getMasterMap().get("Backyard").setInventory(inv);
 		
 		inv = new Inventory(Integer.MAX_VALUE);
+		inv.addRoomInventory(Item.trophy3, "Small Shed", game);
 		game.getMasterMap().get("Small Shed").setInventory(inv);
 		
 		inv = new Inventory(Integer.MAX_VALUE);
@@ -155,6 +156,7 @@ public class Inventory {
 		inv.addRoomInventory(Item.antFarm, "Max's Room", game);
 		inv.addRoomInventory(Item.empanada, "Max's Room", game);
 		inv.addRoomInventory(Item.toyTruck, "Max's Room", game);
+		inv.addRoomInventory(Item.trophy2, "Max's Room", game);
 		game.getMasterMap().get("Max's Room").setInventory(inv);
 		
 		inv = new Inventory(Integer.MAX_VALUE);
@@ -190,6 +192,7 @@ public class Inventory {
 		game.getMasterMap().get("Room3").setInventory(inv);
 		
 		inv = new Inventory(Integer.MAX_VALUE);
+		inv.addRoomInventory(Item.trophy4, "Room4", game);
 		game.getMasterMap().get("Room4").setInventory(inv);
 		
 		//mickey mouse
@@ -227,7 +230,9 @@ public class Inventory {
 		return false;
 	}
 	
+
 	public static void removeRoomInventory(Item item, String room, Game game) {
+
 		HashMap<String, Room> hashmap = game.getMasterMap();
 		hashmap.remove(item);	//fix later 
 		

@@ -10,12 +10,14 @@ public class Player {
 
 	// eat method
 
-	public static void eat(Item item, String room, Inventory playerInven, Game game) {
+	public void eat(Item item, String room, Inventory playerInven, Game game) {
 		if (playerInven.checkPlayerInventory(item) == true) {
 			playerInven.removePlayerInventory(item);
 			System.out.println("You just ate " + item + " : " + Food.sound(item));
 		} else if (Inventory.checkRoomInventory(item, game) == true) {
 			Inventory.removeRoomInventory(item, room, game);
+		} else if (Game.currentRoom.getInventory().checkRoomInventory(item, game) == true) {
+			Game.currentRoom.getInventory().removeRoomInventory(item, game);
 			System.out.println("You just ate " + item + " : " + Food.sound(item));
 		} else {
 			System.out.println("You cannot eat " + item + " because it cannot be found.");
@@ -24,7 +26,7 @@ public class Player {
 	}
 
 	public void take(Item tool, Inventory playerInven, Game game) {
-		if(Inventory.checkRoomInventory(tool, game) == true) {
+		if(Game.currentRoom.getInventory().checkRoomInventory(tool, game) == true) {
 			playerInventory.addPlayerInventory(tool);
 			System.out.println(tool + " added to your Inventory.");
 		} else {System.out.println(tool + "is not in this room. It cannot be added to your inventory.");}
@@ -45,7 +47,7 @@ public class Player {
 
 //get method
 	public void get(Item tool2, Inventory playerInven, String room, Game game) {
-		if (Inventory.checkRoomInventory(tool2, game) == true) {
+		if (Game.currentRoom.getInventory().checkRoomInventory(tool2, game) == true) {
 			playerInventory.addPlayerInventory(tool2);
 		} else {
 			System.out.println("You cannot get" + tool2 + "because it is not in this room.");
@@ -54,12 +56,12 @@ public class Player {
 
 //look method
 	public void look() {
-		System.out.println("You are in: " + Room.getRoomName(Game.currentRoom) + ". " + Game.currentRoom.getDescription());
+		System.out.println("You are in: " + Game.currentRoom.getRoomName(Game.currentRoom) + ". " + Game.currentRoom.getDescription());
 	}
 
 //lookAt method
 	public String lookAt(Item tool, Game game) {
-		if (Inventory.checkRoomInventory(tool, game) == true) {
+		if (Game.currentRoom.getInventory().checkRoomInventory(tool, game) == true) {
 			return tool.getItemDescription(tool);
 		}
 		else {
@@ -69,6 +71,7 @@ public class Player {
 	}
 
 	public String lookAt(useless tool, Game game) {
+		Game.currentRoom.getInventory();
 		if (Inventory.checkRoomInventory(tool, game) == true) {
 			return tool.getItemDescription(tool);
 		}
@@ -81,6 +84,7 @@ public class Player {
 	public void burn(Item tool, Game game) {
 		if (Inventory.checkRoomInventory(tool, game) == true) {
 			Inventory.removeRoomInventory(tool, game.currentRoom.getRoomName(game.currentRoom), game);
+		Game.currentRoom.getInventory();
 			System.out.println(tool + " is burning!");
 		}
 	}
