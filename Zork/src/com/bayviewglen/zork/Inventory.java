@@ -220,14 +220,14 @@ public class Inventory {
 
 	}
 
-	public static boolean checkRoomInventory(Item item, Game game) {
-		if(game.getMasterMap().get(Game.currentRoom).getInventory().equals(item)) {
+	public boolean checkRoomInventory(Item item, Game game) {
+		if(game.getMasterMap().get(Game.currentRoom.getRoomName(Game.currentRoom)).getInventory().equals(item)) {
 			return true;
 		}
 		return false;
 	}
 	
-	public void removePlayerInventory(Item item, String room, Game game) {
+	public void removeRoomInventory(Item item, String room, Game game) {
 		HashMap<String, Room> hashmap = game.getMasterMap();
 		hashmap.remove(item);	//fix later 
 		
