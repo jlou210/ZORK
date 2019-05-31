@@ -300,16 +300,16 @@ class Parser {
 			}
 			else if(word == CommandWords.validCommands[15]) {
 				if(wordTwo == "trophy" && wordThree == "1") {
-					Game.player.place(Item.tools.get("trophy 1"), Game.playerInven, Game.currentRoom.getRoomName(Game.currentRoom), game);
+					Game.player.place(Item.tools.get("trophy 1"));
 				}
 				else if(wordTwo == "trophy" && wordThree == "2") {
-					Game.player.place(Item.tools.get("trophy 2"), Game.playerInven, Game.currentRoom.getRoomName(Game.currentRoom), game);
+					Game.player.place(Item.tools.get("trophy 2"));
 				}
 				else if(wordTwo == "trophy" && wordThree == "3") {
-					Game.player.place(Item.tools.get("trophy 3"), Game.playerInven, Game.currentRoom.getRoomName(Game.currentRoom), game);
+					Game.player.place(Item.tools.get("trophy 3"));
 				}
 				else if(wordTwo == "trophy" && wordThree == "4") {
-					Game.player.place(Item.tools.get("trophy 4"), Game.playerInven, Game.currentRoom.getRoomName(Game.currentRoom), game);
+					Game.player.place(Item.tools.get("trophy 4"));
 				}
 			}
 			else if(word == CommandWords.validCommands[17]) {
