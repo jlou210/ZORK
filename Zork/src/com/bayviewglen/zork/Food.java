@@ -5,5 +5,10 @@ public abstract class Food extends Item{
 		super(name, weight, description);
 	}
 
-	public abstract String sound();
+	public static String sound(Item item) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	
 }

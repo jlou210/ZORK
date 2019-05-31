@@ -26,13 +26,13 @@ public class Item {
 	public static final Item toyTruck = new Item("toy truck", 5, "You picked up a truck. Vroom! Vroom!");
 	public static final Item clothes = new Item("clothes", 10, "You picked up some clothes, but the outfit you are wearing is fine."); 
 	
-	public static final Empanada empanada = new Empanada("empanada", 5, "You picked up an empanada. Muy deliciosa!");
-	public static final Pie pie = new Pie("pie", 10, "You picked up a pie. Is it apple just like how grandma makes it?");
-	public static final IceCream iceCream = new IceCream("ice cream", 5, "You picked up ice cream. Quick! Eat it before it melts!");
-	public static final Cookies cookies = new Cookies("cookies", 5, "You picked up some cookies. Smells super good! I think they're homemade.");
-	public static final Apple apple = new Apple("apple", 5, "You picked up an apple. Hopefully it's not poisonous.");
-	public static final Donuts donuts = new Donuts("donuts", 5, "You picked up some donuts. Or if you're Canadian, weirdly shaped timbits.");
-	public static final Cake cake = new Cake("cake", 20, "You picked up a 10 tier funfetti cake! It looks AMAZING!!! Eat this to win the game! Time to celebrate!");
+	public static final Food empanada = new Empanada("empanada", 5, "You picked up an empanada. Muy deliciosa!");
+	public static final Food pie = new Pie("pie", 10, "You picked up a pie. Is it apple just like how grandma makes it?");
+	public static final Food iceCream = new IceCream("ice cream", 5, "You picked up ice cream. Quick! Eat it before it melts!");
+	public static final Food cookies = new Cookies("cookies", 5, "You picked up some cookies. Smells super good! I think they're homemade.");
+	public static final Food apple = new Apple("apple", 5, "You picked up an apple. Hopefully it's not poisonous.");
+	public static final Food donuts = new Donuts("donuts", 5, "You picked up some donuts. Or if you're Canadian, weirdly shaped timbits.");
+	public static final Food cake = new Cake("cake", 20, "You picked up a 10 tier funfetti cake! It looks AMAZING!!! Eat this to win the game! Time to celebrate!");
 	
 	public static final Map map = new Map("map", 1, "You picked up a map. This will help you navigate and teleporate back to the treehouse.");
 	public static final Flashlight flashlight = new Flashlight("flashlight", 5, "You picked up a flashlight. This will help you see in the dark."); 

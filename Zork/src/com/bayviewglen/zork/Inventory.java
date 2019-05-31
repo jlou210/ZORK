@@ -201,6 +201,7 @@ public class Inventory {
 		inv.addRoomInventory(Item.cake);
 		game.getMasterMap().get("Win Room").setInventory(inv);
 		
+
 		inv = new Inventory(Integer.MAX_VALUE);
 		game.getMasterMap().get("Mickey's Room").setInventory(inv);
 		
@@ -218,7 +219,6 @@ public class Inventory {
 		
 		inv = new Inventory(Integer.MAX_VALUE);
 		game.getMasterMap().get("Outside").setInventory(inv);
-		
 		
 
 	}
