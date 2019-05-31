@@ -24,8 +24,7 @@ import java.util.Scanner;
 class Game {
 	private static Parser parser;
 	public static Room currentRoom;
-	public static Player player;
-;
+	public static Player player;;
 	// This is a MASTER object that contains all of the rooms and is easily
 	// accessible.
 	// The key will be the name of the room -> no spaces (Use all caps and
@@ -37,11 +36,11 @@ class Game {
 	private Map map = new Map("The Map", 1, "Hello! I am Map!");
 	Inventory rooms = new Inventory(11.0, 10);
 	static Inventory playerInven = new Inventory(40);
-	
+
 	private void initRooms(String fileName) throws Exception {
 		masterRoomMap = new HashMap<String, Room>();
 		Scanner roomScanner;
-		
+
 		try {
 			HashMap<String, HashMap<String, String>> exits = new HashMap<String, HashMap<String, String>>();
 			roomScanner = new Scanner(new File(fileName));
@@ -91,16 +90,19 @@ class Game {
 		}
 	}
 
-	/**	 * Create the game and initialize its internal map.
+	/**
+	 * * Create the game and initialize its internal map.
 	 */
 	public Game() {
 		try {
+
 			initRooms("data/Rooms.dat");
+			Item.initializeItems();
+
 			currentRoom = masterRoomMap.get("START_POINT");
 			player = new Player(30);
 
 			playerInven = new Inventory(30);
-			Item.initializeItems();
 
 			Inventory.initializeRooms(this);
 			play(this);
@@ -125,7 +127,7 @@ class Game {
 		}
 		System.out.println("Thank you for playing.  Good bye.");
 	}
-	
+
 	public HashMap<String, Room> getMasterMap() {
 		return masterRoomMap;
 	}
@@ -138,8 +140,10 @@ class Game {
 		System.out.println("Welcome to Zork!");
 		System.out.println("Zork is a new, incredibly boring adventure game. Just like your love life.");
 		System.out.println("Type 'help' if you need help");
-		System.out.println("The objective of this game is to collect all 4 trophies that will allow you to reach the special world where you will find a special prize!");
-		System.out.println("For more info on what this game is really about, please visit our game Wiki. Please. I'm begging you. We wouldn't of wanted to work so very hard on it for no visitors.");
+		System.out.println(
+				"The objective of this game is to collect all 4 trophies that will allow you to reach the special world where you will find a special prize!");
+		System.out.println(
+				"For more info on what this game is really about, please visit our game Wiki. Please. I'm begging you. We wouldn't of wanted to work so very hard on it for no visitors.");
 		System.out.println();
 		System.out.println(currentRoom.longDescription());
 	}
@@ -158,11 +162,11 @@ class Game {
 		if (commandWord.equals("help")) {
 			printHelp();
 		} else if (commandWord.equals("teleport")) {
-			if (command.hasSecondWord()) //Can't teleport to a place of the player's choosing.
+			if (command.hasSecondWord()) // Can't teleport to a place of the player's choosing.
 				teleport(command.getSecondWord(), playerInven);
-		}else if (commandWord.equals("go"))
+		} else if (commandWord.equals("go"))
 			goRoom(command);
-		 else if (commandWord.equals("quit")) {
+		else if (commandWord.equals("quit")) {
 			if (command.hasSecondWord())
 				System.out.println("Quit what?");
 		} else {
@@ -174,10 +178,8 @@ class Game {
 		return false;
 	}
 
-
-
-private void teleport(String secondWord, Inventory playerInven) {
-		if(playerInven.checkPlayerInventory(map)) {
+	private void teleport(String secondWord, Inventory playerInven) {
+		if (playerInven.checkPlayerInventory(map)) {
 			currentRoom = masterRoomMap.get(secondWord.toUpperCase().replaceAll(" ", "_"));
 			System.out.println(currentRoom.longDescription());
 		} else {
@@ -205,18 +207,18 @@ private void teleport(String secondWord, Inventory playerInven) {
 		if (!command.hasSecondWord()) {
 			// if there is no second word, we don't know where to go...
 			System.out.println("Go where?");
-		}else {
-		String direction = command.getSecondWord();
+		} else {
+			String direction = command.getSecondWord();
 // Try to leave current room.
-		Room nextRoom = currentRoom.nextRoom(direction);
-		if (nextRoom == null)
-			System.out.println("There is no door!");
-		else {
-			currentRoom = nextRoom;
-			System.out.println(currentRoom.longDescription());
+			Room nextRoom = currentRoom.nextRoom(direction);
+			if (nextRoom == null)
+				System.out.println("There is no door!");
+			else {
+				currentRoom = nextRoom;
+				System.out.println(currentRoom.longDescription());
+			}
 		}
-	}
 		return null;
 
-}
+	}
 }
