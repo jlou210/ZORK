@@ -137,7 +137,7 @@ class Parser {
 			}
 			else if(word == CommandWords.validCommands[7]) {
 				if(wordTwo == "water") {
-					Game.player.
+					Game.player.drink("water");
 				}
 			}
 			else if(word == CommandWords.validCommands[8]) {
