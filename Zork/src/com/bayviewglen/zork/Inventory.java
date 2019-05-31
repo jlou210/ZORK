@@ -137,6 +137,21 @@ public class Inventory {
 		inv.addRoomInventory(Item.sand);
 		game.getMasterMap().get("Backyard").setInventory(inv);
 		
+		inv = new Inventory(Integer.MAX_VALUE);
+		game.getMasterMap().get("Small Shed").setInventory(inv);
+		
+		inv = new Inventory(Integer.MAX_VALUE);
+		game.getMasterMap().get("Storage Room").setInventory(inv);
+		
+		inv = new Inventory(Integer.MAX_VALUE);
+		game.getMasterMap().get("Backyardigan's Hallway").setInventory(inv);
+		
+		inv = new Inventory(Integer.MAX_VALUE);
+		game.getMasterMap().get("Small Opening").setInventory(inv);
+		
+		inv = new Inventory(Integer.MAX_VALUE);
+		game.getMasterMap().get("House").setInventory(inv);
+		
 		//max and ruby
 		
 		inv = new Inventory(Integer.MAX_VALUE);
@@ -149,6 +164,15 @@ public class Inventory {
 		inv.addRoomInventory(Item.pillow);
 		game.getMasterMap().get("Ruby's Room").setInventory(inv);
 		
+		inv = new Inventory(Integer.MAX_VALUE);
+		game.getMasterMap().get("Ruby's Kitchen").setInventory(inv);
+		
+		inv = new Inventory(Integer.MAX_VALUE);
+		game.getMasterMap().get("Grandma's House").setInventory(inv);
+		
+		inv = new Inventory(Integer.MAX_VALUE);
+		game.getMasterMap().get("Room").setInventory(inv);
+		
 		//treehouse
 		
 		inv = new Inventory(Integer.MAX_VALUE);
@@ -156,11 +180,44 @@ public class Inventory {
 		inv.addRoomInventory(Item.apple);
 		game.getMasterMap().get("Pantry").setInventory(inv);
 		
+		inv = new Inventory(Integer.MAX_VALUE);
+		game.getMasterMap().get("Trophy Room").setInventory(inv);
+		
+		inv = new Inventory(Integer.MAX_VALUE);
+		game.getMasterMap().get("Main Room").setInventory(inv);
+		
+		inv = new Inventory(Integer.MAX_VALUE);
+		game.getMasterMap().get("Room2").setInventory(inv);
+		
+		inv = new Inventory(Integer.MAX_VALUE);
+		game.getMasterMap().get("Room3").setInventory(inv);
+		
+		inv = new Inventory(Integer.MAX_VALUE);
+		game.getMasterMap().get("Room4").setInventory(inv);
+		
 		//mickey mouse
 		
 		inv = new Inventory(Integer.MAX_VALUE);
 		inv.addRoomInventory(Item.cake);
 		game.getMasterMap().get("Win Room").setInventory(inv);
+		
+		inv = new Inventory(Integer.MAX_VALUE);
+		game.getMasterMap().get("Mickey's Room").setInventory(inv);
+		
+		inv = new Inventory(Integer.MAX_VALUE);
+		game.getMasterMap().get("Minnie's Room").setInventory(inv);
+		
+		inv = new Inventory(Integer.MAX_VALUE);
+		game.getMasterMap().get("Donald's Room").setInventory(inv);
+
+		inv = new Inventory(Integer.MAX_VALUE);
+		game.getMasterMap().get("Goofy's Garden").setInventory(inv);
+
+		inv = new Inventory(Integer.MAX_VALUE);
+		game.getMasterMap().get("Pluto's Dog House").setInventory(inv);
+		
+		inv = new Inventory(Integer.MAX_VALUE);
+		game.getMasterMap().get("Outside").setInventory(inv);
 		
 		
 
