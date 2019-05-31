@@ -147,9 +147,13 @@ public class Player {
 
 //save method
 	public String save() {
-		return null;
+		Save.GameData(playerInventory, inventoryWeight, Game.currentRoom);
+		return "The game has been saved.";
 	}
-
+//load method
+	public String load() {
+		null
+	}
 //check inventory method
 	public Inventory check() {
 		return playerInventory;
