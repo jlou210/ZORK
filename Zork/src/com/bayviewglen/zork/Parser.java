@@ -120,6 +120,9 @@ class Parser {
 				else if(wordTwo == "cake") {
 					Game.player.eat(Item.food.get("cookies"), Game.currentRoom.getRoomName(Game.currentRoom), Game.playerInven, game);
 				}
+				else {
+					System.out.println("Are you speaking English? Tu hables espanol? Please try another statement");
+				}
 			}
 			else if(word == CommandWords.validCommands[5]) {
 				if(wordTwo == "flashlight") {
@@ -218,6 +221,9 @@ class Parser {
 				else if(wordTwo == "glass" && wordThree == "of" && wordFour == "milk") {
 					Game.player.get(Item.drink.get("glass of milk"), Game.playerInven, Game.currentRoom.getRoomName(Game.currentRoom), game);
 				}
+				else {
+					System.out.println("Are you speaking English? Tu hables espanol? Please try another statement");
+				}
 			}
 			else if(word == CommandWords.validCommands[6]) {
 				System.out.println("You used the " + wordTwo);
@@ -232,13 +238,19 @@ class Parser {
 				else if(wordTwo == "glass" && wordThree == "of" && wordFour == "water") {
 					Game.player.drink(Item.drink.get("milk"));
 				}
+				else {
+					System.out.println("Are you speaking English? Tu hables espanol? Please try another statement");
+				}
 			}
 			else if(word == CommandWords.validCommands[8]) {
 				if(wordTwo == "at") {
 					System.out.println("You looked at the " + wordThree);
 				}
-				else {
+				else if(wordTwo != "at"){
 					System.out.println("You looked at the " + wordTwo);
+				}
+				else {
+					System.out.println("Are you speaking English? Tu hables espanol? Please try another statement");
 				}
 				
 			}
@@ -260,6 +272,9 @@ class Parser {
 				if(wordTwo == "up") {
 					Game.player.climb();
 				}
+				else {
+					System.out.println("Are you speaking English? Tu hables espanol? Please try another statement");
+				}
 			}
 			else if(word == CommandWords.validCommands[13]) {
 				if(wordTwo == null) {
@@ -267,6 +282,9 @@ class Parser {
 				}
 				else if(wordTwo != null) {
 					System.out.println("You can only teleport to the Treehouse");
+				}
+				else {
+					System.out.println("Are you speaking English? Tu hables espanol? Please try another statement");
 				}
 			}
 			else if(word == CommandWords.validCommands[14]) {
@@ -282,6 +300,9 @@ class Parser {
 				else if(wordTwo == "trophy" && wordThree == "4") {
 					Game.player.put(Item.tools.get("trophy 4"));
 				}
+				else {
+					System.out.println("Are you speaking English? Tu hables espanol? Please try another statement");
+				}
 			}
 			else if(word == CommandWords.validCommands[15]) {
 				if(wordTwo == "trophy" && wordThree == "1") {
@@ -295,6 +316,9 @@ class Parser {
 				}
 				else if(wordTwo == "trophy" && wordThree == "4") {
 					Game.player.place(Item.tools.get("trophy 4"));
+				}
+				else {
+					System.out.println("Are you speaking English? Tu hables espanol? Please try another statement");
 				}
 			}
 			else if(word == CommandWords.validCommands[17]) {
@@ -394,6 +418,9 @@ class Parser {
 				else if(wordTwo == "glass" && wordThree == "of" && wordFour == "milk") {
 					Game.player.get(Item.drink.get("glass of milk"), Game.playerInven, Game.currentRoom.getRoomName(Game.currentRoom), game);
 				}
+				else {
+					System.out.println("Are you speaking English? Tu hables espanol? Please try another statement");
+				}
 			}
 			else if(word == CommandWords.validCommands[18]) {
 				if(wordTwo == "flashlight") {
@@ -492,6 +519,9 @@ class Parser {
 				else if(wordTwo == "glass" && wordThree == "of" && wordFour == "milk") {
 					Game.player.throwObject(Item.drink.get("glass of milk"));
 				}
+				else {
+					System.out.println("Are you speaking English? Tu hables espanol? Please try another statement");
+				}
 			}
 			else if(word == CommandWords.validCommands[19]) {
 				if(wordTwo == "flashlight") {
@@ -589,6 +619,9 @@ class Parser {
 				}
 				else if(wordTwo == "glass" && wordThree == "of" && wordFour == "milk") {
 					Game.player.drop(Item.drink.get("glass of milk"));
+				}
+				else {
+					System.out.println("Are you speaking English? Tu hables espanol? Please try another statement");
 				}
 			}		
 			else if(word == CommandWords.validCommands[20]) {
