@@ -31,6 +31,7 @@ class Room {
 	public Room(String description) {
 		this.description = description;
 		exits = new HashMap<String, Room>();
+		roomItems = new Inventory(Integer.MAX_VALUE);
 	}
 
 	public Room() {
