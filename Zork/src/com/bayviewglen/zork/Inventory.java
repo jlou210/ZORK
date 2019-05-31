@@ -229,7 +229,7 @@ public class Inventory {
 	}
 
 	public static void removeRoomInventory(Item item, String room, Game game) {
-		game.getMasterMap().get(Game.currentRoom).getInventory().remove(Game.currentRoom.getItem(item));	
+		game.getMasterMap().get(Room.getRoomName(Game.currentRoom)).getInventory().remove(Game.currentRoom.getItem(item));	
 
 	}
 
