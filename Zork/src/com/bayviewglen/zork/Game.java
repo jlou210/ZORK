@@ -156,8 +156,7 @@ class Game {
 		if (commandWord.equals("help")) {
 			printHelp();
 		} else if (commandWord.equals("teleport")) {
-			if (command.hasSecondWord()) //Can't teleport to a place of the player's choosing.
-				teleport(command.getSecondWord(), playerInven);
+				teleport(playerInven);
 		}else if (commandWord.equals("go"))
 			goRoom(command);
 		 else if (commandWord.equals("quit")) {
