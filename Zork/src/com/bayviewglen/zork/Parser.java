@@ -129,10 +129,10 @@ class Parser {
 				}
 				else if(wordTwo == "apple") {
 					Game.player.eat(Item.food.get("apple"), Game.currentRoom.getRoomName(Game.currentRoom), Game.playerInven, game);
-
 				}
 			}
 			else if(word == CommandWords.validCommands[5]) {
+				
 				
 			}
 			else if(word == CommandWords.validCommands[6]) {
