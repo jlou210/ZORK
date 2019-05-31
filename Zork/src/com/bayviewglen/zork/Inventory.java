@@ -80,59 +80,59 @@ public class Inventory {
 		
 		//dora 
 		Inventory inv = new Inventory(Integer.MAX_VALUE);
-		inv.addRoomInventory(Item.map);
+		inv.addRoomInventory(Item.map, "House Entrance", game);
 		game.getMasterMap().get("House Entrance").setInventory(inv);
 		
 		inv = new Inventory(Integer.MAX_VALUE);
-		inv.addRoomInventory(Item.pie);
-		inv.addRoomInventory(Item.iceCream);
+		inv.addRoomInventory(Item.pie, "Dining Room", game);
+		inv.addRoomInventory(Item.iceCream, "Dining Room", game);
 		game.getMasterMap().get("Dining Room").setInventory(inv);
 		
 		inv = new Inventory(Integer.MAX_VALUE);
 		game.getMasterMap().get("Kitchen").setInventory(inv);
 		
 		inv = new Inventory(Integer.MAX_VALUE);
-		inv.addRoomInventory(Item.backpack);
-		inv.addRoomInventory(Item.clothes);
-		inv.addRoomInventory(Item.leafletHint);
+		inv.addRoomInventory(Item.backpack, "Living Room", game);
+		inv.addRoomInventory(Item.clothes, "Living Room", game);
+		inv.addRoomInventory(Item.leafletHint, "Living Room", game);
 		game.getMasterMap().get("Living Room").setInventory(inv);
 		
 		//arthur
 		inv = new Inventory(Integer.MAX_VALUE);
-		inv.addRoomInventory(Item.glasses);
+		inv.addRoomInventory(Item.glasses, "Arthur's Room", game);
 		game.getMasterMap().get("Arthur's Room").setInventory(inv);
 		
 		inv = new Inventory(Integer.MAX_VALUE);
-		inv.addRoomInventory(Item.iceCream);
+		inv.addRoomInventory(Item.iceCream, "Mr. Ratburn's Class", game);
 		game.getMasterMap().get("Mr.Ratburn's Class").setInventory(inv);
 		
 		inv = new Inventory(Integer.MAX_VALUE);
 		game.getMasterMap().get("Study Room").setInventory(inv);
 		
 		inv = new Inventory(Integer.MAX_VALUE);
-		inv.addRoomInventory(Item.BookshelfKey);
+		inv.addRoomInventory(Item.BookshelfKey, "Library", game);
 		game.getMasterMap().get("Library").setInventory(inv);
 		
 		inv = new Inventory(Integer.MAX_VALUE);
-		inv.addRoomInventory(Item.flashlight);
-		inv.addRoomInventory(Item.trophy);
+		inv.addRoomInventory(Item.flashlight, "Secret Room", game);
+		inv.addRoomInventory(Item.trophy, "Secret Room", game);
 		game.getMasterMap().get("Secret Room").setInventory(inv);
 		
 		//backyardigans
 		
 		inv = new Inventory(Integer.MAX_VALUE);
-		inv.addRoomInventory(Item.dirt);
-		inv.addRoomInventory(Item.libraryCard);
-		inv.addRoomInventory(Item.treeBranch);
-		inv.addRoomInventory(Item.flower);
+		inv.addRoomInventory(Item.dirt, "Mini Garden", game);
+		inv.addRoomInventory(Item.libraryCard, "Mini Garden", game);
+		inv.addRoomInventory(Item.treeBranch, "Mini Garden", game);
+		inv.addRoomInventory(Item.flower, "Mini Garden", game);
 		game.getMasterMap().get("Mini Garden").setInventory(inv);
 		
 		inv = new Inventory(Integer.MAX_VALUE);
-		inv.addRoomInventory(Item.shedKey);
+		inv.addRoomInventory(Item.shedKey, "Back Storage Room", game);
 		game.getMasterMap().get("Back Storage Room").setInventory(inv);
 		
 		inv = new Inventory(Integer.MAX_VALUE);
-		inv.addRoomInventory(Item.sand);
+		inv.addRoomInventory(Item.sand, "Backyard", game);
 		game.getMasterMap().get("Backyard").setInventory(inv);
 		
 		inv = new Inventory(Integer.MAX_VALUE);
@@ -153,13 +153,13 @@ public class Inventory {
 		//max and ruby
 		
 		inv = new Inventory(Integer.MAX_VALUE);
-		inv.addRoomInventory(Item.antFarm);
-		inv.addRoomInventory(Item.empanada);
-		inv.addRoomInventory(Item.toyTruck);
+		inv.addRoomInventory(Item.antFarm, "Max's Room", game);
+		inv.addRoomInventory(Item.empanada, "Max's Room", game);
+		inv.addRoomInventory(Item.toyTruck, "Max's Room", game);
 		game.getMasterMap().get("Max's Room").setInventory(inv);
 		
 		inv = new Inventory(Integer.MAX_VALUE);
-		inv.addRoomInventory(Item.pillow);
+		inv.addRoomInventory(Item.pillow, "Ruby's Room", game);
 		game.getMasterMap().get("Ruby's Room").setInventory(inv);
 		
 		inv = new Inventory(Integer.MAX_VALUE);
@@ -174,8 +174,8 @@ public class Inventory {
 		//treehouse
 		
 		inv = new Inventory(Integer.MAX_VALUE);
-		inv.addRoomInventory(Item.cookies);
-		inv.addRoomInventory(Item.apple);
+		inv.addRoomInventory(Item.cookies, "Pantry", game);
+		inv.addRoomInventory(Item.apple, "Pantry", game);
 		game.getMasterMap().get("Pantry").setInventory(inv);
 		
 		inv = new Inventory(Integer.MAX_VALUE);
@@ -196,7 +196,7 @@ public class Inventory {
 		//mickey mouse
 		
 		inv = new Inventory(Integer.MAX_VALUE);
-		inv.addRoomInventory(Item.cake);
+		inv.addRoomInventory(Item.cake, "Win Room", game);
 		game.getMasterMap().get("Win Room").setInventory(inv);
 		
 
@@ -233,6 +233,7 @@ public class Inventory {
 
 	}
 
-	public void addRoomInventory(Item item) {
+	public void addRoomInventory(Item item, String room, Game game) {
+		game.getMasterMap().get(room).add(item); 
 	}
 }

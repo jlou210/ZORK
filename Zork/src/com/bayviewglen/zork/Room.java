@@ -175,4 +175,9 @@ class Room {
 	public Item getItem(Item item) {
 		return item; 
 	}
+
+	public void add(Item item) {
+		// TODO Auto-generated method stub
+		
+	}
 }
