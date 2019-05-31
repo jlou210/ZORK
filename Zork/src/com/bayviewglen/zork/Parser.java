@@ -128,18 +128,20 @@ class Parser {
 				}
 			}
 			else if(word == CommandWords.validCommands[5]) {
-						
+				if(wordTwo == "") {
+					Game.player.;
+				}
 			}
 			else if(word == CommandWords.validCommands[6]) {
 				
 			}
 			else if(word == CommandWords.validCommands[7]) {
 				if(wordTwo == "water") {
-					
+					Game.player.
 				}
 			}
 			else if(word == CommandWords.validCommands[8]) {
-				
+				if(wordTwo == "")
 			}
 			else if(word == CommandWords.validCommands[9]) {
 				
@@ -151,10 +153,12 @@ class Parser {
 				
 			}
 			else if(word == CommandWords.validCommands[12]) {
-				
+				if(wordTwo == "up") {
+					Game.player.climb();
+				}
 			}
-			else if(word == CommandWords.validCommands[13]) {
-				
+			else if(word == CommandWords.validCommands[14]) {
+				if
 			}
 		}
 		
