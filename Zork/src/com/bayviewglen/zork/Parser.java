@@ -105,13 +105,13 @@ class Parser {
 					Game.player.read(Item.tools.get("leaflet hint"));
 				}
 			}
-			else if(word == CommandWords.validCommands[1]) {
-				if(wordTwo == "straight") {
-					
-				}
-			}
 			else if(word == CommandWords.validCommands[2]) {
-				
+				if(wordTwo == "game") {
+					Game.player.quit();
+				}
+				else if(wordTwo == null) {
+					Game.player.quit();
+				}
 			}
 			else if(word == CommandWords.validCommands[3]) {
 				
