@@ -60,21 +60,6 @@ class Parser {
 		else
 			word4 = null;
 // note: we just ignore the rest of the input line.
-		//Need something that checks for an adjective
-		String adjective = "ly";
-				
-		if(word1.substring(word1.length()-1, word1.length())== adjective) {
-					
-		}
-		else if(word1.substring(word1.length()-1, word1.length())== adjective) {
-					
-		}
-		else if(word1.substring(word1.length()-1, word1.length())== adjective) {
-					
-		}
-		else if(word1.substring(word1.length()-1, word1.length())== adjective) {
-				
-		}
 // Now check whether this word is known. If so, create a command
 		// with it. If not, create a "nil" command (for unknown command).
 		if (commands.isCommand(word1)) {
