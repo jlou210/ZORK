@@ -96,13 +96,13 @@ class Parser {
 		public void doAction(String word, String wordTwo, Game game) {
 			if(word == CommandWords.validCommands[0]) {
 				if(wordTwo == "book") {
-					
+					Game.player.read(Item.tools.get("book"));
 				}
 				else if(wordTwo=="map") {
-					
+					Game.player.read(Item.tools.get("map"));
 				}
 				else if(wordTwo == "leaflet hint") {
-					
+					Game.player.read(Item.tools.get("leaflet hint"));
 				}
 			}
 			else if(word == CommandWords.validCommands[1]) {
@@ -125,15 +125,13 @@ class Parser {
 				}
 				else if(wordTwo == "empanada") {
 					Game.player.eat(Item.food.get("empanada"), Game.currentRoom.getRoomName(Game.currentRoom), Game.playerInven, game);
-
 				}
 				else if(wordTwo == "apple") {
 					Game.player.eat(Item.food.get("apple"), Game.currentRoom.getRoomName(Game.currentRoom), Game.playerInven, game);
 				}
 			}
 			else if(word == CommandWords.validCommands[5]) {
-				
-				
+								
 			}
 			else if(word == CommandWords.validCommands[6]) {
 				
