@@ -33,7 +33,7 @@ class Game {
 	// masterRoomMap.get("GREAT_ROOM") will return the Room Object that is the Great
 	// Room (assuming you have one).
 	private static HashMap<String, Room> masterRoomMap;
-	private Map map = new Map("The Map", 1, "Hello! I am Map!");
+	private static Map map = new Map("The Map", 1, "Hello! I am Map!");
 	Inventory rooms = new Inventory(11.0, 10);
 	static Inventory playerInven = new Inventory(40);
 	public static Player player;
@@ -174,7 +174,7 @@ class Game {
 
 
 
-private void teleport(String secondWord, Inventory playerInven) {
+private static void teleport(String secondWord, Inventory playerInven) {
 		if(playerInven.checkPlayerInventory(map)) {
 			currentRoom = masterRoomMap.get(secondWord.toUpperCase().replaceAll(" ", "_"));
 			System.out.println(currentRoom.longDescription());

@@ -21,4 +21,9 @@ public class Max implements Character{
 		}
 		return false;
 	}
+
+	@Override
+	public void speak() {
+		System.out.println(description);		
+	}
 }
