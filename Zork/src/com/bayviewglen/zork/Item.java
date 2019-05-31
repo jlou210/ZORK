@@ -52,7 +52,7 @@ public class Item {
 	public static final Trophy trophy2 = new Trophy("trophy 2", 5, "You picked up a trophy. Yay! You got another trophy!"); 
 	public static final Trophy trophy3 = new Trophy("trophy 3", 5, "You picked up a trophy. Yay! You got another trophy!"); 
 	public static final Trophy trophy4 = new Trophy("trophy 4", 5, "You picked up a trophy. Yay! You got another trophy!"); 
-	public static final BookshelfKey BookshelfKey = new BookshelfKey("book-shelf key", 1, "You picked up a key. I wonder where it can be used."); 
+	public static final BookshelfKey bookshelfKey = new BookshelfKey("bookshelf key", 1, "You picked up a key. I wonder where it can be used."); 
 	
 
 	public static void initializeItems() {
@@ -88,6 +88,7 @@ public class Item {
 		tools.put("trophy 2", trophy2); 
 		tools.put("trophy 3", trophy3); 
 		tools.put("trophy 4", trophy4); 
+		tools.put("bookshelf key", bookshelfKey); 
 	}
 	
 	
