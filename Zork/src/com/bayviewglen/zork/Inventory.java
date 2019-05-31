@@ -64,7 +64,9 @@ public class Inventory {
 	}
 
 	// room inventory stuff
+	@SuppressWarnings("unused")
 	private int numRooms = 0;
+	@SuppressWarnings("unused")
 	private int numItems = 0;
 
 	public Inventory(double numRooms, int numItems) {
