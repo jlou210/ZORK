@@ -174,8 +174,9 @@ class Game {
 
 
 
-private static void teleport(String secondWord, Inventory playerInven) {
+private static void teleport(Inventory playerInven) {
 		if(playerInven.checkPlayerInventory(map)) {
+			String secondWord = "Main Room";
 			currentRoom = masterRoomMap.get(secondWord.toUpperCase().replaceAll(" ", "_"));
 			System.out.println(currentRoom.longDescription());
 		} else {
