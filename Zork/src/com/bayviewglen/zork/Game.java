@@ -101,7 +101,7 @@ class Game {
 			Item.initializeItems();
 
 			Inventory.initializeRooms(this);
-			play();
+			play(this);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -112,14 +112,14 @@ class Game {
 	/**
 	 * Main play routine. Loops until end of play.
 	 */
-	public void play() {
+	public void play(Game game) {
 		printWelcome();
 // Enter the main command loop.  Here we repeatedly read commands and
 		// execute them until the game is over.
 
 		boolean finished = false;
 		while (!finished) {
-			Command command = parser.getCommand();
+			Command command = parser.getCommand(game);
 			finished = processCommand(command, playerInven);
 		}
 		System.out.println("Thank you for playing.  Good bye.");

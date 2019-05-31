@@ -15,7 +15,7 @@ public class Player {
 			playerInven.removePlayerInventory(item);
 			System.out.println("You just ate " + item + " : " + Food.sound(item));
 		} else if (Inventory.checkRoomInventory(item, game) == true) {
-			Inventory.removeRoomInventory(item, room, game);
+			Inventory.removeRoomInventory(item, game);
 			System.out.println("You just ate " + item + " : " + Food.sound(item));
 		} else {
 			System.out.println("You cannot eat " + item + " because it cannot be found.");
@@ -53,7 +53,7 @@ public class Player {
 	}
 
 //look method
-	public String look() {
+	public void look() {
 		System.out.println("You are in: " + Room.getRoomName(Game.currentRoom) + ". " + Room.getDescription());
 	}
 
@@ -78,10 +78,10 @@ public class Player {
 	}
 
 //burn methods
-	public String burn(Item tool, Game game) {
+	public void burn(Item tool, Game game) {
 		if (Inventory.checkRoomInventory(tool, game) == true) {
 			Inventory.removeRoomInventory(tool, game);
-			System.out.println(tool + "is burning!");
+			System.out.println(tool + " is burning!");
 		}
 	}
 
