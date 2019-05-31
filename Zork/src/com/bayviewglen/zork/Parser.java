@@ -606,6 +606,9 @@ class Parser {
 					Game.player.drop(Item.drink.get("glass of milk"));
 				}
 			}		
+			else if(word == CommandWords.validCommands[20]) {
+				
+			}
 			else if(word == CommandWords.validCommands[19]) {
 				
 			}
