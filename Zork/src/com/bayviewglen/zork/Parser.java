@@ -96,25 +96,22 @@ class Parser {
 		public void doAction(String word, String wordTwo, Game game) {
 			if(word == CommandWords.validCommands[0]) {
 				if(wordTwo == "book") {
-					
+					Game.player.read(Item.tools.get("book"));
 				}
 				else if(wordTwo=="map") {
-					
+					Game.player.read(Item.tools.get("map"));
 				}
 				else if(wordTwo == "leaflet hint") {
-					
-				}
-			}
-			else if(word == CommandWords.validCommands[1]) {
-				if(wordTwo == "straight") {
-					
+					Game.player.read(Item.tools.get("leaflet hint"));
 				}
 			}
 			else if(word == CommandWords.validCommands[2]) {
-				
-			}
-			else if(word == CommandWords.validCommands[3]) {
-				
+				if(wordTwo == "game") {
+					Game.player.quit();
+				}
+				else if(wordTwo == null) {
+					Game.player.quit();
+				}
 			}
 			else if(word == CommandWords.validCommands[4]) {
 				if(wordTwo == "pie") {
@@ -125,21 +122,21 @@ class Parser {
 				}
 				else if(wordTwo == "empanada") {
 					Game.player.eat(Item.food.get("empanada"), Game.currentRoom.getRoomName(Game.currentRoom), Game.playerInven, game);
-
 				}
 				else if(wordTwo == "apple") {
 					Game.player.eat(Item.food.get("apple"), Game.currentRoom.getRoomName(Game.currentRoom), Game.playerInven, game);
 				}
 			}
 			else if(word == CommandWords.validCommands[5]) {
-				
-				
+						
 			}
 			else if(word == CommandWords.validCommands[6]) {
 				
 			}
 			else if(word == CommandWords.validCommands[7]) {
-				
+				if(wordTwo == "water") {
+					
+				}
 			}
 			else if(word == CommandWords.validCommands[8]) {
 				
