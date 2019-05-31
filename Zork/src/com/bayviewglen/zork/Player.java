@@ -163,7 +163,7 @@ public class Player {
 	}
 //load method
 	public String load() {
-		null
+		return null;
 	}
 //check inventory method
 	public Inventory check() {

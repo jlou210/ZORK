@@ -96,44 +96,42 @@ class Parser {
 		public void doAction(String word, String wordTwo, Game game) {
 			if(word == CommandWords.validCommands[0]) {
 				if(wordTwo == "book") {
-					
+					Game.player.read(Item.tools.get("book"));
 				}
 				else if(wordTwo=="map") {
-					
+					Game.player.read(Item.tools.get("map"));
 				}
 				else if(wordTwo == "leaflet hint") {
-					
-				}
-			}
-			else if(word == CommandWords.validCommands[1]) {
-				if(wordTwo == "straight") {
-					
+					Game.player.read(Item.tools.get("leaflet hint"));
 				}
 			}
 			else if(word == CommandWords.validCommands[2]) {
-				
+				if(wordTwo == "game") {
+					Game.player.quit();
+				}
+				else if(wordTwo == null) {
+					Game.player.quit();
+				}
 			}
 			else if(word == CommandWords.validCommands[3]) {
 				
 			}
 			else if(word == CommandWords.validCommands[4]) {
 				if(wordTwo == "pie") {
-					Player.eat(Item.food.get("pie"), Game.currentRoom.getRoomName(Game.currentRoom), Game.playerInven, game);
+					Game.player.eat(Item.food.get("pie"), Game.currentRoom.getRoomName(Game.currentRoom), Game.playerInven, game);
 				}
 				else if(wordTwo=="ice cream") {
-					Player.eat(Item.food.get("ice cream"), Game.currentRoom.getRoomName(Game.currentRoom), Game.playerInven, game);
+					Game.player.eat(Item.food.get("ice cream"), Game.currentRoom.getRoomName(Game.currentRoom), Game.playerInven, game);
 				}
 				else if(wordTwo == "empanada") {
-					Player.eat(Item.food.get("empanada"), Game.currentRoom.getRoomName(Game.currentRoom), Game.playerInven, game);
-
+					Game.player.eat(Item.food.get("empanada"), Game.currentRoom.getRoomName(Game.currentRoom), Game.playerInven, game);
 				}
 				else if(wordTwo == "apple") {
-					Player.eat(Item.food.get("apple"), Game.currentRoom.getRoomName(Game.currentRoom), Game.playerInven, game);
-
+					Game.player.eat(Item.food.get("apple"), Game.currentRoom.getRoomName(Game.currentRoom), Game.playerInven, game);
 				}
 			}
 			else if(word == CommandWords.validCommands[5]) {
-				
+								
 			}
 			else if(word == CommandWords.validCommands[6]) {
 				

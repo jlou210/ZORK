@@ -24,6 +24,7 @@ import java.util.Scanner;
 class Game {
 	private static Parser parser;
 	public static Room currentRoom;
+	public static Player player;
 ;
 	// This is a MASTER object that contains all of the rooms and is easily
 	// accessible.
@@ -96,6 +97,8 @@ class Game {
 		try {
 			initRooms("data/Rooms.dat");
 			currentRoom = masterRoomMap.get("START_POINT");
+			player = new Player(30);
+
 			playerInven = new Inventory(30);
 			Item.initializeItems();
 
