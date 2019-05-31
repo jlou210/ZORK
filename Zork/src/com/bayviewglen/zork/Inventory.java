@@ -114,7 +114,7 @@ public class Inventory {
 		inv = new Inventory(Integer.MAX_VALUE);
 		inv.addRoomInventory(Item.bookshelfKey, "Library", game);
 		game.getMasterMap().get("Library").setInventory(inv);
-		
+	
 		inv = new Inventory(Integer.MAX_VALUE);
 		inv.addRoomInventory(Item.flashlight, "Secret Room", game);
 		inv.addRoomInventory(Item.trophy1, "Secret Room", game);
