@@ -609,9 +609,6 @@ class Parser {
 			else if(word == CommandWords.validCommands[20]) {
 				
 			}
-			else if(word == CommandWords.validCommands[19]) {
-				
-			}
 		}
 		
 	/**
