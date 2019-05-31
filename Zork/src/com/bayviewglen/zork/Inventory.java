@@ -133,6 +133,7 @@ public class Inventory {
 		
 		inv = new Inventory(Integer.MAX_VALUE);
 		inv.addRoomInventory(Item.sand, "Backyard", game);
+		inv.addRoomInventory(Item.glassOfMilk, "Backyard", game);
 		game.getMasterMap().get("Backyard").setInventory(inv);
 		
 		inv = new Inventory(Integer.MAX_VALUE);
