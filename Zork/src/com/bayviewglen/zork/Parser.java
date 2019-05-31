@@ -133,7 +133,7 @@ class Parser {
 				}
 			}
 			else if(word == CommandWords.validCommands[6]) {
-				
+			
 			}
 			else if(word == CommandWords.validCommands[7]) {
 				if(wordTwo == "water") {
@@ -141,7 +141,9 @@ class Parser {
 				}
 			}
 			else if(word == CommandWords.validCommands[8]) {
-				if(wordTwo == "")
+				if(wordTwo == "") {
+					
+				}
 			}
 			else if(word == CommandWords.validCommands[9]) {
 				
