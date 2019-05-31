@@ -20,7 +20,7 @@ import java.util.Iterator;
 
 class Room {
 	private String roomName;
-	private static String description;
+	private String description;
 	private HashMap<String, Room> exits; // stores exits of this room.
 	private Inventory roomItems;
 
@@ -29,7 +29,7 @@ class Room {
 	 * "description" is something like "a kitchen" or "an open court yard".
 	 */
 	public Room(String description) {
-		Room.description = description;
+		this.description = description;
 		exits = new HashMap<String, Room>();
 	}
 
@@ -48,6 +48,11 @@ class Room {
 		roomItems = inventory;
 	}
 
+	public void removeInventory(Item item, Room room, Game game) {
+		HashMap<String, Item> hashmap = game.getMasterMap().set(room);
+		hashmap.remove(item);	//fix later 
+		
+	}
 	public void setExit(char direction, Room r) throws Exception {
 		String dir = "";
 		switch (direction) {
@@ -164,25 +169,18 @@ class Room {
 		this.roomName = roomName;
 	}
 
-	public static String getDescription() {
+	public String getDescription() {
 		return description;
 	}
 
 	public void setDescription(String description) {
-		Room.description = description;
+		this.description = description;
 	}
 	
 	public Item getItem(Item item) {
 		return item; 
 	}
 
-	public void add(Item item) {
-		// TODO Auto-generated method stub
-		
-	}
 
-	public void remove(Item item) {
-		// TODO Auto-generated method stub
-		
-	}
+
 }

@@ -1,11 +1,10 @@
 package com.bayviewglen.zork;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 public class Inventory {
 
-	private static ArrayList<Item> items;
+	private ArrayList<Item> items;
 	private int maxWeight;
 	private int currentPlayerWeight = 0;
 
@@ -227,18 +226,17 @@ public class Inventory {
 		}
 		return false;
 	}
-
-	public static void removeRoomInventory(Item item, Game game) {
-		game.getMasterMap().get(Room.getRoomName(Game.currentRoom)).getInventory().remove(Game.currentRoom.getItem(item));	
-
-	}
-
-	private void remove(Item item) {
-		// TODO Auto-generated method stub
+	
+	public void removePlayerInventory(Item item, String room, Game game) {
+		HashMap<String, Room> hashmap = game.getMasterMap();
+		hashmap.remove(item);	//fix later 
 		
 	}
+	
+
 
 	public void addRoomInventory(Item item, String room, Game game) {
-		game.getMasterMap().get(room).add(item); 
+		Inventory inv = game.getMasterMap().get(room).getInventory();
+		inv.items.add(item);
 	}
 }
