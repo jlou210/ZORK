@@ -247,7 +247,15 @@ public class Inventory {
 
 
 	public void addRoomInventory(Item item, String room, Game game) {
-		Inventory inv = game.getMasterMap().get(room).getInventory();
-		inv.items.add(item);
+		HashMap<String, Room> hashmap = game.getMasterMap();
+		Room r = hashmap.get(room);
+		Inventory inv = r.getInventory();
+		inv.getItems().add(item);
 	}
+	
+
+	public ArrayList<Item> getItems (){
+		return items;
+	}
+
 }
