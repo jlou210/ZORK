@@ -18,7 +18,6 @@ public class Inventory {
 		this.maxWeight = maxWeight;
 		currentPlayerWeight = setWeight;
 	}
-
 	public double getPlayerWeight() {
 		return currentPlayerWeight;
 	}
