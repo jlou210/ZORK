@@ -64,7 +64,9 @@ public class Inventory {
 	}
 
 	// room inventory stuff
+	@SuppressWarnings("unused")
 	private int numRooms = 0;
+	@SuppressWarnings("unused")
 	private int numItems = 0;
 
 	public Inventory(double numRooms, int numItems) {
@@ -225,6 +227,7 @@ public class Inventory {
 
 	}
 
+	@SuppressWarnings("unlikely-arg-type")
 	public static boolean checkRoomInventory(Item item, Game game) {
 		if(game.getMasterMap().get(Game.currentRoom.getRoomName(Game.currentRoom)).getInventory().equals(item)) {
 			return true;
@@ -233,6 +236,7 @@ public class Inventory {
 	}
 	
 
+	@SuppressWarnings("unlikely-arg-type")
 	public static void removeRoomInventory(Item item, String room, Game game) {
 
 		HashMap<String, Room> hashmap = game.getMasterMap();
@@ -243,7 +247,8 @@ public class Inventory {
 
 
 	public void addRoomInventory(Item item, String room, Game game) {
-		Inventory inv = game.getMasterMap().get(room).getInventory();
-		inv.items.add(item);
+		HashMap<String, Room> hashmap = game.getMasterMap();
+		Inventory inv = hashmap.get(room).getInventory();
+		((List<Item>) inv).add(item);
 	}
 }

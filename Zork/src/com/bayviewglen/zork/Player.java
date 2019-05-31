@@ -87,14 +87,6 @@ public class Player {
 		}
 	}
 
-//burn methods
-	public void burn(Item tool, Game game) {
-		if (Inventory.checkRoomInventory(tool, game) == true) {
-			Inventory.removeRoomInventory(tool, Game.currentRoom.getRoomName(Game.currentRoom), game);
-		Game.currentRoom.getInventory();
-			System.out.println(tool + " is burning!");
-		}
-	}
 
 //drop methods
 	public void drop(Item tool) {
@@ -117,7 +109,15 @@ public class Player {
 
 	}
 
-
+//drink method
+	public void drink(Drink water) {
+		if(playerInventory.checkPlayerInventory(water) == true) {
+			playerInventory.removePlayerInventory(water);
+			System.out.println("You drank" + water + ".");
+		}else {
+			System.out.println("You cannot drinks something that is not in your inventory.");
+		}
+	}
 
 //give method
 	public void give(Item tool) {
@@ -160,7 +160,7 @@ public class Player {
 
 //quitting method
 	public void quit(Game game) {
-		Game.play(game, true);
+		game.play(game, true);
 	}
 // put method
 	public void put(Item tool) {
@@ -180,14 +180,4 @@ public class Player {
 			System.out.println("You cannot place something that's not in your inventory.");
 		}
 	}
-
-	public void drink(Item water) {
-		if(playerInventory.checkPlayerInventory(water) == true) {
-			playerInventory.removePlayerInventory(water);
-			System.out.println("You drank" + water + ".");
-		}else {
-			System.out.println("You cannot drinks something that is not in your inventory.");
-		}		
-	}
-
 }
