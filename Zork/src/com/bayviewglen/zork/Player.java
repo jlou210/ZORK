@@ -148,15 +148,6 @@ public class Player {
 		}
 	}
 
-//save method
-	public String save() {
-		Save.GameData(playerInventory, inventoryWeight, Game.currentRoom);
-		return "The game has been saved.";
-	}
-//load method
-	public String load() {
-		return null;
-	}
 //check inventory method
 	public Inventory check() {
 		return playerInventory;
@@ -167,8 +158,8 @@ public class Player {
 		Game.printHelp();
 	}
 
-//quit method
-	public String quit(Game game) {
+//quitting method
+	public void quit(Game game) {
 		Game.play(game, true);
 	}
 // put method
