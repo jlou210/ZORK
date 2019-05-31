@@ -227,7 +227,7 @@ public class Inventory {
 		return false;
 	}
 	
-	public void removeRoomInventory(Item item, String room, Game game) {
+	public void removeRoomInventory(Item item, Game game) {
 		HashMap<String, Room> hashmap = game.getMasterMap();
 		hashmap.remove(item);	//fix later 
 		
