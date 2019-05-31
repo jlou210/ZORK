@@ -412,25 +412,123 @@ class Parser {
 			}
 			else if(word == CommandWords.validCommands[18]) {
 				if(wordTwo == "flashlight") {
-					Game.player.throw(Item.tools.get("flashlight"), Game.playerInven, Game.currentRoom.getRoomName(Game.currentRoom), game);
+					Game.player.throwObject(Item.tools.get("flashlight"));
 				}
 				else if(wordTwo == "glasses") {
-					Game.player.get(Item.tools.get("glasses"), Game.playerInven, Game.currentRoom.getRoomName(Game.currentRoom), game);
+					Game.player.throwObject(Item.tools.get("glasses"));
 				}
 				else if(wordTwo == "library" && wordThree == "card") {
-					Game.player.get(Item.tools.get("library card"), Game.playerInven, Game.currentRoom.getRoomName(Game.currentRoom), game);
+					Game.player.throwObject(Item.tools.get("library card"));
 				}
 				else if(wordTwo == "backpack") {
-					Game.player.get(Item.tools.get("backpack"), Game.playerInven, Game.currentRoom.getRoomName(Game.currentRoom), game);
+					Game.player.throwObject(Item.tools.get("backpack"));
 				}
 				else if(wordTwo == "shed" && wordThree == "key") {
-					Game.player.get(Item.tools.get("shed key"), Game.playerInven, Game.currentRoom.getRoomName(Game.currentRoom), game);
+					Game.player.throwObject(Item.tools.get("shed key"));
 				}
 				else if(wordTwo == "ant farm") {
-					Game.player.get(Item.tools.get("ant farm"), Game.playerInven, Game.currentRoom.getRoomName(Game.currentRoom), game);
+					Game.player.throwObject(Item.tools.get("ant farm"));
 				}
 				else if(wordTwo == "trophy" && wordThree == "1") {
-					Game.player.get(Item.tools.get("trophy 1"), Game.playerInven, Game.currentRoom.getRoomName(Game.currentRoom), game);
+					Game.player.throwObject(Item.tools.get("trophy 1"));
+				}
+				else if(wordTwo == "trophy" && wordThree == "2") {
+					Game.player.throwObject(Item.tools.get("trophy 2"));
+				}
+				else if(wordTwo == "trophy" && wordThree == "3") {
+					Game.player.throwObject(Item.tools.get("trophy 3"));
+				}
+				else if(wordTwo == "trophy" && wordThree == "4") {
+					Game.player.throwObject(Item.tools.get("trophy 4"));
+				}
+				else if(wordTwo == "bookshelf" && wordThree == "key") {
+					Game.player.throwObject(Item.tools.get("bookshelf key"));
+				}
+				else if(wordTwo == "flower") {
+					Game.player.throwObject(Item.useless.get("flower"));
+				}
+				else if(wordTwo == "tree" && wordThree == "branch") {
+					Game.player.throwObject(Item.useless.get("tree branch"));
+				}
+				else if(wordTwo == "sand") {
+					Game.player.throwObject(Item.useless.get("sand"));
+				}
+				else if(wordTwo == "pillow") {
+					Game.player.throwObject(Item.useless.get("pillow"));
+				}
+				else if(wordTwo == "toy" && wordThree == "truck") {
+					Game.player.throwObject(Item.useless.get("toy truck"));
+				}
+				else if(wordTwo == "clothes") {
+					Game.player.throwObject(Item.useless.get("clothes"));
+				}
+				else if(wordTwo == "dirt") {
+					Game.player.throwObject(Item.useless.get("dirt"));
+				}
+				else if(wordTwo=="map") {
+					Game.player.throwObject(Item.tools.get("map"));
+				}
+				else if(wordTwo == "leaflet" && wordThree == "hint") {
+					Game.player.throwObject(Item.tools.get("leaflet hint"));
+				}
+				else if(wordTwo == "book") {
+					Game.player.throwObject(Item.tools.get("book"));
+				}
+				else if(wordTwo == "pie") {
+					Game.player.throwObject(Item.food.get("pie"));
+				}
+				else if(wordTwo=="ice" && wordThree == "cream") {
+					Game.player.throwObject(Item.food.get("ice cream"));
+				}
+				else if(wordTwo == "empanada") {
+					Game.player.throwObject(Item.food.get("empanada"));
+				}
+				else if(wordTwo == "apple") {
+					Game.player.throwObject(Item.food.get("apple"));
+				}
+				else if(wordTwo == "donuts") {
+					Game.player.throwObject(Item.food.get("donuts"));
+				}
+				else if(wordTwo == "cookies") {
+					Game.player.throwObject(Item.food.get("cookies"));
+				}
+				else if(wordTwo == "cake") {
+					Game.player.throwObject(Item.food.get("cookies"));
+				}
+				else if(wordTwo == "water") {
+					Game.player.throwObject(Item.drink.get("water"));
+				}
+				else if(wordTwo == "milk") {
+					Game.player.throwObject(Item.drink.get("milk"));
+				}
+				else if(wordTwo == "glass" && wordThree == "of" && wordFour == "water") {
+					Game.player.throwObject(Item.drink.get("glass of water"));
+				}
+				else if(wordTwo == "glass" && wordThree == "of" && wordFour == "milk") {
+					Game.player.throwObject(Item.drink.get("glass of milk"));
+				}
+			}
+			else if(word == CommandWords.validCommands[19]) {
+				if(wordTwo == "flashlight") {
+					Game.player.drop(Item.tools.get("flashlight"));
+				}
+				else if(wordTwo == "glasses") {
+					Game.player.drop(Item.tools.get("glasses"));
+				}
+				else if(wordTwo == "library" && wordThree == "card") {
+					Game.player.drop(Item.tools.get("library card"));
+				}
+				else if(wordTwo == "backpack") {
+					Game.player.drop(Item.tools.get("backpack"));
+				}
+				else if(wordTwo == "shed" && wordThree == "key") {
+					Game.player.drop(Item.tools.get("shed key"));
+				}
+				else if(wordTwo == "ant farm") {
+					Game.player.drop(Item.tools.get("ant farm"));
+				}
+				else if(wordTwo == "trophy" && wordThree == "1") {
+					Game.player.drop(Item.tools.get("trophy 1"), Game.playerInven, Game.currentRoom.getRoomName(Game.currentRoom), game);
 				}
 				else if(wordTwo == "trophy" && wordThree == "2") {
 					Game.player.get(Item.tools.get("trophy 2"), Game.playerInven, Game.currentRoom.getRoomName(Game.currentRoom), game);
