@@ -15,7 +15,7 @@ public class Player {
 			playerInven.removePlayerInventory(item);
 			System.out.println("You just ate " + item + " : " + Food.sound(item));
 		} else if (Inventory.checkRoomInventory(item, game) == true) {
-			Inventory.removeRoomInventory(item, game);
+			Inventory.removeRoomInventory(item, room, game);
 			System.out.println("You just ate " + item + " : " + Food.sound(item));
 		} else {
 			System.out.println("You cannot eat " + item + " because it cannot be found.");
@@ -80,7 +80,7 @@ public class Player {
 //burn methods
 	public void burn(Item tool, Game game) {
 		if (Inventory.checkRoomInventory(tool, game) == true) {
-			Inventory.removeRoomInventory(tool, game);
+			Inventory.removeRoomInventory(tool, game.currentRoom.getRoomName(game.currentRoom), game);
 			System.out.println(tool + " is burning!");
 		}
 	}
