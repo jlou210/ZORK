@@ -1,26 +1,46 @@
 package com.bayviewglen.zork;
 
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.ObjectOutputStream;
+
 import java.io.Serializable;
 
 class Save implements Serializable {
 
-		private Inventory playerInventory;
-		private int playerInventoryWeight;
-		private Room currentRoom;
+	private static Inventory playerInventory;
+	private static int playerInventoryWeight;
+	private static Room currentRoom;
 
 	    // getters for the fields
 
-	    public static void GameData(Inventory playerInventory, int playerInventoryWeight, Room currentRoom) {
-	        this.playerInventory = playerInventory;
-	        this.playerInventoryWeight = playerInventoryWeight;
-	        this.currentRoom = currentRoom;
+	    public void GameData(Inventory playerInventory, int playerInventoryWeight, Room currentRoom) {
+	        Save.setPlayerInventory(playerInventory);
+	        Save.setPlayerInventoryWeight(playerInventoryWeight);
+	        Save.setCurrentRoom(currentRoom);
 	    }
 
+		public static int getPlayerInventoryWeight() {
+			return playerInventoryWeight;
+		}
 
-Save data = new Save(someplayerInventory, someplayerInventoryWeight, somecurrentRoom);
-stream.writeObject(data);
+		public static void setPlayerInventoryWeight(int playerInventoryWeight) {
+			playerInventoryWeight = playerInventoryWeight;
+		}
+
+		public static Inventory getPlayerInventory() {
+			return playerInventory;
+		}
+
+		public static void setPlayerInventory(Inventory playerInventory) {
+			playerInventory = playerInventory;
+		}
+
+		public static Room getCurrentRoom() {
+			return currentRoom;
+		}
+
+		public static void setCurrentRoom(Room currentRoom) {
+			currentRoom = currentRoom;
+		}
+
+
+
 }
