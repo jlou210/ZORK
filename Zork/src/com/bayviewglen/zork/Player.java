@@ -10,15 +10,15 @@ public class Player {
 
 	// eat method
 
-	public static String eat(Food food, Inventory playerInven) {
-		if (playerInven.checkPlayerInventory(food) == true) {
-			playerInven.removePlayerInventory(food);
-			System.out.println("You just ate " + food + " : " + food.sound());
-		} else if (Inventory.checkRoomInventory(food) == true) {
-			Inventory.removeRoomInventory(food);
-			System.out.println("You just ate " + food + " : " + food.sound());
+	public static String eat(Item item, Inventory playerInven) {
+		if (playerInven.checkPlayerInventory(item) == true) {
+			playerInven.removePlayerInventory(item);
+			System.out.println("You just ate " + item + " : " + Food.sound(item));
+		} else if (Inventory.checkRoomInventory(item) == true) {
+			Inventory.removeRoomInventory(item);
+			System.out.println("You just ate " + item + " : " + Food.sound(item));
 		} else {
-			return "You cannot eat" + food + "because it cannot be found.";
+			return "You cannot eat" + item + "because it cannot be found.";
 		}
 
 	}

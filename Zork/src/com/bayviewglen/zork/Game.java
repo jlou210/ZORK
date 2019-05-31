@@ -58,7 +58,6 @@ class Game {
 				String[] rooms = roomExits.split(":")[1].split(",");
 				HashMap<String, String> temp = new HashMap<String, String>();
 				for (String s : rooms) {
-					System.out.println(s);
 					temp.put(s.split("-")[0].trim(), s.split("-")[1]);
 				}
 

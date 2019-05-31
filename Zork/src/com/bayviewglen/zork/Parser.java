@@ -118,7 +118,7 @@ class Parser {
 			}
 			else if(word == CommandWords.validCommands[4]) {
 				if(wordTwo == "pie") {
-					Player.eat(Item.food.get("pie"), Game.playerInven);
+					Player.eat(Food.get("pie"), Game.playerInven);
 				}
 				else if(wordTwo=="ice cream") {
 					Player.eat(Item.food.get("ice cream"), Game.playerInven);
