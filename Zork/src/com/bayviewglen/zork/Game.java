@@ -102,7 +102,6 @@ class Game {
 			Inventory.initializeRooms(this);
 			play(this);
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		parser = new Parser();
@@ -111,12 +110,12 @@ class Game {
 	/**
 	 * Main play routine. Loops until end of play.
 	 */
-	public void play(Game game) {
+	public static void play(Game game, boolean finished) {
 		printWelcome();
 // Enter the main command loop.  Here we repeatedly read commands and
 		// execute them until the game is over.
 
-		boolean finished = false;
+	
 		while (!finished) {
 			Command command = parser.getCommand(game);
 			finished = processCommand(command, playerInven);
@@ -131,7 +130,7 @@ class Game {
 	/**
 	 * Print out the opening message for the player.
 	 */
-	private void printWelcome() {
+	private static void printWelcome() {
 		System.out.println();
 		System.out.println("Welcome to Zork!");
 		System.out.println("Zork is a new, incredibly boring adventure game. Just like your love life.");

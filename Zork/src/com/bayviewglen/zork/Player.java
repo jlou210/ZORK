@@ -176,8 +176,8 @@ public class Player {
 	}
 
 //quit method
-	public String quit() {
-		return null;
+	public String quit(Game game) {
+		Game.play(game, true);
 	}
 // put method
 	public void put(Item tool) {
