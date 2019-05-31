@@ -6,3 +6,4 @@ public class Minnie implements Character{
 		System.out.println(description);
 	}
 }
+
