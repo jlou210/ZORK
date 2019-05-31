@@ -113,9 +113,6 @@ class Parser {
 					Game.player.quit();
 				}
 			}
-			else if(word == CommandWords.validCommands[3]) {
-				
-			}
 			else if(word == CommandWords.validCommands[4]) {
 				if(wordTwo == "pie") {
 					Game.player.eat(Item.food.get("pie"), Game.currentRoom.getRoomName(Game.currentRoom), Game.playerInven, game);
@@ -131,13 +128,15 @@ class Parser {
 				}
 			}
 			else if(word == CommandWords.validCommands[5]) {
-								
+						
 			}
 			else if(word == CommandWords.validCommands[6]) {
 				
 			}
 			else if(word == CommandWords.validCommands[7]) {
-				
+				if(wordTwo == "water") {
+					
+				}
 			}
 			else if(word == CommandWords.validCommands[8]) {
 				
