@@ -25,6 +25,7 @@ public class Item {
 	public static final Item pillow = new Item("pillow", 10, "You picked up a pillow. It's so soft and fluffy like a marshmallow.");
 	public static final Item toyTruck = new Item("toy truck", 5, "You picked up a truck. Vroom! Vroom!");
 	public static final Item clothes = new Item("clothes", 10, "You picked up some clothes, but the outfit you are wearing is fine."); 
+	public static final Item dirt = new Item("dirt", 5, "You picked up some dirt. I don't know what you can do with this."); 
 	
 	public static final Food empanada = new Empanada("empanada", 5, "You picked up an empanada. Muy deliciosa!");
 	public static final Food pie = new Pie("pie", 10, "You picked up a pie. Is it apple just like how grandma makes it?");
@@ -42,10 +43,9 @@ public class Item {
 	public static final LibraryCard libraryCard = new LibraryCard("library card", 1, "You picked up a library card. Having fun isn't hard."); 
 
 	public static final Backpack backpack = new Backpack("backpack", 1, "You picked up a backpack. You can use it hold all your items!"); 
-	public static final dirt dirt = new dirt("dirt", 1, "You picked up some dirt. I don't know what you can do with this."); 
-	public static final shedKey shedKey = new shedKey("shed-key", 1, "You picked up a key. I wonder where it can be used."); 
-	public static final antFarm antFarm = new antFarm("backpack", 5, "You picked up an ant-farm. Looks like something Max would play with."); 
-	public static final trophy trophy = new trophy("trophy", 5, "You picked up a trophy. I'm not sure what this is for!"); 
+	public static final ShedKey shedKey = new ShedKey("shed key", 1, "You picked up a key. I wonder where it can be used."); 
+	public static final AntFarm antFarm = new AntFarm("ant farm", 5, "You picked up an ant-farm. Looks like something Max would play with."); 
+	public static final Trophy trophy = new Trophy("trophy", 5, "You picked up a trophy. I'm not sure what this is for!"); 
 	public static final BookshelfKey BookshelfKey = new BookshelfKey("book-shelf key", 1, "You picked up a key. I wonder where it can be used."); 
 	
 	
@@ -75,7 +75,8 @@ public class Item {
 		tools.put("map", map); //dora 
 		tools.put("leaflet hint", leafletHint);
 		tools.put("backpack", backpack); 
-		
+		tools.put("shed key", shedKey); 
+		tools.put("trophy", trophy); 
 	}
 	
 	
