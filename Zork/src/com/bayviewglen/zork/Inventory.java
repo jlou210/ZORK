@@ -81,8 +81,8 @@ public class Inventory {
 		
 		//dora 
 		Inventory inv = new Inventory(Integer.MAX_VALUE);
-		inv.addRoomInventory(Item.map, "House Entrance", game);
-		game.getMasterMap().get("House Entrance").setInventory(inv);
+		inv.addRoomInventory(Item.map, "HOUSE_ENTRANCE", game);
+		game.getMasterMap().get("HOUSE_ENTRANCE").setInventory(inv);
 		
 		inv = new Inventory(Integer.MAX_VALUE);
 		inv.addRoomInventory(Item.pie, "Dining Room", game);
@@ -248,7 +248,7 @@ public class Inventory {
 
 	public void addRoomInventory(Item item, String room, Game game) {
 		HashMap<String, Room> hashmap = game.getMasterMap();
-		Room r = hashmap.get(room);
+		Room r = hashmap.get(room);	//room is null
 		Inventory inv = r.getInventory();
 		inv.getItems().add(item);
 	}
