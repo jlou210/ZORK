@@ -118,7 +118,7 @@ public class Player {
 	}
 
 //drink method
-	public String drink(Drink water) {
+	public void drink(Drink water) {
 		if(playerInventory.checkPlayerInventory(water) == true) {
 			playerInventory.removePlayerInventory(water);
 			System.out.println("You drank" + water + ".");
