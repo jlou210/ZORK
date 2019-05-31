@@ -251,7 +251,7 @@ class Parser {
 				}
 			}
 			else if(word == CommandWords.validCommands[10]) {
-				Game.player.move(wordTwo);
+				System.out.println("This is a kids game why do you want to kill?");
 			}
 			else if(word == CommandWords.validCommands[11]) {
 				System.out.println("Why do you want to burn something...this is a kids game!");
@@ -592,7 +592,7 @@ class Parser {
 				}
 			}		
 			else if(word == CommandWords.validCommands[20]) {
-				
+				System.out.println("You sat down");
 			}
 		}
 		
