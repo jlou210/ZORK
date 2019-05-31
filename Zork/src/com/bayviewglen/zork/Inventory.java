@@ -112,7 +112,7 @@ public class Inventory {
 		game.getMasterMap().get("Study Room").setInventory(inv);
 		
 		inv = new Inventory(Integer.MAX_VALUE);
-		inv.addRoomInventory(Item.BookshelfKey, "Library", game);
+		inv.addRoomInventory(Item.bookshelfKey, "Library", game);
 		game.getMasterMap().get("Library").setInventory(inv);
 		
 		inv = new Inventory(Integer.MAX_VALUE);
