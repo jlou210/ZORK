@@ -15,12 +15,6 @@ Room Description: In the dining room, there are chairs lining the dining table a
 Exit Rooms: E-Living Room
 Room Name: Arthur's Room
 Room Description: You see D.W. standing in the corner, a bed, glasses on the pillow,  a table, and some papers.
-Exit Rooms: D-Living Room, S-Mr. Ratburn's Classroom
-Room Name: Mr. Ratburn's Classroom
-Room Description: You see DW standing in the corner, a bed, glasses on the pillow,  a table, and some papers.
-Exit Rooms: D-Living Room, S-Mr. Ratburn's Classroom Front
-Room Name: Mr. Ratburn's Classroom Front
-Room Description: You see DW standing in the corner, a bed, glasses on the pillow,  a table, and some papers.
 Exit Rooms: D-Living Room, S-Mr. Ratburn's Classroom Front
 Room Name: Mr. Ratburn's Classroom Front
 Room Description: You enter to see a blackboard with something written on it, chairs and tables line the room. Children are staring at you.
@@ -81,7 +75,7 @@ Room Description: The Backyardigans seem to need a lot of storage space, you fin
 Exit Rooms: W-Back Storage Room, U-Mini Garden
 Room Name: Backyard
 Room Description: You enter what seems to be a normal backyard. There seems to be an entrance in the distance.
-Exit Rooms: W-Small Opening, E-Backyardigan's Hallway 
+Exit Rooms: W-Small Opening, N-Backyard Entrance
 Room Name: Back Storage Room
 Room Description: You go to the back of the storage room and there is another storage space.
 Exit Rooms: E-Storage Room

@@ -118,17 +118,17 @@ class Parser {
 			}
 			else if(word == CommandWords.validCommands[4]) {
 				if(wordTwo == "pie") {
-					Player.eat(Item.food.get("pie"), Room.getRoomName(Game.currentRoom), Game.playerInven, game);
+					Player.eat(Item.food.get("pie"), Game.currentRoom.getRoomName(Game.currentRoom), Game.playerInven, game);
 				}
 				else if(wordTwo=="ice cream") {
-					Player.eat(Item.food.get("ice cream"), Room.getRoomName(Game.currentRoom), Game.playerInven, game);
+					Player.eat(Item.food.get("ice cream"), Game.currentRoom.getRoomName(Game.currentRoom), Game.playerInven, game);
 				}
 				else if(wordTwo == "empanada") {
-					Player.eat(Item.food.get("empanada"), Room.getRoomName(Game.currentRoom), Game.playerInven, game);
+					Player.eat(Item.food.get("empanada"), Game.currentRoom.getRoomName(Game.currentRoom), Game.playerInven, game);
 
 				}
 				else if(wordTwo == "apple") {
-					Player.eat(Item.food.get("apple"), Room.getRoomName(Game.currentRoom), Game.playerInven, game);
+					Player.eat(Item.food.get("apple"), Game.currentRoom.getRoomName(Game.currentRoom), Game.playerInven, game);
 
 				}
 			}

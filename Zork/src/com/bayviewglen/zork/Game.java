@@ -135,7 +135,9 @@ class Game {
 		System.out.println();
 		System.out.println("Welcome to Zork!");
 		System.out.println("Zork is a new, incredibly boring adventure game. Just like your love life.");
-		System.out.println("Type 'help' if you need help.");
+		System.out.println("Type 'help' if you need help");
+		System.out.println("The objective of this game is to collect all 4 trophies that will allow you to reach the special world where you will find a special prize!");
+		System.out.println("For more info on what this game is really about, please visit our game Wiki. Please. I'm begging you. We wouldn't of wanted to work so very hard on it for no visitors.");
 		System.out.println();
 		System.out.println(currentRoom.longDescription());
 	}
