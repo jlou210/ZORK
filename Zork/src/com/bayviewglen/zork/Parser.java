@@ -126,6 +126,15 @@ class Parser {
 				else if(wordTwo == "apple") {
 					Game.player.eat(Item.food.get("apple"), Game.currentRoom.getRoomName(Game.currentRoom), Game.playerInven, game);
 				}
+				else if(wordTwo == "donut") {
+					Game.player.eat(Item.food.get("donut"), Game.currentRoom.getRoomName(Game.currentRoom), Game.playerInven, game);
+				}
+				else if(wordTwo == "cookies") {
+					Game.player.eat(Item.food.get("cookies"), Game.currentRoom.getRoomName(Game.currentRoom), Game.playerInven, game);
+				}
+				else if(wordTwo == "cake") {
+					Game.player.eat(Item.food.get("cookies"), Game.currentRoom.getRoomName(Game.currentRoom), Game.playerInven, game);
+				}
 			}
 			else if(word == CommandWords.validCommands[5]) {
 				if(wordTwo == "") {
@@ -137,7 +146,7 @@ class Parser {
 			}
 			else if(word == CommandWords.validCommands[7]) {
 				if(wordTwo == "water") {
-					Game.player.drink("water");
+					Game.player.drink(Item.drink.get("water"));
 				}
 			}
 			else if(word == CommandWords.validCommands[8]) {
