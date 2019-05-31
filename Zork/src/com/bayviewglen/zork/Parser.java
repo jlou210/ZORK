@@ -107,10 +107,10 @@ class Parser {
 			}
 			else if(word == CommandWords.validCommands[2]) {
 				if(wordTwo == "game") {
-					Game.player.quit();
+					Game.player.quit(game);
 				}
 				else if(wordTwo == null) {
-					Game.player.quit();
+					Game.player.quit(game);
 				}
 			}
 			else if(word == CommandWords.validCommands[4]) {
