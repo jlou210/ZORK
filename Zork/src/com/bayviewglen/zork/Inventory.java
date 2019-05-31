@@ -88,6 +88,7 @@ public class Inventory {
 		game.getMasterMap().get("Dining Room").setInventory(inv);
 		
 		inv = new Inventory(Integer.MAX_VALUE);
+		inv.addRoomInventory(Item.glassOfWater, "Kitchen", game);
 		game.getMasterMap().get("Kitchen").setInventory(inv);
 		
 		inv = new Inventory(Integer.MAX_VALUE);
