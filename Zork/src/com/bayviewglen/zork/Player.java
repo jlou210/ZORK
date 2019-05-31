@@ -54,7 +54,7 @@ public class Player {
 
 //look method
 	public String look() {
-		System.out.println("You are in: " + Room.getRoomName() + ". " + Room.getDescription());
+		System.out.println("You are in: " + Room.getRoomName(Game.currentRoom) + ". " + Room.getDescription());
 	}
 
 //lookAt method
