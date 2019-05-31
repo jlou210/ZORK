@@ -48,10 +48,10 @@ public class Item {
 	public static final Backpack backpack = new Backpack("backpack", 1, "You picked up a backpack. You can use it hold all your items!"); 
 	public static final ShedKey shedKey = new ShedKey("shed key", 1, "You picked up a key. I wonder where it can be used."); 
 	public static final AntFarm antFarm = new AntFarm("ant farm", 5, "You picked up an ant-farm. Looks like something Max would play with."); 
-	public static final Trophy trophy1 = new Trophy("trophy", 5, "You picked up a trophy. Yay! You got another trophy!"); 
-	public static final Trophy trophy2 = new Trophy("trophy", 5, "You picked up a trophy. Yay! You got another trophy!"); 
-	public static final Trophy trophy3 = new Trophy("trophy", 5, "You picked up a trophy. Yay! You got another trophy!"); 
-	public static final Trophy trophy4 = new Trophy("trophy", 5, "You picked up a trophy. Yay! You got another trophy!"); 
+	public static final Trophy trophy1 = new Trophy("trophy 1", 5, "You picked up a trophy. Yay! You got another trophy!"); 
+	public static final Trophy trophy2 = new Trophy("trophy 2", 5, "You picked up a trophy. Yay! You got another trophy!"); 
+	public static final Trophy trophy3 = new Trophy("trophy 3", 5, "You picked up a trophy. Yay! You got another trophy!"); 
+	public static final Trophy trophy4 = new Trophy("trophy 4", 5, "You picked up a trophy. Yay! You got another trophy!"); 
 	public static final BookshelfKey BookshelfKey = new BookshelfKey("book-shelf key", 1, "You picked up a key. I wonder where it can be used."); 
 	
 
@@ -84,10 +84,10 @@ public class Item {
 		tools.put("leaflet hint", leafletHint);
 		tools.put("backpack", backpack); 
 		tools.put("shed key", shedKey); 
-		tools.put("trophy", trophy1); 
-		tools.put("trophy", trophy2); 
-		tools.put("trophy", trophy3); 
-		tools.put("trophy", trophy4); 
+		tools.put("trophy 1", trophy1); 
+		tools.put("trophy 2", trophy2); 
+		tools.put("trophy 3", trophy3); 
+		tools.put("trophy 4", trophy4); 
 	}
 	
 	
