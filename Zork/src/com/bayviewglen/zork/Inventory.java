@@ -234,6 +234,5 @@ public class Inventory {
 	}
 
 	public void addRoomInventory(Item item) {
-		rooms.add(item);
 	}
 }
