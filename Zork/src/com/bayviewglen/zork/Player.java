@@ -97,7 +97,7 @@ public class Player {
 
 //read methods
 	public String read(Item tool) {
-		return Item.description;
+		return tool.description;
 	}
 
 //go methods

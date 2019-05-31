@@ -20,7 +20,7 @@ import java.util.Iterator;
 
 class Room {
 	private String roomName;
-	private static String description;
+	private String description;
 	private HashMap<String, Room> exits; // stores exits of this room.
 	private Inventory roomItems;
 
@@ -29,7 +29,7 @@ class Room {
 	 * "description" is something like "a kitchen" or "an open court yard".
 	 */
 	public Room(String description) {
-		Room.description = description;
+		this.description = description;
 		exits = new HashMap<String, Room>();
 	}
 
@@ -164,12 +164,12 @@ class Room {
 		this.roomName = roomName;
 	}
 
-	public static String getDescription() {
+	public String getDescription() {
 		return description;
 	}
 
 	public void setDescription(String description) {
-		Room.description = description;
+		this.description = description;
 	}
 	
 	public Item getItem(Item item) {

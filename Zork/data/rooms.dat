@@ -1,6 +1,6 @@
 Room Name: Start Point
 Room Description: This is where you start.
-Exit Rooms: E-House Entrance, W-Main Room 
+Exit Rooms: E-House Entrance, D-Main Room 
 Room Name: House Entrance
 Room Description: You enter the house to see a couple chairs, a rug with a rolled up piece of paper above, and Dora standing in the kitchen.
 Exit Rooms: W-Start Point, S-Dora's Kitchen
@@ -87,19 +87,19 @@ Room Description: You go to the back of the storage room and there is another st
 Exit Rooms: E-Storage Room
 Room Name: Main Room
 Room Description: You enter the Treehouse, it smells like wood in here.
-Exit Rooms: P-Trophy Room, Q-Room2, R-Room3, T-Room4, E-Start Point
+Exit Rooms: N-Trophy Room, S-Room2, W-Room3, E-Room4, U-Start Point
 Room Name: Trophy Room
 Room Description: There are shelves lining the walls, cartoonish arrows hover above each empty space.
-Exit Rooms: D-Main Room
+Exit Rooms: S-Main Room
 Room Name: Room2
 Room Description: There is a rug on the floor, but beyond that the room seems empty
-Exit Rooms: D-Main Room
+Exit Rooms: N-Main Room
 Room Name: Room3
 Room Description: You take a look around this room to see a small backpack, a piece of what seems to be a mask, and a container.
-Exit Rooms: D-Main Room
+Exit Rooms: E-Main Room
 Room Name: Room4
 Room Description: There is nothing but a towel on the floor here.
-Exit Rooms: D-Main Room, E-Mickey's Room
+Exit Rooms: W-Main Room, E-Mickey's Room
 Room Name: Mickey's Room
 Room Description: You enter Mickey's Room through the secret entrance in the treehouse. You find what seems to be a play room, Mickey awaits you at the door. 
 Exit Rooms: W-Room4, D-Donald's Room, W-Minnie's Room
