@@ -142,7 +142,6 @@ class Parser {
 			}
 			else if(word == CommandWords.validCommands[8]) {
 				if(wordTwo == "") {
-					
 				}
 			}
 			else if(word == CommandWords.validCommands[9]) {
