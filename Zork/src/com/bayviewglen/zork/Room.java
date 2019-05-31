@@ -171,4 +171,8 @@ class Room {
 	public void setDescription(String description) {
 		this.description = description;
 	}
+	
+	public Item getItem(Item item) {
+		return item; 
+	}
 }

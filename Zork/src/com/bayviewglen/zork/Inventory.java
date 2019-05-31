@@ -67,12 +67,10 @@ public class Inventory {
 	// room inventory stuff
 	private int numRooms = 0;
 	private int numItems = 0;
-	private String[][] rooms = new String[numRooms][numItems];
 
 	public Inventory(double numRooms, int numItems) {
 		this.numRooms = (int) numRooms;
 		this.numItems = numItems;
-		rooms = new String[(int) numRooms][numItems];
 
 	}
 
@@ -223,22 +221,15 @@ public class Inventory {
 
 	}
 
-	public boolean checkRoomInventory(Item item) {
-		if(game.get(Game.currentRoom) == item) {
-			
+	public boolean checkRoomInventory(Item item, Game game) {
+		if(game.getMasterMap().get(Game.currentRoom).getInventory().equals(item)) {
+			return true;
 		}
+		return false;
 	}
 
-	public void removeRoomInventory(Item item) {
-		boolean isValid = false;
-
-		for (int i = 0; i < rooms.length; i++) {
-			if (rooms[i].equals(item)) {
-				rooms.remove(i);
-				isValid = true;
-				break;
-			}
-		}
+	public void removeRoomInventory(Item item, String room, Game game) {
+		game.getMasterMap().remove(game.getMasterMap().get(room).getItem(item));	
 
 	}
 
