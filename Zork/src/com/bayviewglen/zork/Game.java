@@ -190,10 +190,8 @@ private void teleport(String secondWord, Inventory playerInven) {
 	 * and a list of the command words.
 	 */
 	public static void printHelp() {
-		System.out.println("You are lost. You are alone. You wander");
-		System.out.println("around at Monash Uni, Peninsula Campus.");
-		System.out.println();
-		System.out.println("Your command words are:");
+		System.out.println("You are currently in: " + currentRoom);
+		System.out.println("Like I said at the beginning of this game...Go. Check. Out. The. Bloody. GAME WIKI!!!");
 		parser.showCommands();
 	}
 
