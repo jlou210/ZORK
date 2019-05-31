@@ -110,10 +110,10 @@ public class Player {
 	}
 
 //drink method
-	public void drink(Drink water) {
-		if(playerInventory.checkPlayerInventory(water) == true) {
-			playerInventory.removePlayerInventory(water);
-			System.out.println("You drank" + water + ".");
+	public void drink(Item item) {
+		if(playerInventory.checkPlayerInventory(item) == true) {
+			playerInventory.removePlayerInventory(item);
+			System.out.println("You drank" + item + ".");
 		}else {
 			System.out.println("You cannot drinks something that is not in your inventory.");
 		}
