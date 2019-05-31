@@ -100,7 +100,7 @@ class Game {
 			Item.initializeItems();
 
 			Inventory.initializeRooms(this);
-			play(this);
+			play(this, true);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -146,7 +146,7 @@ class Game {
 	 * the game, true is returned, otherwise false is returned.
 	 */
 
-	private boolean processCommand(Command command, Inventory playerInven) {
+	private static boolean processCommand(Command command, Inventory playerInven) {
 		if (command.isUnknown()) {
 			System.out.println("I don't know what you mean...");
 			return false;
