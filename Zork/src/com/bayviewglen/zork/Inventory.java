@@ -225,6 +225,7 @@ public class Inventory {
 
 	}
 
+	@SuppressWarnings("unlikely-arg-type")
 	public static boolean checkRoomInventory(Item item, Game game) {
 		if(game.getMasterMap().get(Game.currentRoom.getRoomName(Game.currentRoom)).getInventory().equals(item)) {
 			return true;
@@ -233,6 +234,7 @@ public class Inventory {
 	}
 	
 
+	@SuppressWarnings("unlikely-arg-type")
 	public static void removeRoomInventory(Item item, String room, Game game) {
 
 		HashMap<String, Room> hashmap = game.getMasterMap();
