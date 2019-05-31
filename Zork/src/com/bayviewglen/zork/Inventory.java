@@ -228,7 +228,7 @@ public class Inventory {
 		return false;
 	}
 
-	public static void removeRoomInventory(Item item, String room, Game game) {
+	public static void removeRoomInventory(Item item, Game game) {
 		game.getMasterMap().get(Room.getRoomName(Game.currentRoom)).getInventory().remove(Game.currentRoom.getItem(item));	
 
 	}
