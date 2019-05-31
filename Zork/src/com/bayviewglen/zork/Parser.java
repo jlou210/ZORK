@@ -124,10 +124,10 @@ class Parser {
 					Player.eat(Item.food.get("ice cream"), Game.playerInven);
 				}
 				else if(wordTwo == "empanada") {
-					
+					Player.eat(Item.food.get("empanada"), Game.playerInven);
 				}
 				else if(wordTwo == "apple") {
-					
+					Player.eat(Item.food.get("apple"), Game.playerInven);
 				}
 			}
 			else if(word == CommandWords.validCommands[5]) {
