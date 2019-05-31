@@ -17,6 +17,7 @@ public class Item {
 
 	static HashMap<String, Item> useless = new HashMap<String, Item>();
 	static HashMap<String, Item> food = new HashMap<String, Item>();
+	static HashMap<String, Item> drink = new HashMap<String, Item>();
 	static HashMap<String, Item> tools = new HashMap<String, Item>();
 	
 	public static final Item flower = new Item("flower", 5, "You picked up a sunflower. The pollen is making your nose itchy. I'm not sure it's useful...");
@@ -34,6 +35,9 @@ public class Item {
 	public static final Food apple = new Apple("apple", 5, "You picked up an apple. Hopefully it's not poisonous.");
 	public static final Food donuts = new Donuts("donuts", 5, "You picked up some donuts. Or if you're Canadian, weirdly shaped timbits.");
 	public static final Food cake = new Cake("cake", 20, "You picked up a 10 tier funfetti cake! It looks AMAZING!!! Eat this to win the game! Time to celebrate!");
+	
+	public static final Drink glassOfWater = new GlassOfWater("glass of water", 5, "You picked up a glass of water. Gotta stay hydrated!"); 
+	public static final Drink glassOfMilk = new GlassOfMilk("glass of milk", 5, "You picked up a glass of milk. Gotta make your bones strong!"); 
 	
 	public static final Map map = new Map("map", 1, "You picked up a map. This will help you navigate and teleporate back to the treehouse.");
 	public static final Flashlight flashlight = new Flashlight("flashlight", 5, "You picked up a flashlight. This will help you see in the dark."); 
@@ -68,7 +72,9 @@ public class Item {
 		food.put("apple", apple); //treehouse
 		food.put("cake", cake); // mickey
 		food.put("donuts", donuts); // mickey
-
+		
+		drink.put("glass of water", glassOfWater); 
+		drink.put("glass of milk", glassOfWater); 
 
 		tools.put("flashlight", flashlight); // max
 		tools.put("library card", libraryCard); // arthur
