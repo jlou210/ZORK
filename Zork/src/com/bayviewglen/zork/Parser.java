@@ -312,7 +312,7 @@ class Parser {
 					Game.player.place(Item.tools.get("trophy 4"), Game.playerInven, Game.currentRoom.getRoomName(Game.currentRoom), game);
 				}
 			}
-			else if(word == CommandWords.validCommands[5]) {
+			else if(word == CommandWords.validCommands[17]) {
 				if(wordTwo == "flashlight") {
 					Game.player.get(Item.tools.get("flashlight"), Game.playerInven, Game.currentRoom.getRoomName(Game.currentRoom), game);
 				}
@@ -368,46 +368,46 @@ class Parser {
 					Game.player.get(Item.useless.get("dirt"), Game.playerInven, Game.currentRoom.getRoomName(Game.currentRoom), game);
 				}
 				else if(wordTwo=="map") {
-					Game.player.read(Item.tools.get("map"));
+					Game.player.get(Item.tools.get("map"), Game.playerInven, Game.currentRoom.getRoomName(Game.currentRoom), game);
 				}
 				else if(wordTwo == "leaflet" && wordThree == "hint") {
-					Game.player.read(Item.tools.get("leaflet hint"));
+					Game.player.get(Item.tools.get("leaflet hint"), Game.playerInven, Game.currentRoom.getRoomName(Game.currentRoom), game);
 				}
 				else if(wordTwo == "book") {
-					Game.player.read(Item.tools.get("book"));
+					Game.player.get(Item.tools.get("book"), Game.playerInven, Game.currentRoom.getRoomName(Game.currentRoom), game);
 				}
 				else if(wordTwo == "pie") {
-					Game.player.eat(Item.food.get("pie"), Game.currentRoom.getRoomName(Game.currentRoom), Game.playerInven, game);
+					Game.player.get(Item.food.get("pie"), Game.playerInven, Game.currentRoom.getRoomName(Game.currentRoom), game);
 				}
 				else if(wordTwo=="ice" && wordThree == "cream") {
-					Game.player.eat(Item.food.get("ice cream"), Game.currentRoom.getRoomName(Game.currentRoom), Game.playerInven, game);
+					Game.player.get(Item.food.get("ice cream"), Game.playerInven, Game.currentRoom.getRoomName(Game.currentRoom), game);
 				}
 				else if(wordTwo == "empanada") {
-					Game.player.eat(Item.food.get("empanada"), Game.currentRoom.getRoomName(Game.currentRoom), Game.playerInven, game);
+					Game.player.get(Item.food.get("empanada"), Game.playerInven, Game.currentRoom.getRoomName(Game.currentRoom), game);
 				}
 				else if(wordTwo == "apple") {
-					Game.player.eat(Item.food.get("apple"), Game.currentRoom.getRoomName(Game.currentRoom), Game.playerInven, game);
+					Game.player.get(Item.food.get("apple"), Game.playerInven, Game.currentRoom.getRoomName(Game.currentRoom), game);
 				}
 				else if(wordTwo == "donuts") {
-					Game.player.eat(Item.food.get("donuts"), Game.currentRoom.getRoomName(Game.currentRoom), Game.playerInven, game);
+					Game.player.get(Item.food.get("donuts"), Game.playerInven, Game.currentRoom.getRoomName(Game.currentRoom), game);
 				}
 				else if(wordTwo == "cookies") {
-					Game.player.eat(Item.food.get("cookies"), Game.currentRoom.getRoomName(Game.currentRoom), Game.playerInven, game);
+					Game.player.get(Item.food.get("cookies"), Game.playerInven, Game.currentRoom.getRoomName(Game.currentRoom), game);
 				}
 				else if(wordTwo == "cake") {
-					Game.player.eat(Item.food.get("cookies"), Game.currentRoom.getRoomName(Game.currentRoom), Game.playerInven, game);
+					Game.player.get(Item.food.get("cookies"), Game.playerInven, Game.currentRoom.getRoomName(Game.currentRoom), game);
 				}
 				else if(wordTwo == "water") {
-					Game.player.drink(Item.drink.get("water"));
+					Game.player.get(Item.drink.get("water"), Game.playerInven, Game.currentRoom.getRoomName(Game.currentRoom), game);
 				}
 				else if(wordTwo == "milk") {
-					Game.player.drink(Item.drink.get("milk"));
+					Game.player.get(Item.drink.get("milk"), Game.playerInven, Game.currentRoom.getRoomName(Game.currentRoom), game);
 				}
 				else if(wordTwo == "glass" && wordThree == "of" && wordFour == "water") {
-					Game.player.drink(Item.drink.get("glass of water"));
+					Game.player.get(Item.drink.get("glass of water"), Game.playerInven, Game.currentRoom.getRoomName(Game.currentRoom), game);
 				}
 				else if(wordTwo == "glass" && wordThree == "of" && wordFour == "milk") {
-					Game.player.drink(Item.drink.get("glass of milk"));
+					Game.player.get(Item.drink.get("glass of milk"), Game.playerInven, Game.currentRoom.getRoomName(Game.currentRoom), game);
 				}
 			}
 			
