@@ -263,7 +263,7 @@ class Parser {
 			}
 			else if(word == CommandWords.validCommands[13]) {
 				if(wordTwo == null) {
-					Game.teleport();
+					Game.teleport(Game.playerInven);
 				}
 				else if(wordTwo != null) {
 					System.out.println("You can only teleport to the Treehouse");
