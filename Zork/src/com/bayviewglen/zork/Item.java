@@ -47,7 +47,7 @@ public class Item {
 	public static final Trophy trophy = new Trophy("trophy", 5, "You picked up a trophy. I'm not sure what this is for!"); 
 	public static final BookshelfKey BookshelfKey = new BookshelfKey("book-shelf key", 1, "You picked up a key. I wonder where it can be used."); 
 	
-	
+
 	public static void initializeItems() {
 
 		useless.put("flower", flower); // dora
