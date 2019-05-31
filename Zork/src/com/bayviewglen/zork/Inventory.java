@@ -1,11 +1,10 @@
 package com.bayviewglen.zork;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 public class Inventory {
 
-	private static ArrayList<Item> items;
+	private ArrayList<Item> items;
 	private int maxWeight;
 	private int currentPlayerWeight = 0;
 
@@ -67,96 +66,180 @@ public class Inventory {
 	// room inventory stuff
 	private int numRooms = 0;
 	private int numItems = 0;
-	private String[][] rooms = new String[numRooms][numItems];
 
 	public Inventory(double numRooms, int numItems) {
 		this.numRooms = (int) numRooms;
 		this.numItems = numItems;
-		rooms = new String[(int) numRooms][numItems];
 
 	}
 
-	public void initializeRooms() {
-		//dora
-		rooms[0] = new String [] {"House Entrance","map", "Dora"};
-		rooms[1] = new String [] {"Dining Room", "pie", "ice cream"};
-		rooms[2] = new String [] {"Kitchen"};
-		rooms[3] = new String [] {"LivingRoom", "backpack", "clothes", "leaflet hint"};
+
+
+	public static void initializeRooms(Game game) {
+		
+		//dora 
+		Inventory inv = new Inventory(Integer.MAX_VALUE);
+		inv.addRoomInventory(Item.map, "House Entrance", game);
+		game.getMasterMap().get("House Entrance").setInventory(inv);
+		
+		inv = new Inventory(Integer.MAX_VALUE);
+		inv.addRoomInventory(Item.pie, "Dining Room", game);
+		inv.addRoomInventory(Item.iceCream, "Dining Room", game);
+		game.getMasterMap().get("Dining Room").setInventory(inv);
+		
+		inv = new Inventory(Integer.MAX_VALUE);
+		game.getMasterMap().get("Kitchen").setInventory(inv);
+		
+		inv = new Inventory(Integer.MAX_VALUE);
+		inv.addRoomInventory(Item.backpack, "Living Room", game);
+		inv.addRoomInventory(Item.clothes, "Living Room", game);
+		inv.addRoomInventory(Item.leafletHint, "Living Room", game);
+		game.getMasterMap().get("Living Room").setInventory(inv);
+		
 		//arthur
-		rooms[4] = new String [] {"Arthur's Room", "glasses"};
-		rooms[5] = new String [] {"Mr.Ratburn's Class", "ice cream"};
-		rooms[6] = new String [] {"Study Room", "apple"};
-		rooms[7] = new String [] {"Library", "bookshelf key"};
-		rooms[8] = new String [] {"Secret Room", "flashlight", "trophy"};
+		inv = new Inventory(Integer.MAX_VALUE);
+		inv.addRoomInventory(Item.glasses, "Arthur's Room", game);
+		game.getMasterMap().get("Arthur's Room").setInventory(inv);
+		
+		inv = new Inventory(Integer.MAX_VALUE);
+		inv.addRoomInventory(Item.iceCream, "Mr. Ratburn's Class", game);
+		game.getMasterMap().get("Mr.Ratburn's Class").setInventory(inv);
+		
+		inv = new Inventory(Integer.MAX_VALUE);
+		game.getMasterMap().get("Study Room").setInventory(inv);
+		
+		inv = new Inventory(Integer.MAX_VALUE);
+		inv.addRoomInventory(Item.BookshelfKey, "Library", game);
+		game.getMasterMap().get("Library").setInventory(inv);
+		
+		inv = new Inventory(Integer.MAX_VALUE);
+		inv.addRoomInventory(Item.flashlight, "Secret Room", game);
+		inv.addRoomInventory(Item.trophy1, "Secret Room", game);
+		game.getMasterMap().get("Secret Room").setInventory(inv);
+		
 		//backyardigans
-		rooms[9] = new String [] {"Mini Garden", "dirt", "library card", "tree branch", "flower"};
-		rooms[10] = new String [] {"Backyard", "sand"};
-		rooms[11] = new String [] {"Back Storage Room", "shed key"};
+		
+		inv = new Inventory(Integer.MAX_VALUE);
+		inv.addRoomInventory(Item.dirt, "Mini Garden", game);
+		inv.addRoomInventory(Item.libraryCard, "Mini Garden", game);
+		inv.addRoomInventory(Item.treeBranch, "Mini Garden", game);
+		inv.addRoomInventory(Item.flower, "Mini Garden", game);
+		game.getMasterMap().get("Mini Garden").setInventory(inv);
+		
+		inv = new Inventory(Integer.MAX_VALUE);
+		inv.addRoomInventory(Item.shedKey, "Back Storage Room", game);
+		game.getMasterMap().get("Back Storage Room").setInventory(inv);
+		
+		inv = new Inventory(Integer.MAX_VALUE);
+		inv.addRoomInventory(Item.sand, "Backyard", game);
+		game.getMasterMap().get("Backyard").setInventory(inv);
+		
+		inv = new Inventory(Integer.MAX_VALUE);
+		inv.addRoomInventory(Item.trophy3, "Small Shed", game);
+		game.getMasterMap().get("Small Shed").setInventory(inv);
+		
+		inv = new Inventory(Integer.MAX_VALUE);
+		game.getMasterMap().get("Storage Room").setInventory(inv);
+		
+		inv = new Inventory(Integer.MAX_VALUE);
+		game.getMasterMap().get("Backyardigan's Hallway").setInventory(inv);
+		
+		inv = new Inventory(Integer.MAX_VALUE);
+		game.getMasterMap().get("Small Opening").setInventory(inv);
+		
+		inv = new Inventory(Integer.MAX_VALUE);
+		game.getMasterMap().get("House").setInventory(inv);
+		
 		//max and ruby
-		rooms[12] = new String [] {"Max's Room", "ant farm", "empanada", "toy truck"};
-		rooms[13] = new String [] {"Ruby's Room", "pillow"};
+		
+		inv = new Inventory(Integer.MAX_VALUE);
+		inv.addRoomInventory(Item.antFarm, "Max's Room", game);
+		inv.addRoomInventory(Item.empanada, "Max's Room", game);
+		inv.addRoomInventory(Item.toyTruck, "Max's Room", game);
+		inv.addRoomInventory(Item.trophy2, "Max's Room", game);
+		game.getMasterMap().get("Max's Room").setInventory(inv);
+		
+		inv = new Inventory(Integer.MAX_VALUE);
+		inv.addRoomInventory(Item.pillow, "Ruby's Room", game);
+		game.getMasterMap().get("Ruby's Room").setInventory(inv);
+		
+		inv = new Inventory(Integer.MAX_VALUE);
+		game.getMasterMap().get("Ruby's Kitchen").setInventory(inv);
+		
+		inv = new Inventory(Integer.MAX_VALUE);
+		game.getMasterMap().get("Grandma's House").setInventory(inv);
+		
+		inv = new Inventory(Integer.MAX_VALUE);
+		game.getMasterMap().get("Room").setInventory(inv);
+		
 		//treehouse
-		rooms[14] = new String [] {"Pantry", "cookies", "donuts"};
-		//mickeymouse
-		rooms[15] = new String [] {"Win Room", "cake"};		
+		
+		inv = new Inventory(Integer.MAX_VALUE);
+		inv.addRoomInventory(Item.cookies, "Pantry", game);
+		inv.addRoomInventory(Item.apple, "Pantry", game);
+		game.getMasterMap().get("Pantry").setInventory(inv);
+		
+		inv = new Inventory(Integer.MAX_VALUE);
+		game.getMasterMap().get("Trophy Room").setInventory(inv);
+		
+		inv = new Inventory(Integer.MAX_VALUE);
+		game.getMasterMap().get("Main Room").setInventory(inv);
+		
+		inv = new Inventory(Integer.MAX_VALUE);
+		game.getMasterMap().get("Room2").setInventory(inv);
+		
+		inv = new Inventory(Integer.MAX_VALUE);
+		game.getMasterMap().get("Room3").setInventory(inv);
+		
+		inv = new Inventory(Integer.MAX_VALUE);
+		inv.addRoomInventory(Item.trophy4, "Room4", game);
+		game.getMasterMap().get("Room4").setInventory(inv);
+		
+		//mickey mouse
+		
+		inv = new Inventory(Integer.MAX_VALUE);
+		inv.addRoomInventory(Item.cake, "Win Room", game);
+		game.getMasterMap().get("Win Room").setInventory(inv);
+		
+
+		inv = new Inventory(Integer.MAX_VALUE);
+		game.getMasterMap().get("Mickey's Room").setInventory(inv);
+		
+		inv = new Inventory(Integer.MAX_VALUE);
+		game.getMasterMap().get("Minnie's Room").setInventory(inv);
+		
+		inv = new Inventory(Integer.MAX_VALUE);
+		game.getMasterMap().get("Donald's Room").setInventory(inv);
+
+		inv = new Inventory(Integer.MAX_VALUE);
+		game.getMasterMap().get("Goofy's Garden").setInventory(inv);
+
+		inv = new Inventory(Integer.MAX_VALUE);
+		game.getMasterMap().get("Pluto's Dog House").setInventory(inv);
+		
+		inv = new Inventory(Integer.MAX_VALUE);
+		game.getMasterMap().get("Outside").setInventory(inv);
+		
 
 	}
 
-	public void initializeRooms() {
-		// dora
-		rooms[0] = new String[] { "House Entrance", "map" };
-		rooms[1] = new String[] { "Dining Room", "pie", "ice cream" };
-		rooms[2] = new String[] { "Kitchen" };
-		rooms[3] = new String[] { "LivingRoom", "backpack", "clothes", "leaflet hint" };
-		// arthur
-		rooms[4] = new String[] { "Arthur's Room", "glasses" };
-		rooms[5] = new String[] { "Mr.Ratburn's Class", "ice cream" };
-		rooms[6] = new String[] { "Study Room" };
-		rooms[7] = new String[] { "Library", "bookshelf key" };
-		rooms[8] = new String[] { "Secret Room", "flashlight", "trophy" };
-		// backyardigans
-		rooms[9] = new String[] { "Mini Garden", "dirt", "library card", "branch", "flower" };
-		rooms[10] = new String[] { "Backyard", "sand" };
-		rooms[11] = new String[] { "Back Storage Room", "shed key" };
-		// max and ruby
-		rooms[12] = new String[] { "Max's Room", "ant farm", "empanada", "toy truck" };
-		rooms[13] = new String[] { "Ruby's Room", "pillow" };
-		// treehouse
-		rooms[14] = new String[] { "Pantry", "cookies", "apple" };
-		// mickeymouse
-		rooms[15] = new String[] { "Win Room", "cake" };
-
-	}
-
-	public boolean checkRoomInventory(Item item) {
-		for (Item i : rooms) {
-			if (i == item) {
-
-				for (String[] i : rooms) {
-					if (i == item.getItemName(i)) {
-
-						return true;
-					}
-				}
-				return false;
-			}
+	public boolean checkRoomInventory(Item item, Game game) {
+		if(game.getMasterMap().get(Game.currentRoom.getRoomName(Game.currentRoom)).getInventory().equals(item)) {
+			return true;
 		}
+		return false;
 	}
-
-	public void removeRoomInventory(Item item) {
-		boolean isValid = false;
-
-		for (int i = 0; i < rooms.length; i++) {
-			if (rooms[i].equals(item)) {
-				rooms.remove(i);
-				isValid = true;
-				break;
-			}
-		}
-
+	
+	public void removeRoomInventory(Item item, Game game) {
+		HashMap<String, Room> hashmap = game.getMasterMap();
+		hashmap.remove(item);	//fix later 
+		
 	}
+	
 
-	public void addRoomInventory(Item item) {
-		rooms.add(item);
+
+	public void addRoomInventory(Item item, String room, Game game) {
+		Inventory inv = game.getMasterMap().get(room).getInventory();
+		inv.items.add(item);
 	}
 }

@@ -24,6 +24,7 @@ import java.util.Scanner;
 class Game {
 	private static Parser parser;
 	public static Room currentRoom;
+;
 	// This is a MASTER object that contains all of the rooms and is easily
 	// accessible.
 	// The key will be the name of the room -> no spaces (Use all caps and
@@ -31,7 +32,7 @@ class Game {
 	// In a hashmap keys are case sensitive.
 	// masterRoomMap.get("GREAT_ROOM") will return the Room Object that is the Great
 	// Room (assuming you have one).
-	private HashMap<String, Room> masterRoomMap;
+	private static HashMap<String, Room> masterRoomMap;
 	private Map map = new Map("The Map", 1, "Hello! I am Map!");
 	Inventory rooms = new Inventory(11.0, 10);
 	static Inventory playerInven = new Inventory(40);
@@ -89,8 +90,7 @@ class Game {
 		}
 	}
 
-	/**
-	 * Create the game and initialize its internal map.
+	/**	 * Create the game and initialize its internal map.
 	 */
 	public Game() {
 		try {
@@ -98,7 +98,9 @@ class Game {
 			currentRoom = masterRoomMap.get("START_POINT");
 			playerInven = new Inventory(30);
 			Item.initializeItems();
-			play();
+
+			Inventory.initializeRooms(this);
+			play(this);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -109,17 +111,21 @@ class Game {
 	/**
 	 * Main play routine. Loops until end of play.
 	 */
-	public void play() {
+	public void play(Game game) {
 		printWelcome();
 // Enter the main command loop.  Here we repeatedly read commands and
 		// execute them until the game is over.
 
 		boolean finished = false;
 		while (!finished) {
-			Command command = parser.getCommand();
+			Command command = parser.getCommand(game);
 			finished = processCommand(command, playerInven);
 		}
 		System.out.println("Thank you for playing.  Good bye.");
+	}
+	
+	public HashMap<String, Room> getMasterMap() {
+		return masterRoomMap;
 	}
 
 	/**
@@ -128,8 +134,10 @@ class Game {
 	private void printWelcome() {
 		System.out.println();
 		System.out.println("Welcome to Zork!");
-		System.out.println("Zork is a new, incredibly boring adventure game.");
-		System.out.println("Type 'help' if you need help.");
+		System.out.println("Zork is a new, incredibly boring adventure game. Just like your love life.");
+		System.out.println("Type 'help' if you need help");
+		System.out.println("The objective of this game is to collect all 4 trophies that will allow you to reach the special world where you will find a special prize!");
+		System.out.println("For more info on what this game is really about, please visit our game Wiki. Please. I'm begging you. We wouldn't of wanted to work so very hard on it for no visitors.");
 		System.out.println();
 		System.out.println(currentRoom.longDescription());
 	}
@@ -182,10 +190,8 @@ private void teleport(String secondWord, Inventory playerInven) {
 	 * and a list of the command words.
 	 */
 	public static void printHelp() {
-		System.out.println("You are lost. You are alone. You wander");
-		System.out.println("around at Monash Uni, Peninsula Campus.");
-		System.out.println();
-		System.out.println("Your command words are:");
+		System.out.println("You are currently in: " + currentRoom);
+		System.out.println("Like I said at the beginning of this game...Go. Check. Out. The. Bloody. GAME WIKI!!!");
 		parser.showCommands();
 	}
 

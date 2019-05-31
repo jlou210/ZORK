@@ -29,7 +29,7 @@ class Parser {
 		commands = new CommandWords();
 	}
 
-	public Command getCommand() {
+	public Command getCommand(Game game) {
 		String inputLine = ""; // will hold the full input line
 		String word1;
 		String word2;
@@ -78,11 +78,11 @@ class Parser {
 // Now check whether this word is known. If so, create a command
 		// with it. If not, create a "nil" command (for unknown command).
 		if (commands.isCommand(word1)) {
-			doAction(word1, word2);
+			doAction(word1, word2, game);
 			return new Command(word1, word2);
 		}
 		else {
-			doAction(word2, word3);
+			doAction(word2, word3, game);
 			return new Command(null, word2);
 		}
 	}
@@ -93,7 +93,7 @@ class Parser {
 		
 		for example u can read a book but you can read a broom
 		*/
-		public void doAction(String word, String wordTwo) {
+		public void doAction(String word, String wordTwo, Game game) {
 			if(word == CommandWords.validCommands[0]) {
 				if(wordTwo == "book") {
 					
@@ -118,16 +118,18 @@ class Parser {
 			}
 			else if(word == CommandWords.validCommands[4]) {
 				if(wordTwo == "pie") {
-					Player.eat(Item.food.get("pie"), Game.playerInven);
+					Player.eat(Item.food.get("pie"), Game.currentRoom.getRoomName(Game.currentRoom), Game.playerInven, game);
 				}
 				else if(wordTwo=="ice cream") {
-					Player.eat(Item.food.get("ice cream"), Game.playerInven);
+					Player.eat(Item.food.get("ice cream"), Game.currentRoom.getRoomName(Game.currentRoom), Game.playerInven, game);
 				}
 				else if(wordTwo == "empanada") {
-					Player.eat(Item.food.get("empanada"), Game.playerInven);
+					Player.eat(Item.food.get("empanada"), Game.currentRoom.getRoomName(Game.currentRoom), Game.playerInven, game);
+
 				}
 				else if(wordTwo == "apple") {
-					Player.eat(Item.food.get("apple"), Game.playerInven);
+					Player.eat(Item.food.get("apple"), Game.currentRoom.getRoomName(Game.currentRoom), Game.playerInven, game);
+
 				}
 			}
 			else if(word == CommandWords.validCommands[5]) {
