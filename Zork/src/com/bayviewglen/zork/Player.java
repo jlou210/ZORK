@@ -166,7 +166,7 @@ public class Player {
 		Game.printHelp();
 	}
 
-//quit method
+//quitting method
 	public void quit(Game game) {
 		Game.play(game, true);
 	}
