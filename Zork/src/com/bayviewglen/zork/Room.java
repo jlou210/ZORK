@@ -48,11 +48,6 @@ class Room {
 		roomItems = inventory;
 	}
 
-	public void removeInventory(Item item, Room room, Game game) {
-		HashMap<String, Item> hashmap = game.getMasterMap().set(room);
-		hashmap.remove(item);	//fix later 
-		
-	}
 	public void setExit(char direction, Room r) throws Exception {
 		String dir = "";
 		switch (direction) {
