@@ -18,7 +18,6 @@ public class Inventory {
 		this.maxWeight = maxWeight;
 		currentPlayerWeight = setWeight;
 	}
-
 	public double getPlayerWeight() {
 		return currentPlayerWeight;
 	}
@@ -85,144 +84,144 @@ public class Inventory {
 		game.getMasterMap().get("HOUSE_ENTRANCE").setInventory(inv);
 		
 		inv = new Inventory(Integer.MAX_VALUE);
-		inv.addRoomInventory(Item.pie, "Dining Room", game);
-		inv.addRoomInventory(Item.iceCream, "Dining Room", game);
-		game.getMasterMap().get("Dining Room").setInventory(inv);
+		inv.addRoomInventory(Item.pie, "DINING_ROOM", game);
+		inv.addRoomInventory(Item.iceCream, "DINING_ROOM", game);
+		game.getMasterMap().get("DINING_ROOM").setInventory(inv);
 		
 		inv = new Inventory(Integer.MAX_VALUE);
-		inv.addRoomInventory(Item.glassOfWater, "Kitchen", game);
-		game.getMasterMap().get("Kitchen").setInventory(inv);
+		inv.addRoomInventory(Item.glassOfWater, "KITCHEN", game);
+		game.getMasterMap().get("KITCHEN").setInventory(inv);
 		
 		inv = new Inventory(Integer.MAX_VALUE);
-		inv.addRoomInventory(Item.backpack, "Living Room", game);
-		inv.addRoomInventory(Item.clothes, "Living Room", game);
-		inv.addRoomInventory(Item.leafletHint, "Living Room", game);
-		game.getMasterMap().get("Living Room").setInventory(inv);
+		inv.addRoomInventory(Item.backpack, "LIVING_ROOM", game);
+		inv.addRoomInventory(Item.clothes, "LIVING_ROOM", game);
+		inv.addRoomInventory(Item.leafletHint, "LIVING_ROOM", game);
+		game.getMasterMap().get("LIVING_ROOM").setInventory(inv);
 		
 		//arthur
 		inv = new Inventory(Integer.MAX_VALUE);
-		inv.addRoomInventory(Item.glasses, "Arthur's Room", game);
-		game.getMasterMap().get("Arthur's Room").setInventory(inv);
+		inv.addRoomInventory(Item.glasses, "ARTHUR'S_ROOM", game);
+		game.getMasterMap().get("ARTHUR'S_ROOM").setInventory(inv);
 		
 		inv = new Inventory(Integer.MAX_VALUE);
-		inv.addRoomInventory(Item.iceCream, "Mr. Ratburn's Class", game);
-		game.getMasterMap().get("Mr.Ratburn's Class").setInventory(inv);
+		inv.addRoomInventory(Item.iceCream, "MR.RATBURN'S_CLASS", game);
+		game.getMasterMap().get("MR.RATBURN'S_CLASS").setInventory(inv);
 		
 		inv = new Inventory(Integer.MAX_VALUE);
-		game.getMasterMap().get("Study Room").setInventory(inv);
+		game.getMasterMap().get("STUDY_ROOM").setInventory(inv);
 		
 		inv = new Inventory(Integer.MAX_VALUE);
-		inv.addRoomInventory(Item.bookshelfKey, "Library", game);
-		game.getMasterMap().get("Library").setInventory(inv);
+		inv.addRoomInventory(Item.bookshelfKey, "LIBRARY", game);
+		game.getMasterMap().get("LIBRARY").setInventory(inv);
 	
 		inv = new Inventory(Integer.MAX_VALUE);
-		inv.addRoomInventory(Item.flashlight, "Secret Room", game);
-		inv.addRoomInventory(Item.trophy1, "Secret Room", game);
-		game.getMasterMap().get("Secret Room").setInventory(inv);
+		inv.addRoomInventory(Item.flashlight, "SECRET_ROOM", game);
+		inv.addRoomInventory(Item.trophy1, "SECRET_ROOM", game);
+		game.getMasterMap().get("SECRET_ROOM").setInventory(inv);
 		
 		//backyardigans
 		
 		inv = new Inventory(Integer.MAX_VALUE);
-		inv.addRoomInventory(Item.dirt, "Mini Garden", game);
-		inv.addRoomInventory(Item.libraryCard, "Mini Garden", game);
-		inv.addRoomInventory(Item.treeBranch, "Mini Garden", game);
-		inv.addRoomInventory(Item.flower, "Mini Garden", game);
-		game.getMasterMap().get("Mini Garden").setInventory(inv);
+		inv.addRoomInventory(Item.dirt, "MINI_GARDEN", game);
+		inv.addRoomInventory(Item.libraryCard, "MINI_GARDEN", game);
+		inv.addRoomInventory(Item.treeBranch, "MINI_GARDEN", game);
+		inv.addRoomInventory(Item.flower, "MINI_GARDEN", game);
+		game.getMasterMap().get("MINI_GARDEN").setInventory(inv);
 		
 		inv = new Inventory(Integer.MAX_VALUE);
-		inv.addRoomInventory(Item.shedKey, "Back Storage Room", game);
-		game.getMasterMap().get("Back Storage Room").setInventory(inv);
+		inv.addRoomInventory(Item.shedKey, "BACK_STORAGE_ROOM", game);
+		game.getMasterMap().get("BACK_STORAGE_ROOM").setInventory(inv);
 		
 		inv = new Inventory(Integer.MAX_VALUE);
-		inv.addRoomInventory(Item.sand, "Backyard", game);
-		inv.addRoomInventory(Item.glassOfMilk, "Backyard", game);
-		game.getMasterMap().get("Backyard").setInventory(inv);
+		inv.addRoomInventory(Item.sand, "BACKYARD", game);
+		inv.addRoomInventory(Item.glassOfMilk, "BACKYARD", game);
+		game.getMasterMap().get("BACKYARD").setInventory(inv);
 		
 		inv = new Inventory(Integer.MAX_VALUE);
-		inv.addRoomInventory(Item.trophy3, "Small Shed", game);
-		game.getMasterMap().get("Small Shed").setInventory(inv);
+		inv.addRoomInventory(Item.trophy3, "SMALL_SHED", game);
+		game.getMasterMap().get("SMALL_SHED").setInventory(inv);
 		
 		inv = new Inventory(Integer.MAX_VALUE);
-		game.getMasterMap().get("Storage Room").setInventory(inv);
+		game.getMasterMap().get("STORAGE_ROOM").setInventory(inv);
 		
 		inv = new Inventory(Integer.MAX_VALUE);
-		game.getMasterMap().get("Backyardigan's Hallway").setInventory(inv);
+		game.getMasterMap().get("BACKYARDIGAN'S_HALLWAY").setInventory(inv);
 		
 		inv = new Inventory(Integer.MAX_VALUE);
-		game.getMasterMap().get("Small Opening").setInventory(inv);
+		game.getMasterMap().get("SMALL_OPENING").setInventory(inv);
 		
 		inv = new Inventory(Integer.MAX_VALUE);
-		game.getMasterMap().get("House").setInventory(inv);
+		game.getMasterMap().get("HOUSE").setInventory(inv);
 		
 		//max and ruby
 		
 		inv = new Inventory(Integer.MAX_VALUE);
-		inv.addRoomInventory(Item.antFarm, "Max's Room", game);
-		inv.addRoomInventory(Item.empanada, "Max's Room", game);
-		inv.addRoomInventory(Item.toyTruck, "Max's Room", game);
-		inv.addRoomInventory(Item.trophy2, "Max's Room", game);
-		game.getMasterMap().get("Max's Room").setInventory(inv);
+		inv.addRoomInventory(Item.antFarm, "MAX'S_ROOM", game);
+		inv.addRoomInventory(Item.empanada, "MAX'S_ROOM", game);
+		inv.addRoomInventory(Item.toyTruck, "MAX'S_ROOM", game);
+		inv.addRoomInventory(Item.trophy2, "MAX'S_ROOM", game);
+		game.getMasterMap().get("MAX'S_ROOM").setInventory(inv);
 		
 		inv = new Inventory(Integer.MAX_VALUE);
-		inv.addRoomInventory(Item.pillow, "Ruby's Room", game);
-		game.getMasterMap().get("Ruby's Room").setInventory(inv);
+		inv.addRoomInventory(Item.pillow, "RUBY'S_ROOM", game);
+		game.getMasterMap().get("RUBY'S_ROOM").setInventory(inv);
 		
 		inv = new Inventory(Integer.MAX_VALUE);
-		game.getMasterMap().get("Ruby's Kitchen").setInventory(inv);
+		game.getMasterMap().get("RUBY'S_KITCHEN").setInventory(inv);
 		
 		inv = new Inventory(Integer.MAX_VALUE);
-		game.getMasterMap().get("Grandma's House").setInventory(inv);
+		game.getMasterMap().get("GRANDMA'S_HOUSE").setInventory(inv);
 		
 		inv = new Inventory(Integer.MAX_VALUE);
-		game.getMasterMap().get("Room").setInventory(inv);
+		game.getMasterMap().get("ROOM").setInventory(inv);
 		
 		//treehouse
 		
 		inv = new Inventory(Integer.MAX_VALUE);
-		inv.addRoomInventory(Item.cookies, "Pantry", game);
-		inv.addRoomInventory(Item.apple, "Pantry", game);
-		game.getMasterMap().get("Pantry").setInventory(inv);
+		inv.addRoomInventory(Item.cookies, "PANTRY", game);
+		inv.addRoomInventory(Item.apple, "PANTRY", game);
+		game.getMasterMap().get("PANTRY").setInventory(inv);
 		
 		inv = new Inventory(Integer.MAX_VALUE);
-		game.getMasterMap().get("Trophy Room").setInventory(inv);
+		game.getMasterMap().get("TROPHY_ROOM").setInventory(inv);
 		
 		inv = new Inventory(Integer.MAX_VALUE);
-		game.getMasterMap().get("Main Room").setInventory(inv);
+		game.getMasterMap().get("MAIN_ROOM").setInventory(inv);
 		
 		inv = new Inventory(Integer.MAX_VALUE);
-		game.getMasterMap().get("Room2").setInventory(inv);
+		game.getMasterMap().get("ROOM2").setInventory(inv);
 		
 		inv = new Inventory(Integer.MAX_VALUE);
-		game.getMasterMap().get("Room3").setInventory(inv);
+		game.getMasterMap().get("ROOM3").setInventory(inv);
 		
 		inv = new Inventory(Integer.MAX_VALUE);
-		inv.addRoomInventory(Item.trophy4, "Room4", game);
-		game.getMasterMap().get("Room4").setInventory(inv);
+		inv.addRoomInventory(Item.trophy4, "ROOM4", game);
+		game.getMasterMap().get("ROOM4").setInventory(inv);
 		
 		//mickey mouse
 		
 		inv = new Inventory(Integer.MAX_VALUE);
-		inv.addRoomInventory(Item.cake, "Win Room", game);
-		game.getMasterMap().get("Win Room").setInventory(inv);
+		inv.addRoomInventory(Item.cake, "WIN_ROOM", game);
+		game.getMasterMap().get("WIN_ROOM").setInventory(inv);
 		
 
 		inv = new Inventory(Integer.MAX_VALUE);
-		game.getMasterMap().get("Mickey's Room").setInventory(inv);
+		game.getMasterMap().get("MICKEY'S_ROOM").setInventory(inv);
 		
 		inv = new Inventory(Integer.MAX_VALUE);
-		game.getMasterMap().get("Minnie's Room").setInventory(inv);
+		game.getMasterMap().get("MINNIE'S_ROOM").setInventory(inv);
 		
 		inv = new Inventory(Integer.MAX_VALUE);
-		game.getMasterMap().get("Donald's Room").setInventory(inv);
+		game.getMasterMap().get("DONALD'S_ROOM").setInventory(inv);
 
 		inv = new Inventory(Integer.MAX_VALUE);
-		game.getMasterMap().get("Goofy's Garden").setInventory(inv);
+		game.getMasterMap().get("GOOFY'S_GARDEN").setInventory(inv);
 
 		inv = new Inventory(Integer.MAX_VALUE);
-		game.getMasterMap().get("Pluto's Dog House").setInventory(inv);
+		game.getMasterMap().get("PLUTO'S_DOG_HOUSE").setInventory(inv);
 		
 		inv = new Inventory(Integer.MAX_VALUE);
-		game.getMasterMap().get("Outside").setInventory(inv);
+		game.getMasterMap().get("OUTSIDE").setInventory(inv);
 		
 
 	}
