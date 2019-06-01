@@ -170,9 +170,28 @@ class Game {
 		}
 		
 		else if(commandWord.equals("get")){
-			if(command.hasSecondWord()) {
+			if(command.getSecondWord()=="cookies") {
 				player.get(Item.food.get("cookies"), playerInven, currentRoom.getRoomName(currentRoom), game);
-			}else {
+			}
+			else if(command.getSecondWord()=="cake") {
+				player.get(Item.food.get("cake"), playerInven, currentRoom.getRoomName(currentRoom), game);
+			}
+			else if(command.getSecondWord()=="donuts") {
+				player.get(Item.food.get("donuts"), playerInven, currentRoom.getRoomName(currentRoom), game);
+			}else if(command.getSecondWord()=="ice") {
+				player.get(Item.food.get("ice cream"), playerInven, currentRoom.getRoomName(currentRoom), game);
+			}
+			else if(command.getSecondWord()=="pie") {
+				player.get(Item.food.get("pie"), playerInven, currentRoom.getRoomName(currentRoom), game);
+			}
+			else if(command.getSecondWord()=="empanada") {
+				player.get(Item.food.get("empanada"), playerInven, currentRoom.getRoomName(currentRoom), game);
+			}
+			else if(command.getSecondWord()=="apple") {
+				player.get(Item.food.get("apple"), playerInven, currentRoom.getRoomName(currentRoom), game);
+			}
+			
+			else {
 				System.out.println("get what?");
 			}
 		}
