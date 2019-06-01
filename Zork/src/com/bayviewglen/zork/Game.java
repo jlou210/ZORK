@@ -171,7 +171,7 @@ class Game {
 		
 		else if(commandWord.equals("get")){
 			if(command.hasSecondWord()) {
-				
+				player.get(Item.food.get("cookies"), Game.playerInven, Game.currentRoom.getRoomName(Game.currentRoom), game);
 			}
 		}
 		 else if(commandWord.equals("drink")) {
