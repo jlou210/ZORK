@@ -257,7 +257,6 @@ class Game {
 			else if(command.getSecondWord()=="book") {
 				player.get(Item.tools.get("book"), playerInven, currentRoom.getRoomName(currentRoom), game);
 			}
-			
 			else {
 				System.out.println("get what?");
 			}
