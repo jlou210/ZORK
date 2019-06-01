@@ -167,11 +167,12 @@ class Game {
 			 } 
 		
 		}
-		"get""use""look""burn", "climb""put""place""look at", "take", "throw", "drop", "sit"
 		
 		else if(commandWord.equals("get")){
 			if(command.hasSecondWord()) {
-				player.get(Item.food.get("cookies"), Game.playerInven, Game.currentRoom.getRoomName(Game.currentRoom), game);
+				player.get(Item.food.get("cookies"), playerInven, currentRoom.getRoomName(currentRoom), game);
+			}else {
+				System.out.println("get what?");
 			}
 		}
 		 else if(commandWord.equals("drink")) {
@@ -198,14 +199,19 @@ class Game {
 				 System.out.println("Give what?");
 			 }
 		 }
-		 else if(command)
-		if (commandWord.equals("eat")) {
+		 else if (commandWord.equals("eat")) {
 			if(command.hasSecondWord()) {
 				player.eat(Item.food.get(command.getSecondWord()), currentRoom.getRoomName(currentRoom), playerInven, game);
 			}
 			System.out.println("Do you really think you should be eating at a time like this?");
 		} else if (commandWord.equals("kill")) {
 			System.out.println("This is a kids game, why do you want to kill something?");
+		} else if (commandWord.equals("take")) {
+			if (command.hasSecondWord()) {
+				player.take(Item.tools.get(command.getSecondWord()), playerInven, game);
+			} else {
+				System.out.println("Take what?");
+			}
 		}
 		return false;
 	}
