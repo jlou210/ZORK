@@ -185,7 +185,34 @@ class Game {
 			 }
 		 }
 		 else if(commandWord.equals("talk")) {
-			 
+			 if(command.getSecondWord() == "Dora") {
+				 Dora dora = new Dora();
+				 dora.speak();
+			 }
+			 else  if(command.getSecondWord() == "Arthur") {
+				 Arthur arthur = new Arthur();
+				 arthur.speak();
+			 }
+			 else if(command.getSecondWord() == "DW") {
+				 DW dw = new DW();
+				 dw.speak();
+			 }
+			 else if(command.getSecondWord() == "Max") {
+				 Max max = new Max();
+				 max.speak();
+			 }
+			 else if(command.getSecondWord() == "Ruby") {
+				 Ruby ruby = new Ruby();
+				 ruby.speak();
+			 }
+			 else if(command.getSecondWord() == "Mickey") {
+				 Mickey mickey = new Mickey();
+				 mickey.speak();
+			 }
+			 else if(command.getSecondWord() == "Minnie") {
+				 Minnie minnie = new Minnie();
+				 minnie.speak();
+			 }
 		 }
 		 else if(commandWord.equals("read")) {
 			 if(command.hasSecondWord()) {
