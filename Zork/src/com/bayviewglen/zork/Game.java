@@ -162,9 +162,10 @@ class Game {
 		 else if (commandWord.equals("quit")) {
 			if (command.hasSecondWord())
 				System.out.println("Quit what?");
+			 else {
+					return true; // signal that we want to quit
 		} 
-		 else {
-			return true; // signal that we want to quit
+		
 		}
 		if (commandWord.equals("eat")) {
 			System.out.println("Do you really think you should be eating at a time like this?");
