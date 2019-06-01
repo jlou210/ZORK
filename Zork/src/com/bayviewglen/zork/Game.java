@@ -98,9 +98,9 @@ class Game {
 			initRooms("data/Rooms.dat");
 			currentRoom = masterRoomMap.get("START_POINT");
 			playerInven = new Inventory(30);
-			Item.initializeItems();
-
-			Inventory.initializeRooms(this);
+			Item itemList = new Item();	//null pointer
+			itemList.initializeItems();	//null pointer
+			Inventory.initializeRooms(this, itemList);	//null pointer
 			play(this, true);
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -119,7 +119,7 @@ class Game {
 	
 		while (!finished) {
 			Command command = parser.getCommand(game);
-			finished = processCommand(command, playerInven);
+			finished = processCommand(command, playerInven, game);
 		}
 		System.out.println("Thank you for playing.  Good bye.");
 	}
@@ -147,7 +147,7 @@ class Game {
 	 * the game, true is returned, otherwise false is returned.
 	 */
 
-	private static boolean processCommand(Command command, Inventory playerInven) {
+	private static boolean processCommand(Command command, Inventory playerInven, Game game) {
 		if (command.isUnknown()) {
 			System.out.println("I don't know what you mean...");
 			return false;
@@ -162,11 +162,18 @@ class Game {
 		 else if (commandWord.equals("quit")) {
 			if (command.hasSecondWord())
 				System.out.println("Quit what?");
-		} else {
-			return true; // signal that we want to quit
+			 else {
+					return true; // signal that we want to quit
+		} 
+		
 		}
 		if (commandWord.equals("eat")) {
+			if(command.hasSecondWord()) {
+				player.eat(Item.food.get(command.getSecondWord()), currentRoom.getRoomName(currentRoom), playerInven, game);
+			}
 			System.out.println("Do you really think you should be eating at a time like this?");
+		} else if (commandWord.equals("kill")) {
+			System.out.println("This is a kids game, why do you want to kill something?");
 		}
 		return false;
 	}
@@ -190,8 +197,9 @@ public static void teleport(Inventory playerInven) {
 	 * and a list of the command words.
 	 */
 	public static void printHelp() {
-		System.out.println("You are currently in: " + currentRoom);
+		System.out.println("You are currently in: " + currentRoom.getRoomName(currentRoom));
 		System.out.println("Like I said at the beginning of this game...Go. Check. Out. The. Bloody. GAME WIKI!!!");
+		System.out.println("Your Commands are: ");
 		parser.showCommands();
 	}
 

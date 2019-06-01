@@ -63,11 +63,11 @@ class Parser {
 // Now check whether this word is known. If so, create a command
 		// with it. If not, create a "nil" command (for unknown command).
 		if (commands.isCommand(word1)) {
-			doAction(word1, word2, word3, word4, game);
+			//doAction(word1, word2, word3, word4, game);
 			return new Command(word1, word2);
 		}
 		else {
-			doAction(word2, word3, word4, " ",game);
+			//doAction(word2, word3, word4, " ",game);
 			return new Command(null, word2);
 		}
 	}
@@ -283,9 +283,7 @@ class Parser {
 				else if(wordTwo != null) {
 					System.out.println("You can only teleport to the Treehouse");
 				}
-				else {
-					System.out.println("Are you speaking English? Tu hables espanol? Please try another statement");
-				}
+				
 			}
 			else if(word == CommandWords.validCommands[14]) {
 				if(wordTwo == "trophy" && wordThree == "1") {

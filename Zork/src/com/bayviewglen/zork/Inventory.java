@@ -76,7 +76,7 @@ public class Inventory {
 
 
 
-	public static void initializeRooms(Game game) {
+	public static void initializeRooms(Game game, Item item) {
 		
 		//dora 
 		Inventory inv = new Inventory(Integer.MAX_VALUE);
@@ -248,8 +248,8 @@ public class Inventory {
 	public void addRoomInventory(Item item, String room, Game game) {
 		HashMap<String, Room> hashmap = game.getMasterMap();
 		Room r = hashmap.get(room);	//room is null
-		Inventory inv = r.getInventory();
-		inv.getItems().add(item);
+		Inventory inv = r.getInventory();	//null pointer
+		inv.getItems().add(item);	//null pointer
 	}
 	
 

@@ -15,6 +15,9 @@ public class Item {
 		
 	}
 
+	public Item() {
+	}
+
 	static HashMap<String, Item> useless = new HashMap<String, Item>();
 	static HashMap<String, Item> food = new HashMap<String, Item>();
 	static HashMap<String, Item> drink = new HashMap<String, Item>();
@@ -55,7 +58,7 @@ public class Item {
 	public static final BookshelfKey bookshelfKey = new BookshelfKey("bookshelf key", 1, "You picked up a key. I wonder where it can be used."); 
 	
 
-	public static void initializeItems() {
+	public void initializeItems() {
 
 		useless.put("flower", flower); // dora
 		useless.put("tree branch", treeBranch); // treehouse
