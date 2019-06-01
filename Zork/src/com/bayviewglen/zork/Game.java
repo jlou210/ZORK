@@ -184,6 +184,9 @@ class Game {
 				 System.out.println("Drink what?");
 			 }
 		 }
+		 else if(commandWord.equals("talk")) {
+			 
+		 }
 		 else if(commandWord.equals("read")) {
 			 if(command.hasSecondWord()) {
 				 player.read(Item.tools.get(command.getSecondWord()));
