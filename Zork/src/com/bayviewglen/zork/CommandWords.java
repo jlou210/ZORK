@@ -15,7 +15,6 @@ class CommandWords {
 	public static final String[] validCommands = { "read","go","quit","help", "eat", "get"
 			, "use", "drink", "look", "give", "kill", "burn", "climb", "teleport", "put", "place", 
 			"look at", "take", "throw", "drop", "sit", "talk"};
-
 	/**
 	 * Constructor - initialise the command words.
 	 **/
