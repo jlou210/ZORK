@@ -15,6 +15,9 @@ public class Item {
 		
 	}
 
+	public Item() {
+	}
+
 	static HashMap<String, Item> useless = new HashMap<String, Item>();
 	static HashMap<String, Item> food = new HashMap<String, Item>();
 	static HashMap<String, Item> drink = new HashMap<String, Item>();

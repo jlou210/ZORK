@@ -98,9 +98,10 @@ class Game {
 			initRooms("data/Rooms.dat");
 			currentRoom = masterRoomMap.get("START_POINT");
 			playerInven = new Inventory(30);
-			Item.initializeItems();
+			Item itemList = new Item();
+			itemList.initializeItems();
 
-			Inventory.initializeRooms(this);
+			Inventory.initializeRooms(this, itemList);
 			play(this, true);
 		} catch (Exception e) {
 			e.printStackTrace();
