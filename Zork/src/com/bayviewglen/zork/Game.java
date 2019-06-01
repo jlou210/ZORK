@@ -233,6 +233,30 @@ class Game {
 			else if(command.getSecondWord()=="bookshelf") {
 				player.get(Item.tools.get("bookshelf"), playerInven, currentRoom.getRoomName(currentRoom), game);
 			}
+			else if(command.getSecondWord()=="flower") {
+				player.get(Item.useless.get("flower"), playerInven, currentRoom.getRoomName(currentRoom), game);
+			}
+			else if(command.getSecondWord()=="sand") {
+				player.get(Item.useless.get("sand"), playerInven, currentRoom.getRoomName(currentRoom), game);
+			}
+			else if(command.getSecondWord()=="dirt") {
+				player.get(Item.useless.get("dirt"), playerInven, currentRoom.getRoomName(currentRoom), game);
+			}
+			else if(command.getSecondWord()=="tree") {
+				player.get(Item.useless.get("tree branch"), playerInven, currentRoom.getRoomName(currentRoom), game);
+			}
+			else if(command.getSecondWord()=="toy") {
+				player.get(Item.useless.get("tory truck"), playerInven, currentRoom.getRoomName(currentRoom), game);
+			}
+			else if(command.getSecondWord()=="clothes") {
+				player.get(Item.useless.get("clothles"), playerInven, currentRoom.getRoomName(currentRoom), game);
+			}
+			else if(command.getSecondWord()=="leaflet") {
+				player.get(Item.tools.get("leaflet hint"), playerInven, currentRoom.getRoomName(currentRoom), game);
+			}
+			else if(command.getSecondWord()=="book") {
+				player.get(Item.tools.get("book"), playerInven, currentRoom.getRoomName(currentRoom), game);
+			}
 			
 			else {
 				System.out.println("get what?");
