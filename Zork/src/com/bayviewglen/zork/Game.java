@@ -364,6 +364,95 @@ class Game {
 						player.drop(Item.tools.get("book"));
 					}
 		 }
+		 else if(commandWord.equals("throw")) {
+				if(command.getSecondWord()=="cookies") {
+					player.throwObject(Item.food.get("cookies"));
+				}
+				else if(command.getSecondWord()=="cake") {
+					player.throwObject(Item.food.get("cake"));
+				}
+				else if(command.getSecondWord()=="donuts") {
+					player.throwObject(Item.food.get("donuts"));
+				}else if(command.getSecondWord()=="ice") {
+					player.throwObject(Item.food.get("ice cream"));
+				}
+				else if(command.getSecondWord()=="pie") {
+					player.throwObject(Item.food.get("pie"));
+				}
+				else if(command.getSecondWord()=="empanada") {
+					player.throwObject(Item.food.get("empanada"));
+				}
+				else if(command.getSecondWord()=="apple") {
+					player.throwObject(Item.food.get("apple"));
+				}else if(command.getSecondWord()=="water") {
+					player.throwObject(Item.drink.get("water"));
+				}
+				else if(command.getSecondWord()=="milk") {
+					player.throwObject(Item.food.get("milk"));
+				}
+				else if(command.getSecondWord()=="map") {
+					player.throwObject(Item.tools.get("map"));
+				}
+				else if(command.getSecondWord()=="glasses") {
+					player.throwObject(Item.food.get("glasses"));
+				}
+				else if(command.getSecondWord()=="cake") {
+					player.throwObject(Item.food.get("cake"));
+				}else if(command.getSecondWord()=="flashlight") {
+					player.throwObject(Item.tools.get("flashlight"));
+				}
+				else if(command.getSecondWord()=="library") {
+					player.throwObject(Item.tools.get("library card"));
+				}
+				else if(command.getSecondWord()=="backpack") {
+					player.throwObject(Item.tools.get("backpack"));
+				}
+				else if(command.getSecondWord()=="shed") {
+					player.throwObject(Item.tools.get("shed key"));
+				}
+				else if(command.getSecondWord()=="trophy 1") {
+					player.throwObject(Item.tools.get("trophy"));
+				}
+				else if(command.getSecondWord()=="trophy 2") {
+					player.throwObject(Item.tools.get("trophy 2"));
+				}
+				else if(command.getSecondWord()=="trophy 3") {
+					player.throwObject(Item.tools.get("trophy 3"));
+				}
+				else if(command.getSecondWord()=="trophy 4") {
+					player.throwObject(Item.tools.get("trophy 4"));
+				}
+				else if(command.getSecondWord()=="ant") {
+					player.throwObject(Item.tools.get("ant farm"));
+				}
+				else if(command.getSecondWord()=="bookshelf") {
+					player.throwObject(Item.tools.get("bookshelf"));
+				}
+				else if(command.getSecondWord()=="flower") {
+					player.throwObject(Item.useless.get("flower"));
+				}
+				else if(command.getSecondWord()=="sand") {
+					player.throwObject(Item.useless.get("sand"));
+				}
+				else if(command.getSecondWord()=="dirt") {
+					player.throwObject(Item.useless.get("dirt"));
+				}
+				else if(command.getSecondWord()=="tree") {
+					player.throwObject(Item.useless.get("tree branch"));
+				}
+				else if(command.getSecondWord()=="toy") {
+					player.throwObject(Item.useless.get("tory truck"));
+				}
+				else if(command.getSecondWord()=="clothes") {
+					player.throwObject(Item.useless.get("clothles"));
+				}
+				else if(command.getSecondWord()=="leaflet") {
+					player.throwObject(Item.tools.get("leaflet hint"));
+				}
+				else if(command.getSecondWord()=="book") {
+					player.throwObject(Item.tools.get("book"));
+				}
+	 }
 		 else if(commandWord.equals("talk")) {
 			 if(command.getSecondWord() == "Dora") {
 				 Dora dora = new Dora();
@@ -421,6 +510,9 @@ class Game {
 			System.out.println("This is a kids game, why do you want to burn something?");
 		}else if(commandWord.equals("climb")) {
 			System.out.println("You climbed");
+		}
+		else if(commandWord.equals("sit")) {
+			System.out.println("You sat down");
 		}
 		else if (commandWord.equals("take")) {
 			if (command.hasSecondWord()) {
