@@ -164,9 +164,25 @@ class Game {
 				System.out.println("Quit what?");
 			 else {
 					return true; // signal that we want to quit
-		} 
+			 } 
 		
 		}
+		 else if(commandWord.equals("drink")) {
+			 if(command.hasSecondWord()) {
+				 player.drink(command.getSecondWord());
+			 }
+		 }
+		 else if(commandWord.equals("read")) {
+			 if(command.hasSecondWord()) {
+				 player.read(command.getSecondWord());
+			 }
+		 }
+		 else if(commandWord.equals("give")) {
+			 if(command.hasSecondWord()) {
+				 player.give(command.getSecondWord());
+			 }
+		 }
+		 else if(command)
 		if (commandWord.equals("eat")) {
 			if(command.hasSecondWord()) {
 				player.eat(Item.food.get(command.getSecondWord()), currentRoom.getRoomName(currentRoom), playerInven, game);
