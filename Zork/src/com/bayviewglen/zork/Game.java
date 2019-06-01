@@ -169,6 +169,8 @@ class Game {
 		}
 		if (commandWord.equals("eat")) {
 			System.out.println("Do you really think you should be eating at a time like this?");
+		} else if (commandWord.equals("kill")) {
+			System.out.println("This is a kids game, why do you want to kill something?");
 		}
 		return false;
 	}
