@@ -317,52 +317,52 @@ class Game {
 						player.drop(Item.tools.get("library card"));
 					}
 					else if(command.getSecondWord()=="backpack") {
-						player.get(Item.tools.get("backpack"));
+						player.drop(Item.tools.get("backpack"));
 					}
 					else if(command.getSecondWord()=="shed") {
-						player.get(Item.tools.get("shed key"));
+						player.drop(Item.tools.get("shed key"));
 					}
 					else if(command.getSecondWord()=="trophy 1") {
-						player.get(Item.tools.get("trophy"));
+						player.drop(Item.tools.get("trophy"));
 					}
 					else if(command.getSecondWord()=="trophy 2") {
-						player.get(Item.tools.get("trophy 2"));
+						player.drop(Item.tools.get("trophy 2"));
 					}
 					else if(command.getSecondWord()=="trophy 3") {
-						player.get(Item.tools.get("trophy 3"));
+						player.drop(Item.tools.get("trophy 3"));
 					}
 					else if(command.getSecondWord()=="trophy 4") {
-						player.get(Item.tools.get("trophy 4"), playerInven, currentRoom.getRoomName(currentRoom), game);
+						player.drop(Item.tools.get("trophy 4"));
 					}
 					else if(command.getSecondWord()=="ant") {
-						player.get(Item.tools.get("ant farm"), playerInven, currentRoom.getRoomName(currentRoom), game);
+						player.drop(Item.tools.get("ant farm"));
 					}
 					else if(command.getSecondWord()=="bookshelf") {
-						player.get(Item.tools.get("bookshelf"), playerInven, currentRoom.getRoomName(currentRoom), game);
+						player.drop(Item.tools.get("bookshelf"));
 					}
 					else if(command.getSecondWord()=="flower") {
-						player.get(Item.useless.get("flower"), playerInven, currentRoom.getRoomName(currentRoom), game);
+						player.drop(Item.useless.get("flower"));
 					}
 					else if(command.getSecondWord()=="sand") {
-						player.get(Item.useless.get("sand"), playerInven, currentRoom.getRoomName(currentRoom), game);
+						player.drop(Item.useless.get("sand"));
 					}
 					else if(command.getSecondWord()=="dirt") {
-						player.get(Item.useless.get("dirt"), playerInven, currentRoom.getRoomName(currentRoom), game);
+						player.drop(Item.useless.get("dirt"));
 					}
 					else if(command.getSecondWord()=="tree") {
-						player.get(Item.useless.get("tree branch"), playerInven, currentRoom.getRoomName(currentRoom), game);
+						player.drop(Item.useless.get("tree branch"));
 					}
 					else if(command.getSecondWord()=="toy") {
-						player.get(Item.useless.get("tory truck"), playerInven, currentRoom.getRoomName(currentRoom), game);
+						player.drop(Item.useless.get("tory truck"));
 					}
 					else if(command.getSecondWord()=="clothes") {
-						player.get(Item.useless.get("clothles"), playerInven, currentRoom.getRoomName(currentRoom), game);
+						player.drop(Item.useless.get("clothles"));
 					}
 					else if(command.getSecondWord()=="leaflet") {
-						player.get(Item.tools.get("leaflet hint"), playerInven, currentRoom.getRoomName(currentRoom), game);
+						player.drop(Item.tools.get("leaflet hint"));
 					}
 					else if(command.getSecondWord()=="book") {
-						player.get(Item.tools.get("book"), playerInven, currentRoom.getRoomName(currentRoom), game);
+						player.drop(Item.tools.get("book"));
 					}
 		 }
 		 else if(commandWord.equals("talk")) {
