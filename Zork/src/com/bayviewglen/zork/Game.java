@@ -98,9 +98,9 @@ class Game {
 			initRooms("data/Rooms.dat");
 			currentRoom = masterRoomMap.get("START_POINT");
 			playerInven = new Inventory(30);
-			Item itemList = new Item();
-			itemList.initializeItems();
-			Inventory.initializeRooms(this, itemList);
+			Item itemList = new Item();	//null pointer
+			itemList.initializeItems();	//null pointer
+			Inventory.initializeRooms(this, itemList);	//null pointer
 			play(this, true);
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -190,7 +190,7 @@ public static void teleport(Inventory playerInven) {
 	 * and a list of the command words.
 	 */
 	public static void printHelp() {
-		System.out.println("You are currently in: " + currentRoom);
+		System.out.println("You are currently in: " + currentRoom.getRoomName(currentRoom));
 		System.out.println("Like I said at the beginning of this game...Go. Check. Out. The. Bloody. GAME WIKI!!!");
 		parser.showCommands();
 	}
