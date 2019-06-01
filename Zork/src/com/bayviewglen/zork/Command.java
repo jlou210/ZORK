@@ -24,19 +24,17 @@ package com.bayviewglen.zork;
 class Command {
 	private String commandWord;
 	private String secondWord;
-	private String thirdWord;
-	private String fourthWord;
+
 
 	/**
 	 * Create a command object. First and second word must be supplied, but either
 	 * one (or both) can be null. The command word should be null to indicate that
 	 * this was a command that is not recognised by this game.
 	 */
-	public Command(String firstWord, String secondWord, String thirdWord, String fourthWord) {
+	public Command(String firstWord, String secondWord) {
 		commandWord = firstWord;
 		this.secondWord = secondWord;
-		this.thirdWord = thirdWord;
-		this.fourthWord = fourthWord;
+		
 	}
 
 	/**

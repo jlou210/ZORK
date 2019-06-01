@@ -119,7 +119,7 @@ class Game {
 	
 		while (!finished) {
 			Command command = parser.getCommand(game);
-			finished = processCommand(command, playerInven);
+			finished = processCommand(command, playerInven, game);
 		}
 		System.out.println("Thank you for playing.  Good bye.");
 	}
@@ -147,7 +147,7 @@ class Game {
 	 * the game, true is returned, otherwise false is returned.
 	 */
 
-	private static boolean processCommand(Command command, Inventory playerInven) {
+	private static boolean processCommand(Command command, Inventory playerInven, Game game) {
 		if (command.isUnknown()) {
 			System.out.println("I don't know what you mean...");
 			return false;
@@ -168,6 +168,9 @@ class Game {
 		
 		}
 		if (commandWord.equals("eat")) {
+			if(command.hasSecondWord()) {
+				player.eat(Item.food.get(command.getSecondWord()), currentRoom.getRoomName(currentRoom), playerInven, game);
+			}
 			System.out.println("Do you really think you should be eating at a time like this?");
 		} else if (commandWord.equals("kill")) {
 			System.out.println("This is a kids game, why do you want to kill something?");

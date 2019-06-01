@@ -64,11 +64,11 @@ class Parser {
 		// with it. If not, create a "nil" command (for unknown command).
 		if (commands.isCommand(word1)) {
 			//doAction(word1, word2, word3, word4, game);
-			return new Command(word1, word2, word3, word4);
+			return new Command(word1, word2);
 		}
 		else {
 			//doAction(word2, word3, word4, " ",game);
-			return new Command(null, word2, word3, word4);
+			return new Command(null, word2);
 		}
 	}
 		//have all the if statements that link it to the correct methods
