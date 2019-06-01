@@ -100,7 +100,6 @@ class Game {
 			playerInven = new Inventory(30);
 			Item itemList = new Item();
 			itemList.initializeItems();
-
 			Inventory.initializeRooms(this, itemList);
 			play(this, true);
 		} catch (Exception e) {
