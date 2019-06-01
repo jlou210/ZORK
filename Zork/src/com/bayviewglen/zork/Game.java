@@ -276,7 +276,6 @@ class Game {
 			 }
 		 }
 		 else if(commandWord.equals("drop")) {
-			 else if(commandWord.equals("get")){
 					if(command.getSecondWord()=="cookies") {
 						player.drop(Item.food.get("cookies"));
 					}
