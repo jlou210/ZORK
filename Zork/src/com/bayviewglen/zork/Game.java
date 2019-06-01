@@ -192,6 +192,7 @@ public static void teleport(Inventory playerInven) {
 	public static void printHelp() {
 		System.out.println("You are currently in: " + currentRoom.getRoomName(currentRoom));
 		System.out.println("Like I said at the beginning of this game...Go. Check. Out. The. Bloody. GAME WIKI!!!");
+		System.out.println("Your Commands are: ");
 		parser.showCommands();
 	}
 
