@@ -134,10 +134,11 @@ class Game {
 	private void printWelcome() {
 		System.out.println();
 		System.out.println("Welcome to Zork!");
-		System.out.println("Zork is a new, incredibly boring adventure game. Just like your love life.");
+		System.out.println("Zork is a new, exciting and thrilling adventure game. (Hopefully) Just like your love life.");
 		System.out.println("Type 'help' if you need help");
 		System.out.println("The objective of this game is to collect all 4 trophies that will allow you to reach the special world where you will find a special prize!");
-		System.out.println("For more info on what this game is really about, please visit our game Wiki. Please. I'm begging you. We wouldn't of wanted to work so very hard on it for no visitors.");
+		System.out.println("For more info on what this game is really about, please visit our game Wiki. Please. I'm begging you.");
+		System.out.println("We wouldn't of wanted to work so very hard on it find that no one wants to read it."); 
 		System.out.println();
 		System.out.println(currentRoom.longDescription());
 	}
@@ -167,11 +168,12 @@ class Game {
 			 } 
 		
 		}
-		"get""use""look""burn", "climb""put""place""look at", "take", "throw", "drop", "sit"
 		
 		else if(commandWord.equals("get")){
 			if(command.hasSecondWord()) {
-				player.get(Item.food.get("cookies"), Game.playerInven, Game.currentRoom.getRoomName(Game.currentRoom), game);
+				player.get(Item.food.get("cookies"), playerInven, currentRoom.getRoomName(currentRoom), game);
+			}else {
+				System.out.println("get what?");
 			}
 		}
 		 else if(commandWord.equals("drink")) {
@@ -198,14 +200,19 @@ class Game {
 				 System.out.println("Give what?");
 			 }
 		 }
-		 else if(command)
-		if (commandWord.equals("eat")) {
+		 else if (commandWord.equals("eat")) {
 			if(command.hasSecondWord()) {
 				player.eat(Item.food.get(command.getSecondWord()), currentRoom.getRoomName(currentRoom), playerInven, game);
 			}
 			System.out.println("Do you really think you should be eating at a time like this?");
 		} else if (commandWord.equals("kill")) {
 			System.out.println("This is a kids game, why do you want to kill something?");
+		} else if (commandWord.equals("take")) {
+			if (command.hasSecondWord()) {
+				player.take(Item.tools.get(command.getSecondWord()), playerInven, game);
+			} else {
+				System.out.println("Take what?");
+			}
 		}
 		return false;
 	}
