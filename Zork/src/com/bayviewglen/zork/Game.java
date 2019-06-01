@@ -167,22 +167,35 @@ class Game {
 			 } 
 		
 		}
+		"get""use""look""burn", "climb""put""place""look at", "take", "throw", "drop", "sit"
+		
+		else if(commandWord.equals("get")){
+			if(command.hasSecondWord()) {
+				
+			}
+		}
 		 else if(commandWord.equals("drink")) {
 			 if(command.hasSecondWord()) {
-				 player.drink(command.getSecondWord());
+				 player.drink(Item.drink.get(command.getSecondWord()));
 			 }
 			 else {
-				 System.out.println("Drink what?")
+				 System.out.println("Drink what?");
 			 }
 		 }
 		 else if(commandWord.equals("read")) {
 			 if(command.hasSecondWord()) {
-				 player.read(command.getSecondWord());
+				 player.read(Item.tools.get(command.getSecondWord()));
+			 }
+			 else {
+				 System.out.println("Read what?");
 			 }
 		 }
 		 else if(commandWord.equals("give")) {
 			 if(command.hasSecondWord()) {
-				 player.give(command.getSecondWord());
+				 player.give(Item.tools.get(command.getSecondWord()));
+			 }
+			 else {
+				 System.out.println("Give what?");
 			 }
 		 }
 		 else if(command)
