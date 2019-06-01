@@ -168,6 +168,12 @@ class Game {
 			 } 
 		
 		}
+		 else if(commandWord.equals("use")) {
+			 System.out.println("You used the " + command.getSecondWord());
+		 }
+		 else if(commandWord.equals("look")) {
+			 System.out.println("You looked " + command.getSecondWord());
+		 }
 		
 		else if(commandWord.equals("get")){
 			if(command.getSecondWord()=="cookies") {
@@ -322,7 +328,10 @@ class Game {
 			System.out.println("Do you really think you should be eating at a time like this?");
 		} else if (commandWord.equals("kill")) {
 			System.out.println("This is a kids game, why do you want to kill something?");
-		} else if (commandWord.equals("take")) {
+		} else if(commandWord.equals("burn")) {
+			System.out.println("This is a kids game, why do you want to burn something?");
+		}
+		else if (commandWord.equals("take")) {
 			if (command.hasSecondWord()) {
 				player.take(Item.tools.get(command.getSecondWord()), playerInven, game);
 			} else {
