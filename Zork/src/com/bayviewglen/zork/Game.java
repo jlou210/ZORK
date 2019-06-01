@@ -189,6 +189,49 @@ class Game {
 			}
 			else if(command.getSecondWord()=="apple") {
 				player.get(Item.food.get("apple"), playerInven, currentRoom.getRoomName(currentRoom), game);
+			}else if(command.getSecondWord()=="water") {
+				player.get(Item.drink.get("water"), playerInven, currentRoom.getRoomName(currentRoom), game);
+			}
+			else if(command.getSecondWord()=="milk") {
+				player.get(Item.food.get("milk"), playerInven, currentRoom.getRoomName(currentRoom), game);
+			}
+			else if(command.getSecondWord()=="map") {
+				player.get(Item.tools.get("map"), playerInven, currentRoom.getRoomName(currentRoom), game);
+			}
+			else if(command.getSecondWord()=="glasses") {
+				player.get(Item.food.get("glasses"), playerInven, currentRoom.getRoomName(currentRoom), game);
+			}
+			else if(command.getSecondWord()=="cake") {
+				player.get(Item.food.get("cake"), playerInven, currentRoom.getRoomName(currentRoom), game);
+			}else if(command.getSecondWord()=="flashlight") {
+				player.get(Item.tools.get("flashlight"), playerInven, currentRoom.getRoomName(currentRoom), game);
+			}
+			else if(command.getSecondWord()=="library") {
+				player.get(Item.tools.get("library card"), playerInven, currentRoom.getRoomName(currentRoom), game);
+			}
+			else if(command.getSecondWord()=="backpack") {
+				player.get(Item.tools.get("backpack"), playerInven, currentRoom.getRoomName(currentRoom), game);
+			}
+			else if(command.getSecondWord()=="shed") {
+				player.get(Item.tools.get("shed key"), playerInven, currentRoom.getRoomName(currentRoom), game);
+			}
+			else if(command.getSecondWord()=="trophy 1") {
+				player.get(Item.tools.get("trophy"), playerInven, currentRoom.getRoomName(currentRoom), game);
+			}
+			else if(command.getSecondWord()=="trophy 2") {
+				player.get(Item.tools.get("trophy 2"), playerInven, currentRoom.getRoomName(currentRoom), game);
+			}
+			else if(command.getSecondWord()=="trophy 3") {
+				player.get(Item.tools.get("trophy 3"), playerInven, currentRoom.getRoomName(currentRoom), game);
+			}
+			else if(command.getSecondWord()=="trophy 4") {
+				player.get(Item.tools.get("trophy 4"), playerInven, currentRoom.getRoomName(currentRoom), game);
+			}
+			else if(command.getSecondWord()=="ant") {
+				player.get(Item.tools.get("ant farm"), playerInven, currentRoom.getRoomName(currentRoom), game);
+			}
+			else if(command.getSecondWord()=="bookshelf") {
+				player.get(Item.tools.get("bookshelf"), playerInven, currentRoom.getRoomName(currentRoom), game);
 			}
 			
 			else {
