@@ -248,8 +248,8 @@ public class Inventory {
 	public void addRoomInventory(Item item, String room, Game game) {
 		HashMap<String, Room> hashmap = game.getMasterMap();
 		Room r = hashmap.get(room);	//room is null
-		Inventory inv = r.getInventory();
-		inv.getItems().add(item);
+		Inventory inv = r.getInventory();	//null pointer
+		inv.getItems().add(item);	//null pointer
 	}
 	
 
