@@ -283,9 +283,7 @@ class Parser {
 				else if(wordTwo != null) {
 					System.out.println("You can only teleport to the Treehouse");
 				}
-				else {
-					System.out.println("Are you speaking English? Tu hables espanol? Please try another statement");
-				}
+				
 			}
 			else if(word == CommandWords.validCommands[14]) {
 				if(wordTwo == "trophy" && wordThree == "1") {
